@@ -41,7 +41,7 @@
     {\fontsize{50pt}{30pt}\selectfont\Acmefont
     Selected Topics\par
     In\par
-    Pure Mathmatics
+    Pure Mathematics
     }
 \end{center}
 \endgroup
@@ -215,7 +215,7 @@ we say that the solutions of equation (1) are stable if and only if
 \left\lvert x(t) - x^*(t) \right\rvert \leq \epsilon
 \]
 where $x(t)$ and $x^*(t)$ are solutions of equation (1) moreover we 
-say that the solutions of equation (1) are asymptotically stable iff they 
+say that the solutions of equation (1) are asymptotically stable if and only if they 
 satisfies the previous Conditions and $\displaystyle \lim_{t \to \infty} (x(t) - x^*(t)) = 0$
 
 \subsection{Lipschitz Condition}
@@ -742,8 +742,7 @@ In this equation:
     \item $Q$ represents the incoming solar radiation.
     \item $\alpha$ is the albedo, which represents the fraction of incoming solar radiation that is reflected back to space.
     \item $R$ is the averaged heat capacity of the Earth/atmosphere
-    system (heat capacity is the amount of heat required to raise the temper-
-    ature of an object or substance 1 kelvin(= 1 C))
+    system (heat capacity is the amount of heat required to raise the temperature of an object or substance 1 kelvin(= 1 C))
     \item $A$ and $B$ are empirically determined parameters.
 \end{itemize}
 now let's try to solve it 
@@ -974,22 +973,21 @@ we get in the end that
 \newpage
 Consider the following hyperbolic nonlinear problem\\
 \begin{equation}
-    \label{hypEQ}
     \begin{cases}
          \displaystyle \pdv{u(x,t)}{t} =  u(x,t)\pdv{u(x,t)}{ x}
          \\
          \displaystyle u(x,0) = \frac{x}{10}
      \end{cases}
  \end{equation}
- The solution of $(\ref{hypEQ})$ is given by $u(x,t)=\frac{-x}{t-10}$\\
- Now let’s use A.D.M to solve it !\\
- Integrate w.r.t $t$ \\
+ The solution of (3) is given by $\displaystyle u(x,t)=\frac{x}{10-t}$\\
+ Now let's use A.D.M to solve it !\\
+ First we integrate with respect to $t$
  \begin{align*}
-    u(x,t) &= u(x,0) + \int_0^t u(x,s) \pdv{u(x,s)}{x} \, ds\\
-    u(x,t) &= \frac{x}{10} + \int_0^t u(x,s) \pdv{u(x,s)}{x} \, ds\\
+    u(x,t) &= u(x,0) + \int_{0}^{t} u(x,s) \pdv{u(x,s)}{x} \, ds
+    \\
+    u(x,t) &= \frac{x}{10} + \int_{0}^{t} u(x,s) \pdv{u(x,s)}{x} \, ds
  \end{align*}
- Let $u(x,t) = \sum_{n=0}^{\infty} u_n \quad \& \quad N_u = \sum_{n=0}^{\infty} A_n$\\
- where
+ Let $\displaystyle u(x,t) = \sum_{n=0}^{\infty} u_n \quad \& \quad N(u) = \sum_{n=0}^{\infty} A_n$ , where
  \begin{equation*}
     A_n = \left[ \frac{1}{n!} \dv[n]{}{\lambda}  \left( \sum_{n=0}^{\infty} \lambda^j u_j \right) \left( \sum_{n=0}^{\infty}\lambda^j \pdv{u_j}{x} \right) \right]_{\lambda = 0}
  \end{equation*}
@@ -1023,14 +1021,19 @@ put
     \\
     u_n &= \frac{x}{10} (\frac{t}{10})^n
 \end{align*}
-$$u(x,t) = \frac{x}{10}\left[1 +\left(\frac{t}{10}\right) +\left(\frac{t}{10}\right)^2 +\dots + \right] $$
-$$u(x,t) = \frac{x}{10}\sum_{n=0}^{\infty} \left(\frac{t}{10}\right)^n  $$
-Remember that : $\frac{1}{1-\spadesuit} = \sum_{n=0}^{\infty} \left(\spadesuit\right)^n$
-$$u(x,t) = \frac{x}{10}\frac{1}{1-\frac{t}{10}} = \frac{-x}{t-10}$$
-
-Consider the nonlinear system of equations\\
+\begin{align*}
+    \sum_{n=0}^{\infty} u_n(x,t) &= \frac{x}{10}\left[1 +\left(\frac{t}{10}\right) +\left(\frac{t}{10}\right)^2 +\dots \right]
+    \\
+    \therefore u(x,t) &= \frac{x}{10}\sum_{n=0}^{\infty} \left(\frac{t}{10}\right)^n
+\end{align*}
+Remember that the value of the geometric series is $\displaystyle \sum_{n=s}^{\infty} \left(r\right)^n  = \frac{r^s}{1-r}  $
+\\
+then in our case $\displaystyle \sum_{n=0}^{\infty} \left(\frac{t}{10}\right)^n = \frac{1}{1-\frac{t}{10}} = \frac{10}{10-t}$
+\[
+    \therefore u(x,t) = \frac{x}{10}\frac{10}{10-t} = \frac{x}{10-t}    
+\]
+Consider the nonlinear system of equations
 \begin{equation}
-    \label{Nsystem}
     \begin{cases}
          \displaystyle \pdv{u}{t}= u\pdv{u}{x} + v\pdv{u}{y}
          \\
@@ -1038,22 +1041,25 @@ Consider the nonlinear system of equations\\
      \end{cases}
  \end{equation}
  With initial condition: $u(x,y,0)=v(x,y,0)=x+y$ \\
-Integrate $(\ref{Nsystem})$ w.r.t t\\
+Integrate (4) with respect to t\\
 \begin{align*} 
-    u(x,y,t) &=x+y + \int_0^{t}\left( u(x,y,\theta)\pdv{u}{x} + v(x,y,\theta)\pdv{u}{y} \right)\, d\theta \\
+    u(x,y,t) &=x+y + \int_0^{t}\left( u(x,y,\theta)\pdv{u}{x} + v(x,y,\theta)\pdv{u}{y} \right)\, d\theta 
+    \\
     v(x,y,t) &=x+y + \int_0^{t}\left(u(x,y,\theta)\pdv{v}{x} + v(x,y,\theta)\pdv{v}{y} \right) \, d\theta
 \end{align*}
-Let\\
+Let
 \begin{align*}
-    u(x,y,t) = \sum_{n=0}^\infty u_n \quad&\&\quad v(x,y,t) = \sum_{n=0}^\infty v_n\\
+    u(x,y,t) = \sum_{n=0}^{\infty} u_n \quad&\&\quad v(x,y,t) = \sum_{n=0}^\infty v_n
+    \\
     u\pdv{u}{x}+v\pdv{u}{y} =\sum_{n=0}^\infty A_n \quad&\&\quad u\pdv{v}{x}+v\pdv{v}{y} =\sum_{n=0}^\infty B_n 
 \end{align*}
 where
 \begin{align*}
-    A_n &= \frac{1}{n!} \dv[n]{}{\lambda}\left[\left(\sum_{j=0}^{n} \lambda^j u_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{u_j}{x}\right)+ \left(\sum_{j=0}^{n} \lambda^j v_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{u_j}{y}\right)\right]_{\lambda=0}\\
+    A_n &= \frac{1}{n!} \dv[n]{}{\lambda}\left[\left(\sum_{j=0}^{n} \lambda^j u_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{u_j}{x}\right)+ \left(\sum_{j=0}^{n} \lambda^j v_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{u_j}{y}\right)\right]_{\lambda=0}
+    \\
     B_n &= \frac{1}{n!} \dv[n]{}{\lambda}\left[\left(\sum_{j=0}^{n} \lambda^j u_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{v_j}{x}\right)+ \left(\sum_{j=0}^{n} \lambda^j v_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{v_j}{y}\right)\right]_{\lambda=0}
 \end{align*}
-And as before we get $A_0,A_1,A_2\dots$
+And as before we get $A_0,A_1,A_2\dots$ and $B_0,B_1,B_2\dots$
 \begin{align*}
     A_0 &= u_0 \pdv{u_0}{x}+v_0 \pdv{u_0}{y}
     \\
@@ -1063,6 +1069,7 @@ And as before we get $A_0,A_1,A_2\dots$
     \\
     \vdots
 \end{align*}
+\newpage
 Similarly
 \begin{align*}
     B_0 &= u_0 \pdv{v_0}{x}+v_0 \pdv{v_0}{y}
@@ -1074,13 +1081,6 @@ Similarly
     \vdots
 \end{align*}
 Now, Let 
-   % \begin{align*}
-    %  \end{align*}   
-%\begin{align*}
- 
-%\end{align*}
-
-
 \begin{equation*}
 \begin{aligned}[c]
     u_0 &=  x+y
@@ -1108,15 +1108,32 @@ Now, Let
 \end{equation*}
 Thus
 \begin{align*}
-    u(x,y,t) &=(x+y)\left[ 1+(2t) + (2t)^2 + \dots \right] \\
-    &=(x+y)\frac{1}{1-2t} = \frac{x+y}{1-2t}\\
-    v(x,y,t)&=\frac{x+y}{1-2t}\\
+    \sum_{n=0}^{\infty} u_n &=(x+y)\left[ 1+(2t) + (2t)^2 + \dots \right] \\
+    u(x,y,t) &=(x+y)\frac{1}{1-2t} = \frac{x+y}{1-2t}\\
+    \sum_{n=0}^{\infty} v_n &=(x+y)\left[ 1+(2t) + (2t)^2 + \dots \right] \\
+    v(x,y,t) &=(x+y)\frac{1}{1-2t} = \frac{x+y}{1-2t}\\
 \end{align*}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%                     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%        End of the book       %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%                     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begingroup
 \newpage
 \AddToShipoutPicture*{\put(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{back.jpg}}}
@@ -1126,7 +1143,7 @@ Thus
 \begin{center}
     {
     \fontsize{20pt}{0}\handfont \color{white}
-    Selected Topics In Pure Mathmatics
+    Selected Topics In Pure Mathematics
     }
 \end{center}
 
@@ -1152,11 +1169,12 @@ Author : \\\\
 \color{white} \fancyfont Prof. Dr. Mahmoud M. El-Borai
 \\ \\ \fontspec{Arial}
 \color{cover}Prepared by :\\\\
-\color{white} \fancyfont Ahmed Mohammed Habib \& Hazem Hossam
+\color{white} \fancyfont Ahmed Mohamed Habib \& Hazem Hossam
 \\ \\\fontspec{Arial}
 \color{cover} Cover Designed by :\\\\
 \color{white} \fancyfont Hazem Hossam
 }
 \restoregeometry
 \endgroup
+
 \end{document}

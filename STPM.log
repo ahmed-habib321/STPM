@@ -1,10 +1,13 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.10.29)  29 OCT 2023 14:30
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.10.30)  30 OCT 2023 13:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/Faculty of science/Math Department/PDE NOTES/STPM/STPM.tex"
-(d:/Faculty of science/Math Department/PDE NOTES/STPM/STPM.tex
+**"d:/Faculty of science/Math Department/latex documents/Selected topics in pur
+e mathematics/Book - Latex/STPM/STPM.tex"
+
+(d:/Faculty of science/Math Department/latex documents/Selected topics in pure 
+mathematics/Book - Latex/STPM/STPM.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -1089,6 +1092,9 @@ X
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
+(C:\Program Files\MiKTeX\tex/latex/physics\physics.sty
+Package: physics 
+)
 
 Package fontspec Info: Font family 'Acme-Regular(0)' created for font
 (fontspec)             'Acme-Regular' with options [Path =
@@ -1143,37 +1149,37 @@ n;language=dflt;"
 n;language=dflt;+smcp;"
 
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 27.
+h' as default language. on input line 29.
  (STPM.aux)
 \openout1 = `STPM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-7.
+9.
 
 (C:\Program Files\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-Package hyperref Info: Link coloring OFF on input line 27.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+Package hyperref Info: Link coloring OFF on input line 29.
  (STPM.out) (STPM.out)
 \@outlinefile=\write5
 \openout5 = `STPM.out'.
@@ -1216,13 +1222,24 @@ Package hyperref Info: Link coloring OFF on input line 27.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
+Package siunitx Warning: Detected the "physics" package:
+(siunitx)                omitting definition of \qty.
+(siunitx)                
+(siunitx)                If you want to use \qty with the siunitx definition,
+(siunitx)                add 
+(siunitx)                
+(siunitx)                    \AtBeginDocument{\RenewCommandCopy\qty\SI}
+(siunitx)                
+(siunitx)                to your preamble.
+
+
 (C:\Program Files\MiKTeX\tex/latex/translations/dicts\translations-basic-dictio
 nary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 27.
+or `english'. on input line 29.
 File: front.jpg Graphic file (type bmp)
 <front.jpg>
  [1
@@ -1272,48 +1289,48 @@ File: collage logo.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-1.
+3.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-1.
+3.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-81.
+83.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-81.
+83.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 81.
+(Font)              <10> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 81.
+(Font)              <7> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 81.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
+(Font)              <5> on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 81
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 83
 .
 
 (C:\Program Files\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -1321,65 +1338,85 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [3] [4] [5]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 237.
+(mdframed)              on input line 239.
  [6] [7]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 313.
-Package mdframed Info: Not enough space on this page on input line 335.
+(mdframed)              on input line 315.
+Package mdframed Info: Not enough space on this page on input line 337.
 
 [8]
 File: Rudolf Lipschitz.jpg Graphic file (type bmp)
 <Rudolf Lipschitz.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 441--441
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 443--443
 [][] 
  []
 
 [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 445.
-Package mdframed Info: Not enough space on this page on input line 499.
+(mdframed)              on input line 447.
+Package mdframed Info: Not enough space on this page on input line 501.
  [10] [11]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 608.
+(mdframed)              on input line 610.
  [12]
-Underfull \hbox (badness 2426) in paragraph at lines 711--720
+Underfull \hbox (badness 2426) in paragraph at lines 713--722
 []\TU/lmr/m/n/10 Aleksandr Mikhailovich Lyapunov was a Russian mathematician,
  []
 
 File: Aleksandr_Lyapunov.jpg Graphic file (type bmp)
 <Aleksandr_Lyapunov.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 720--720
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 722--722
 [][] 
  []
 
 [13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 956--958
-
- []
-
-
-Underfull \hbox (badness 3557) in paragraph at lines 961--973
+Underfull \hbox (badness 3557) in paragraph at lines 960--972
 []\TU/lmr/m/n/10 George Adomian (March 21, 1922 – June 17, 1996) was an
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 961--973
+Underfull \hbox (badness 1117) in paragraph at lines 960--972
 \TU/lmr/m/n/10 American mathematician of Armenian descent who developed the
  []
 
 File: adom.jpg Graphic file (type bmp)
 <adom.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 973--973
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 972--972
 [][] 
  []
 
 [17]
+Underfull \hbox (badness 10000) in paragraph at lines 975--976
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 982--986
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1038--1041
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1044--1046
+
+ []
+
+[19] [20]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -1413,7 +1450,7 @@ Overfull \hbox (1.51756pt too wide) in paragraph at lines 973--973
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (33.50638pt too wide) in paragraph at lines 999--1003
+Overfull \hbox (33.50638pt too wide) in paragraph at lines 1142--1146
 \TU/EBGaramond-Medium(0)/m/n/15 profound connections between stability and clim
 ate change, offering fresh perspectives
  []
@@ -1443,56 +1480,49 @@ Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;"
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1007--1016
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
 
  []
 
 File: back.jpg Graphic file (type bmp)
 <back.jpg>
-[18
+[21
 
 ] (STPM.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
-
-
-Package rerunfilecheck Warning: File `STPM.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `STPM.out':
-(rerunfilecheck)             Before: A95ACA2CB92E98EF3EBCE08E4E7E8846;2049
-(rerunfilecheck)             After:  FC50B150B286E5DC7D514BF1569C20D0;2038.
+Package rerunfilecheck Info: File `STPM.out' has not changed.
+(rerunfilecheck)             Checksum: FC50B150B286E5DC7D514BF1569C20D0;2038.
  ) 
 Here is how much of TeX's memory you used:
- 34294 strings out of 409849
- 730039 string characters out of 5782957
- 1936667 words of memory out of 5000000
- 55593 multiletter control sequences out of 15000+600000
+ 34871 strings out of 409849
+ 735672 string characters out of 5782957
+ 1938667 words of memory out of 5000000
+ 56167 multiletter control sequences out of 15000+600000
  583334 words of font info for 103 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,15n,92p,1248b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,15n,92p,1303b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (19 pages).
+Output written on STPM.pdf (22 pages).

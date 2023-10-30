@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.10.30)  30 OCT 2023 13:13
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.10.30)  30 OCT 2023 13:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1397,22 +1397,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 975--976
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 982--986
+Underfull \hbox (badness 10000) in paragraph at lines 983--987
 
  []
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 1030--1031
+Underfull \hbox (badness 10000) in paragraph at lines 1031--1032
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1038--1041
+Underfull \hbox (badness 10000) in paragraph at lines 1039--1042
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1044--1046
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1047
 
  []
 
@@ -1450,7 +1450,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1044--1046
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (33.50638pt too wide) in paragraph at lines 1142--1146
+Overfull \hbox (33.50638pt too wide) in paragraph at lines 1143--1147
 \TU/EBGaramond-Medium(0)/m/n/15 profound connections between stability and clim
 ate change, offering fresh perspectives
  []
@@ -1480,27 +1480,27 @@ Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;"
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1159
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1160
 
  []
 
@@ -1517,10 +1517,10 @@ Package rerunfilecheck Info: File `STPM.out' has not changed.
 (rerunfilecheck)             Checksum: FC50B150B286E5DC7D514BF1569C20D0;2038.
  ) 
 Here is how much of TeX's memory you used:
- 34871 strings out of 409849
- 735672 string characters out of 5782957
+ 34872 strings out of 409849
+ 735679 string characters out of 5782957
  1938667 words of memory out of 5000000
- 56167 multiletter control sequences out of 15000+600000
+ 56168 multiletter control sequences out of 15000+600000
  583334 words of font info for 103 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,15n,92p,1303b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s

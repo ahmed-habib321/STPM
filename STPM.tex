@@ -974,15 +974,16 @@ we get in the end that
 \newpage
 Consider the following hyperbolic nonlinear problem\\
 \begin{equation}
+    \label{hypEQ}
     \begin{cases}
          \displaystyle \pdv{u(x,t)}{t} =  u(x,t)\pdv{u(x,t)}{ x}
          \\
          \displaystyle u(x,0) = \frac{x}{10}
      \end{cases}
  \end{equation}
- The solution of previous equations is given by $u(x,t)=\frac{-x}{t-10}$\\
+ The solution of $(\ref{hypEQ})$ is given by $u(x,t)=\frac{-x}{t-10}$\\
  Now let’s use A.D.M to solve it !\\
- Integrate DE w.r.t t from $0\rightarrow t$\\
+ Integrate w.r.t $t$ \\
  \begin{align*}
     u(x,t) &= u(x,0) + \int_0^t u(x,s) \pdv{u(x,s)}{x} \, ds\\
     u(x,t) &= \frac{x}{10} + \int_0^t u(x,s) \pdv{u(x,s)}{x} \, ds\\
@@ -1008,7 +1009,7 @@ Consider the following hyperbolic nonlinear problem\\
 \end{align*}
 now 
 \[
-u_0 + u_1 + u_2+\dots = \frac{x}{10} \int_{0}^{t} \sum_{i=0}^{\infty} A_n  \,ds
+u_0 + u_1 + u_2+\dots = \frac{x}{10} + \int_{0}^{t} \sum_{i=0}^{\infty} A_n  \,ds
 \]
 put 
 \begin{align*}

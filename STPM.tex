@@ -798,7 +798,48 @@ the equilibrium point of this model is
 \end{align*}
 
 \section {Adomian Decomposition Method(A.D.M)}
-
+Consider the problem
+\begin{equation}
+    \label{ADM}
+    \begin{cases}
+         \displaystyle \pdv{u(x,t)}{t} + Lu(x,t) + Nu(x,y) = g(x,t)
+         \\
+         \displaystyle u(x,0) = \phi(x)
+     \end{cases}
+ \end{equation}
+Where $Lu(x,t)$ is a linear term and $Nu(x,t)$ is a non-linear term\\
+Now, Integrate $(\ref{ADM})$ w.r.t t\\
+\begin{equation*}
+    \label{ADM3}
+    u(x,t) = \phi(x) - \int_0^t Lu(x,s) \,ds  - \int_0^t Nu(x,s) \,ds  + \int_0^t g(x,s) \,ds
+\end{equation*}
+Set
+ \begin{equation}
+    \label{ADM4}
+    u(x,t) = \sum_{n=0}^\infty u_n(x,y)
+\end{equation} 
+\begin{equation}
+    \label{ADM5}
+    Nu(x,t) = \sum_{n=0}^\infty A_n(x,y)
+\end{equation}   
+Where $A_0,A_1,A_2,\dots$ are \textbf{Adomian polynomails} defined as:
+\begin{equation}
+    \label{ADM6}
+    A_n(x,y) = \frac{1}{n!} \dv[n]{}{\lambda} \left( N \left( \sum_{j=0}^{n}\lambda^j u_j \right) \right)
+\end{equation}
+Substitue equations $(\ref{ADM4})$,$(\ref{ADM3})$ into $(\ref{ADM3})$ we get 
+\begin{equation}
+    \label{ADM7}
+   u(x,y) = \sum_{n=0}^{\infty}u_i(x,t) = \phi(x) + \int_0^t g(x,s) ds - \int_0^t L \sum_{n=0}^{\infty}u_n(z,t) - \int_0^t \sum_{n=0}^{\infty}A_n(x,s) ds
+\end{equation}
+Now,
+\begin{align*}
+    u_0 &= \phi(x) + \int_0^t g(x,s) ds\\
+    u_1 &= -\int_0^t Lu_0  ds - \int_0^t A_0 ds\\
+    u_2 &= -\int_0^t Lu_1  ds - \int_0^t A_1 ds\\
+    \vdots \\
+    u_n &= -\int_0^t Lu_{n-1}  ds - \int_0^t A_{n-1} ds\\
+\end{align*}
 consider the nonlinear differential equation 
 \begin{equation}
     \begin{cases}

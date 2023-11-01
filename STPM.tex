@@ -1155,10 +1155,66 @@ Thus
     v(x,y,t) &=(x+y)\frac{1}{1-2t} = \frac{x+y}{1-2t}\\
 \end{align*}
 
-
-
-
-
+Consider the following climate change system\\
+(Archana C. \& Twinkle 2022)\\
+\begin{equation}
+    \label{archanaSys}
+    \begin{cases}
+         \displaystyle \pdv{mx}{t}+m\pdv{m}{x} - fP + g\pdv{\eta}{x} =0\\
+         \\
+         \displaystyle \pdv{P}{t} + m\pdv{P}{x} + fm=0\\
+         \\
+         \displaystyle \pdv{\eta}{t} + m\pdv{\eta}{x} + \eta \pdv{\eta}{x} =0
+     \end{cases}
+ \end{equation}
+ Let 
+ \begin{align*}
+    &m(x,t) = \sum_{i=0}^\infty m_i(x,t) \qquad P(x,t) = \sum_{i=0}^\infty P_i(x,t)\\
+    &\eta(x,t) = \sum_{i=0}^\infty \eta_i(x,t)\\
+    &m\pdv{m}{x} = \sum_{n=0}^\infty A_n(x,t) \qquad m\pdv{p}{x} = \sum_{n=0}^\infty B_n(x,t)\\
+    &m\pdv{\eta}{x}+\eta\pdv{\eta}{x} = \sum_{n=0}^\infty C_n(x,t)
+ \end{align*}
+ Where 
+ \begin{align*}
+    A_n&= \frac{1}{n!} \dv[n]{}{\lambda}\left( \sum_{j=0}^n \lambda^j m_j \sum_{j=0}^n \lambda^j \pdv{m_j}{x}\right)\Bigg|_{\lambda=0} \\
+    B_n&= \frac{1}{n!} \dv[n]{}{\lambda}\left( \sum_{j=0}^n \lambda^j m_j \sum_{j=0}^n \lambda^j \pdv{P_j}{x}\right)\Bigg|_{\lambda=0} \\
+    C_n&= \frac{1}{n!} \dv[n]{}{\lambda}\left( \sum_{j=0}^n \lambda^j m_j \sum_{j=0}^n \lambda^j \pdv{\eta_j}{x}+ \sum_{j=0}^n \lambda^j \eta_j \sum_{j=0}^n \lambda^j \pdv{\eta_j}{x}\right)\Bigg|_{\lambda=0}
+\end{align*}
+Now, Integrate $(\ref{archanaSys})$ w.r.t t we get
+\begin{align*}
+    m(x,t)&= m(x,0) - \int_0^t m\pdv{m(x,s)}{x} ds + f \int_0^t P(x,s) ds - g\int_0^t \pdv{\eta(x,s)}{x} ds\\
+    P(x,t)&= P(x,0) - \int_0^t m\pdv{P(x,s)}{x} ds - f \int_0^t m(x,s)ds\\
+    \eta(x,s) = \eta(x,0) - \int_0^t m \pdv{\eta(x,s)}{x} ds - \int_0^t \eta \pdv{\eta(x,s)}{x} ds
+\end{align*} 
+Set initial conditions $m(x,0)=P(x,0)=\eta(x,0) = x$ and $f = g = 1$\\
+Now,
+\begin{equation*}
+    m_0 = x \qquad p_0 = x \qquad \eta_0 = x
+\end{equation*}
+\begin{align*}
+    A_0 &= m_0 \pdv{m_0}{x}\\
+    A_1 &= m_1 \pdv{m_0}{x} + m_0 \pdv{m_1}{x}\\
+    \vdots \\
+    B_0 &= m_0 \pdv{P_0}{x}\\
+    B_1 &= m_1 \pdv{P_0}{x} + m_0 \pdv{P_1}{x}\\ 
+    \vdots \\
+    C_0 &= m_0 \pdv{\eta_0}{x} + \eta_0 \pdv{\eta_0}{x}\\
+    C_1 &= m_1 \pdv{\eta_0}{x} + \eta_1 \pdv{\eta_0}{x}+ m_0 \pdv{\eta_1}{x} + \eta_0 \pdv{\eta_1}{x}\\ 
+    \vdots\\
+\end{align*}
+Substitue in system, we get
+\begin{align*}
+m_1 &= - \int_0^t A_0 ds + \int_0^t P_0 ds - \int_0^t \pdv{\eta_0}{x} ds \\
+&= - \int_0^t x.1 ds + \int_0^t x ds - \int_0^t 1 ds = -T\\
+\vdots\\
+P_1 &= -\int_0^t B_0 ds - \int_0^t m_0 ds \\
+&= -\int_0^t x.1 ds - \int_0^t x ds = -2xt\\
+\vdots\\
+\eta_1 &= -\int_0^t c_0 ds \\
+&= - \int_0^t x.1 + x.1 ds = -2xt\\
+\vdots\\
+\end{align*}
+Similarly, we can dedcue the solution of the system
 
 
 

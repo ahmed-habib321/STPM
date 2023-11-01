@@ -8,5 +8,5 @@
 \contentsline {subsection}{\numberline {2.2}Lyapunov Function}{12}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Dynamical System And Climate Change Models}{14}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Kaper and Engler Climate Model}{14}{subsection.3.1}%
-\contentsline {section}{\numberline {4}Adomian Decomposition Method(A.D.M)}{15}{section.4}%
+\contentsline {subsection}{\numberline {3.2}Adomian Decomposition Method(A.D.M)}{15}{subsection.3.2}%
 \contentsfinish 

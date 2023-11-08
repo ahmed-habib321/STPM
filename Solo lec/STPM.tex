@@ -1,0 +1,1487 @@
+\documentclass[]{article}
+
+
+\input{MyTools}
+\usepackage{fancyhdr}
+\usepackage{physics}
+
+\definecolor{cover}{RGB}{230, 194, 24}
+
+\begin{document}
+
+% \vspace*{\fill}
+% \begingroup
+% \thispagestyle{empty}
+% \begin{center}
+%     \fontsize{50pt}{0} $\mathbf{Lecture \qquad 1}$    
+%     \par
+%     \hspace*{-.7cm}\fontsize{50pt}{0} $\mathbf{Fractional \qquad Calculus}$    
+% \end{center}
+
+% \endgroup
+% \vspace*{\fill}
+
+% \newpage
+
+% \section{Fractional Integral}
+% let $f$ be a continuous function on $[a,b]$ and let $I$ donate the integral operator 
+% \[
+% If(t) = \int_{0}^{t}f(s)ds = g(t) \ \ , \ \ t\in[a,b]
+% \]
+% and if we apply it again 
+% \begin{align*}
+%     I^{2}f(t)  &= \int_{0}^{t}g(s)ds \\
+%             &= \int_{0}^{t}\int_{0}^{s}f(\theta)d\theta\\
+%             &= \int_{0}^{t} \left(\int_{s}^{t}d\theta\right)f(s)ds\\
+%             &= \int_{0}^{t} (t-s) f(s) ds
+% \end{align*}
+% we can get the general formula for integrating n time by 
+% \begin{align*}
+%     I^{n}f(t) &= \frac{1}{(n-1)!}\int_{0}^{t}(t-s)^{n-1}f(s)ds\\
+%             &=\frac{1}{\Gamma(n)}\int_{0}^{t}(t-s)^{n-1}f(s)ds
+% \end{align*}
+% then we can say that the fractional integral of order $\alpha$ is defined as 
+% \begin{equation}
+%     I^{\alpha}f(t) =\frac{1}{\Gamma(\alpha)}\int_{0}^{t}(t-s)^{\alpha-1}f(s)ds
+% \end{equation}
+% \[
+%     0<\alpha\leq 1    
+% \]
+% \section{Fractional Derivative}
+% the fractional derivative is defined by 
+% \begin{align}
+%     D^{\alpha}f(t) &= \frac{1}{\Gamma(1-\alpha)}\int_{0}^{t}(t-s)^{-\alpha}\frac{d f(s)}{ds}ds    
+% \end{align}
+% or
+% \begin{align}
+%     D^{\alpha}f(t) &= \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt}\int_{0}^{t}(t-s)^{-\alpha}f(s)ds
+%     \\\notag
+%     &\fquad0\leq \alpha \leq 1    
+% \end{align}
+% where $\alpha$ is the order of differentiation 
+% \\
+% the need of having 2 formulas that each has a problem that the other solves 
+% like that formula (2) need the $1^{\text{st}}$ derivative to exist to get the fractional derivative
+% and formula (3) the derivative of the constant not equal zero 
+% \begin{align*}
+%     D^{\alpha} 1 &= \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt}\int_{0}^{t}(t-s)^{-\alpha}ds
+%     \\
+%     &= \frac{-1}{\Gamma(1-\alpha)}\frac{d}{dt} \left[\frac{(t-s)^{-\alpha+1}}{-\alpha+1}\right]_{0}^{t}
+%     \\
+%     &= \frac{-1}{\Gamma(1-\alpha)} \frac{t^{1-\alpha}}{1-\alpha} \neq 0
+% \end{align*}
+% \section{Laplace transform for fractional integral}
+% we know that 
+% \[
+%      \mathcal{L} \{f(t)\} = \int_{0}^{\infty}e^{-st}f(t)dt = F(s)
+% \]
+% then we can do the following
+% \begin{align*}
+%     \mathcal{L}\{I^{\alpha}f(t)\} &= \int_{0}^{\infty}e^{-st}\frac{1}{\Gamma(\alpha)}\int_{0}^{t}(t-\theta)^{\alpha-1}f(\theta)d\theta dt
+%     \\
+%     &= \frac{1}{\Gamma(\alpha)} \mathcal{L}\{t^{\alpha-1}\times f(t)\}
+% \end{align*}
+% from the convolution property
+% \begin{align}
+%     \mathcal{L}\{I^{\alpha}f\} = \frac{1}{\Gamma(\alpha)} \mathcal{L}\{t^{\alpha-1}\}\times \mathcal{L}\{f(t)\}
+% \end{align}
+% let's handle the first transformation
+% \begin{align*}
+%     \mathcal{L}\{t^{\alpha-1}\} &= \int_{0}^{\infty}e^{-st}t^{\alpha-1}dt 
+%      \\
+%     \text{put } st &= \eta \Longrightarrow dt = \frac{1}{s}d\eta
+%     \\
+%     \mathcal{L}\{t^{\alpha-1}\} &= \int_{0}^{\infty}e^{-\eta}\eta^{\alpha-1}s^{1-\alpha}\frac{1}{s}d\eta
+%     \\
+%     &= \int_{0}^{\infty}e^{-\eta}\eta^{\alpha-1}s^{-\alpha}\frac{1}{s}d\eta = s^{-\alpha}\Gamma(\alpha)
+% \end{align*}
+% now substitute in equation (4)
+% \[
+%     \mathcal{L}\{I^{\alpha}f\} = s^{-\alpha}\mathcal{L}\{f(t)\} = s^{-\alpha} F(s)
+% \]
+% \section{The Integral of Derivative}
+% Now that we defined the integral and the differential operator logically they suppose to cancel each other
+% we need to proof that
+% \begin{align*}
+%     I^{\alpha}D^{\alpha}f(t) = f(t)
+% \end{align*}
+% using the formula (2)
+% \begin{align}
+%     \notag
+%     I^{\alpha}D^{\alpha}f(t) &= I^{\alpha}\left[\frac{1}{\Gamma(1-\alpha)}\int_{0}^{t}(t-s)^{-\alpha}\frac{d f(s)}{ds}ds\right] \qquad 0 < \alpha < 1
+%     \\\notag
+%     &= \frac{1}{\Gamma(\alpha)\Gamma(1-\alpha)} \int_{0}^{t}(t-s)^{\alpha-1} \int_{0}^{s}(s-\theta)^{-\alpha} \frac{d f(\theta)}{d\theta} d\theta ds
+%     \\
+%     &= \frac{1}{\Gamma(\alpha)\Gamma(1-\alpha)} \int_{0}^{t}\underbrace{\int_{\theta}^{t}(t-s)^{\alpha-1}(s-\theta)^{-\alpha} ds}_J  \frac{d f(\theta)}{d\theta} d\theta
+% \end{align}
+% let's handle the inner integral first
+% \begin{align*}
+%     J &= \int_{\theta}^{t}(t-s)^{\alpha-1}(s-\theta)^{-\alpha} ds
+%     \\
+%     &\text{put } s-\theta = \eta \Longrightarrow ds = d\eta
+%     \\
+%     &= \int_{0}^{t-\theta}(t-\theta-\eta)^{\alpha-1}(\eta)^{-\alpha} d\eta
+%     \\
+%     &= (t-\theta)^{\alpha-1} \int_{0}^{t-\theta}(1-\frac{\eta}{t-\theta})^{\alpha-1}(\eta)^{-\alpha} d\eta
+%     \\
+%     &\text{put } \eta = (t-\theta)\xi  \Longrightarrow d\eta = (t-\theta)d\xi
+%     \\
+%     &= (t-\theta)^{\alpha-1} \int_{0}^{1}(1-\xi)^{\alpha-1} (t-\theta)^{1-\alpha} \xi^{-\alpha} d\xi
+%     \\
+%     &= \int_{0}^{1}(1-\xi)^{\alpha-1} \xi^{-\alpha} d\xi = \beta(\alpha,1-\alpha)
+% \end{align*}
+% substitute in (5) we get that
+% \begin{align*}
+%     I^{\alpha}D^{\alpha}f &= \frac{\beta(\alpha,1-\alpha)}{\Gamma(\alpha)\Gamma(1-\alpha)}\int_{0}^{t}\frac{d f(\theta)}{d\theta} d\theta
+%     \\
+%     &= \frac{\Gamma(\alpha)\Gamma(1-\alpha)}{\Gamma(\alpha+1-\alpha)\Gamma(\alpha)\Gamma(1-\alpha)}[f(t)-f(0)] 
+%     \\
+%     &= f(t)-f(0)
+% \end{align*}
+
+% \setcounter{section}{0}
+% \setcounter{equation}{0}
+% \newpage 
+% \vspace*{\fill}
+% \begingroup
+% \thispagestyle{empty}
+% \begin{center}
+%     \fontsize{50pt}{0} $\mathbf{Lecture \qquad 2}$    
+%     \par
+%     \hspace*{-.7cm}\fontsize{50pt}{0} $\mathbf{Dynamical \qquad System}$    
+% \end{center}
+% \endgroup
+% \vspace*{\fill}
+% \newpage
+
+% \section{Stability}
+
+% consider 
+
+% \begin{equation}
+%     \begin{cases}
+%         \displaystyle \frac{dx(t)}{dt} = &f(x(t),t) \dquad t>0
+%         \\
+%         x(0) = a
+%     \end{cases}
+% \end{equation}
+% we say that the solutions of equation (1) are stable iff
+% \[
+% \forall \epsilon >0 \  , \ \exists \delta >0 \ \text{s.t} \  x(0)=a , x^*(0)=b 
+% \]\[
+% \left\lvert a-b \right\rvert < \delta \Longrightarrow  
+% \left\lvert x(t) - x^*(t) \right\rvert \leq \epsilon
+% \]
+% where $x(t)$ and $x^*(t)$ are solutions of equation (1) moreover we 
+% say that the solutions of equation (1) are asymptotically stable iff they 
+% satisfies the previous Conditions and $\displaystyle \lim_{t \to \infty} (x(t) - x^*(t)) = 0$
+
+% \section{Lipschitz Condition}
+% we say that $f(x)$ satisfies lipschitz condition with lipschitz constant $N$ iff
+% \[
+% \left\lvert f(x) - f(x^*)\right\rvert \leq N \left\lvert x - x^*\right\rvert
+% \]
+% \[
+% f(x) \ \ \text{defined on} \ \ [a,b] \ , \ x,x^* \in [a,b]
+% \]
+% if $f(x)$ is differentiable and $f'(x)$ is bounded i.e. $|f'(x)| \leq M$
+% \[
+%     f(x) - f(x^*) = (x-x^*)f'(x^{**})
+% \]
+% \[
+% x \leq x^{**} \leq x^* 
+% \]
+% \[
+%     \left\lvert f(x) - f(x^*)\right\rvert \leq M \left\lvert x - x^*\right\rvert
+% \]
+% \begin{theorem}[]
+%     let $f(x,t)$ be a continues function on $G:=\{(x,t) \ | \ a\leq x\leq b \ , \ 0\leq t \leq T\}$ and
+%     \\
+%     satisfies lipschitz condition with respect to $x$ and with lipschitz constant $N$ , i.e.
+%     \[
+%         \left\lvert f(x,t) - f(x^*,t)\right\rvert \leq N \left\lvert x - x^*\right\rvert    
+%     \]
+%     suppose that 
+%     $
+%     \begin{cases}
+%         \displaystyle \frac{ds_1(t)}{dt} = f(s_1(t),t) \ , \  s_1(0) = \beta_1 
+%         \\
+%         \displaystyle \frac{ds_2(t)}{dt} = f(s_2(t),t) \ , \  s_2(0) = \beta_2
+%     \end{cases}
+%     $
+%     \\
+%     if $\left\lvert \beta_1 - \beta_2 \right\rvert \leq \delta $ then $\left\lvert s_1(t) - s_2(t) \right\rvert \leq \delta e^{Nt} $ 
+% \end{theorem}
+% \begin{proof}[proof]
+%     \begin{align}
+%         s_1(t) = \beta_1 + \int_{0}^{t}f(s_1(\theta),\theta)d\theta
+%         \\
+%         s_2(t) = \beta_2 + \int_{0}^{t}f(s_2(\theta),\theta)d\theta
+%     \end{align}
+% subtract equation (3) from (2)
+% \[
+%     s_1(t) - s_2(t) = \beta_1 - \beta_2 + \int_{0}^{t} \left[ f(s_1(\theta),\theta) - f(s_2(\theta),\theta)\right]d\theta    
+% \]
+% taking the absolute value to both sides
+% \\
+% and because $\left\lvert \beta_1 - \beta_2 \right\rvert \leq \delta $
+% and $f$ satisfies lipschitz condition $\left\lvert f(x,t) - f(x^*,t)\right\rvert \leq N\left\lvert x - x^*\right\rvert$
+% \\
+% then
+% \[
+%     |s_1(t) - s_2(t)| \leq \delta  + N \int_{0}^{t} \left\lvert s_1(\theta) - s_2(\theta) \right\rvert d\theta    
+% \]
+% put $|s_1(t) - s_2(t)| = r(t)$
+% \begin{equation}
+%     r(t) \leq \delta  + N \int_{0}^{t} r(\theta) d\theta    
+% \end{equation}
+% set $\displaystyle R(t) = \int_{0}^{t} r(\theta)d\theta \dquad$ i.e. $\dquad \displaystyle r(t) = \frac{dR(t)}{dt} $
+% \\ and Substitute in (4)
+% \begin{equation}
+%     \frac{dR(t)}{dt} - NR(t) \leq \delta 
+% \end{equation}
+% multiply both sides by $e^{-Nt}$
+% \begin{align*}
+%     e^{-Nt}\left[\frac{dR(t)}{dt} - NR(t)\right] &\leq \delta e^{-Nt}    
+%     \\
+%     \frac{d}{dt}\left[e^{-Nt}R(t)\right] &\leq \delta e^{-Nt}    
+% \end{align*}
+% integrating both sides from $0 \to t$ we get that 
+% \[
+%     e^{-Nt}R(t) - R(0) \leq \frac{\delta}{N}\left[1-e^{-Nt}\right]
+% \]
+% and we know that 
+% \[
+%     R(t) = \int_{0}^{t} r(\theta)d\theta
+% \]
+% then
+% \[
+%     R(0) = \int_{0}^{0} r(\theta)d\theta = 0
+% \]
+% therefore we get
+% \begin{align*}
+%     R(t) \leq \frac{\delta}{N}\left[e^{Nt}-1\right]
+% \end{align*}
+% Substitute in (5) to get the following
+% \begin{align*}
+%     r(t) &\leq \delta + \delta\left[e^{Nt}-1\right]
+%     \\
+%     |s_1(t) - s_2(t)|  &\leq \delta e^{Nt}
+% \end{align*}
+% \end{proof}
+% \newpage
+% \begin{theorem}[]
+%     let $f(x,t)$ be a continues function on $G:=\{(x,t) \ | \ a\leq x\leq b \ , \ 0\leq t \leq T\}$ and
+%     \\
+%     satisfies lipschitz condition with respect to $x$ and with lipschitz constant $N$ , i.e.
+%     \[
+%         \left\lvert f(x,t) - f(x^*,t)\right\rvert \leq N \left\lvert x - x^*\right\rvert      
+%     \]
+%     suppose that 
+%     \begin{equation}
+%         \frac{dx(t)}{dt} = -\gamma x(t) + f(x(t),t)
+%     \end{equation}
+%     and let $s_1(t)$ and $s_2(t)$ be solutions for equation (6) corresponding to 
+%     $
+%     \begin{cases}
+%         s_1(0) = \beta_1  
+%         \\
+%         s_2(0) = \beta_2
+%     \end{cases}
+%     $
+%     \\
+%     if $\gamma >N$ and $\left\lvert \beta_1 - \beta_2 \right\rvert \leq \delta $ then $\displaystyle \lim_{t \to \infty}|s_1(t) - s_2(t)| = 0 $
+%     and $|s_1(t) - s_2(t)| \leq \delta e^{-(\gamma-N)t}$
+% \end{theorem}
+
+% \begin{proof}[proof]
+
+% let $ y(t) = e^{\gamma t} x(t) $ 
+% \[
+%     \frac{dy(t)}{dt}  = e^{\gamma t}\frac{dx(t)}{dt} + \gamma e^{\gamma t}x(t)
+% \]
+% Substitute $\displaystyle \frac{dx(t)}{dt}$ from equation (6)
+% \begin{align*}
+%     \frac{dy(t)}{dt}  &= e^{\gamma t}\left[-\gamma x(t) + f(x(t),t)\right] + \gamma e^{\gamma t}x(t)
+%     \\
+%     &= e^{\gamma t}f(x(t),t)
+%     \\
+%     &\because y(t) = e^{\gamma t} x(t)
+%     \\
+%     &\therefore x(t) = e^{-\gamma t}y(t) 
+% \end{align*}
+% therefore
+% \begin{equation}
+%     \frac{dy(t)}{dt} = e^{\gamma t}f(e^{-\gamma t}y(t),t)
+% \end{equation}
+% let $\mathbf{S}_1(t)$ and $\mathbf{S}_2(t)$ be solution of equation (7)
+% \begin{equation}
+%     \begin{cases}
+%         \displaystyle \mathbf{S}_1(t) = e^{\gamma t}s_1(t) \ , \  s_1(0) = \beta_1 
+%         \\
+%         \displaystyle \mathbf{S}_2(t) = e^{\gamma t}s_2(t) \ , \  s_2(0) = \beta_2
+%     \end{cases}
+% \end{equation}
+
+% $y(0) = x(0)$ i.e. $\mathbf{S}_1(t) = \beta_1 $ and $\mathbf{S}_2(t) = \beta_2$
+
+%     \begin{align}
+%         \mathbf{S}_1(t) = \beta_1 + \int_{0}^{t}e^{\gamma \theta}f(e^{-\gamma \theta}\mathbf{S}_1(\theta),\theta)d\theta
+%         \\
+%         \mathbf{S}_2(t) = \beta_2 + \int_{0}^{t}e^{\gamma \theta}f(e^{-\gamma \theta}\mathbf{S}_2(\theta),\theta)d\theta
+%     \end{align}
+% subtract equation (10) from (9)
+% \[
+%     \mathbf{S}_1(t) - \mathbf{S}_2(t) = \beta_1 - \beta_2 + \int_{0}^{t} e^{\gamma \theta}\left[ f(e^{-\gamma \theta}\mathbf{S}_1(\theta),\theta) - f(e^{-\gamma \theta}\mathbf{S}_2(\theta),\theta)\right]d\theta    
+% \]
+% taking the absolute value to both sides
+% \\
+% and because $\left\lvert \beta_1 - \beta_2 \right\rvert \leq \delta $
+% and $f$ satisfies lipschitz condition $\left\lvert f(x,t) - f(x^*,t)\right\rvert \leq N\left\lvert x - x^*\right\rvert$
+% \\
+% then
+% \begin{align*}
+%     |\mathbf{S}_1(t) - \mathbf{S}_2(t)| &\leq \delta  + N \int_{0}^{t} e^{\gamma \theta} \left\lvert e^{-\gamma \theta}\mathbf{S}_1(\theta) -e^{-\gamma \theta} \mathbf{S}_2(\theta) \right\rvert d\theta    
+%     \\
+%     &\leq \delta  + N \int_{0}^{t} \left\lvert \mathbf{S}_1(\theta) - \mathbf{S}_2(\theta) \right\rvert d\theta    
+% \end{align*}
+% put $\left\lvert \mathbf{S}_1(t) - \mathbf{S}_2(t) \right\rvert d\theta = r(t)$
+% \begin{equation}
+%     r(t) \leq \delta  + N \int_{0}^{t} r(\theta) d\theta    
+% \end{equation}
+% set $\displaystyle R(t) = \int_{0}^{t} r(\theta)d\theta \dquad$ i.e. $\dquad \displaystyle r(t) = \frac{dR(t)}{dt} $
+% \\ and Substitute in (11)
+
+
+
+% \begin{equation}
+%     \frac{dR(t)}{dt} - NR(t) \leq \delta 
+% \end{equation}
+% multiply both sides by $e^{-Nt}$
+% \begin{align*}
+%     e^{-Nt}\left[\frac{dR(t)}{dt} - NR(t)\right] &\leq \delta e^{-Nt}    
+%     \\
+%     \frac{d}{dt}\left[e^{-Nt}R(t)\right] &\leq \delta e^{-Nt}    
+% \end{align*}
+% integrating both sides from $0 \to t$ we get that 
+% \begin{align*}
+%     R(t) \leq \frac{\delta}{N}\left[e^{Nt}-1\right]
+% \end{align*}
+% Substitute in (12) to get the following
+% \begin{align*}
+%     r(t) &\leq \delta + \delta\left[e^{Nt}-1\right]
+%     \\
+%     |\mathbf{S}_1(t) - \mathbf{S}_2(t)|  &\leq \delta e^{Nt}
+% \end{align*}
+% multiply both sides by $e^{-\gamma t}$
+% \[
+%     e^{-\gamma t}|\mathbf{S}_1(t) - \mathbf{S}_2(t)|  \leq \delta e^{-(\gamma-N)t}
+% \]
+% from equations (8) we get that 
+% \[
+%     e^{-\gamma t}e^{\gamma t}|s_1(t) - s_2(t)|  \leq \delta e^{-(\gamma-N)t}
+% \]
+% \[
+%     |s_1(t) - s_2(t)|  \leq \delta e^{-(\gamma-N)t}
+% \]
+% because $\gamma > N$ is given in the theorem then the power of R.H.S is negative therefore 
+% when $t \to \infty$ then $e^{-(\gamma-N)} \to 0$ then
+% \[
+% \lim_{t \to \infty} |s_1(t) - s_2(t)| \leq 0
+% \]
+% \[
+% \therefore \lim_{t \to \infty} |s_1(t) - s_2(t)| = 0
+% \]
+% \end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setcounter{section}{0}
+% \setcounter{equation}{0}
+% \newpage 
+% \vspace*{\fill}
+% \begingroup
+% \thispagestyle{empty}
+% \begin{center}
+%     \fontsize{50pt}{0} $\mathbf{Lecture \qquad 3}$    
+%     \par
+%     \hspace*{-1.5cm}\fontsize{50pt}{0} $\mathbf{Continue \qquad Dynamical}$    
+%     \par
+%     \fontsize{50pt}{0} $\mathbf{System}$    
+% \end{center}
+% \endgroup
+% \vspace*{\fill}
+% \newpage
+
+% \section{Continue Stability}
+% \vspace*{.5cm}
+% \begin{theorem}[]
+
+%     Let $A$ be a constant matrix suppose that all the characteristic roots of $A$ with negative real part
+%     \\
+%     Now consider the equation 
+% \[
+% \frac{dx(t)}{dt} = Ax(t) + f(t,x(t))
+% \]
+% if $||f(t,x(t))|| = o(||x(t)||)$ and $f(t,0) = 0$ , then the rest point is asymptotically stable
+
+% we can define $A$ as 
+% $\begin{bmatrix}
+%     a_{11} & a_{12} & \dots & a_{1n}\\
+%     a_{21} & a_{22} & \dots & a_{2n}\\
+%     \vdots &\vdots & &\vdots \\
+%     a_{n1} & a_{n2} & \dots & a_{nn}\\
+% \end{bmatrix}$
+% and x as 
+% $\begin{bmatrix}
+%     x_{1}\\
+%     x_{2}\\
+%     \vdots\\
+%     x_{n}\\
+% \end{bmatrix}$
+% \par
+% and the Norm as 
+% \(
+%     \displaystyle ||x(t)|| = \sum^{n}_{i=1}|x_i(t)|    
+% \)
+% or
+% \(
+%     \displaystyle  ||x(t)|| = \left(\sum^{n}_{i=1}|x_i(t)|^2\right)^{\frac{1}{2}}    
+% \)
+% \par
+% and
+% \(
+% \displaystyle ||A|| = \sum^{n}_{i,j=1}|a_{ij}|    
+% \)
+% or
+% \(
+%     \displaystyle ||A|| = \left(\sum^{n}_{i,j=1}|a_{ij}|^2\right)^{\frac{1}{2}}    
+% \)
+% \\
+% and rest point is the zero solution of the equation (1)
+% \\
+% the rest point is stable if 
+% \[
+% \forall \epsilon >0 \  , \ \exists \delta >0 \ \text{s.t} \ || x(0)|| \leq \delta \Longrightarrow 
+% ||x(t)|| \leq \epsilon
+% \]
+% and it is asymptotically stable if it satisfies the last condition and 
+% \[
+% \lim_{t \to \infty} ||x(t)|| = 0
+% \]
+% \end{theorem}
+% \begin{proof}[proof]
+% we have 
+% \begin{equation}
+%     \frac{dx(t)}{dt} = Ax(t) + f(t,x(t))
+% \end{equation}
+% we can write it as 
+% \begin{equation}
+%     x(t) = e^{At}x(0) + \int_{0}^{t} e^{A(t-\theta)} f(x(\theta),\theta) d \theta
+% \end{equation}
+% this is a representation for equation (1) to see that they are the same take the derivative of it with respect to t
+% \[
+% \frac{dx(t)}{dt} = A e^{At}x(0) + \frac{d}{dt} \int_{0}^{t} e^{A(t-\theta)} f(x(\theta),\theta) d \theta
+% \]
+% using Leibniz rule
+% \begin{align*}
+%     \frac{dx(t)}{dt} &= A e^{At}x(0) + A\int_{0}^{t} e^{A(t-\theta)} f(x(\theta),\theta) d \theta + f(x(t),t) 
+%     \\
+%     &=A\left(e^{At}x(0) + \int_{0}^{t} e^{A(t-\theta)} f(x(\theta),\theta) d \theta \right) + f(x(t),t)
+%     \\
+%     &= Ax(t) + f(x(t),t)
+% \end{align*}
+% \begin{enrichment*}{Leibniz rule}
+%     \[
+%         \frac{d}{dt}\int_{\alpha(t)}^{\beta(t)} f(t,\theta)d\theta = \frac{d\beta(t)}{dt}f(t,\beta(t))-\frac{d\alpha(t)}{dt}f(t,\alpha(t)) + \int_{\alpha(t)}^{\beta(t)} \frac{\partial f(t,\theta)}{\partial t} d\theta    
+%     \]
+% \end{enrichment*}
+% we can find $K>0,\sigma>0$ such that $||e^{At}||<Ke^{-\sigma t}$
+% \\
+% Take the Norm for equation (2)
+% \[
+% ||x(t)|| \leq Ke^{-\sigma t}||x(0)|| + K\int_{0}^{t} e^{-\sigma(t-\theta)} ||f(x(\theta),\theta)|| d \theta
+% \]
+% and we know that $||f(t,x(t))|| = o(||x(t)||)$ or in other word 
+% $\displaystyle \lim_{||x(t)|| \to 0}\frac{||f(x(t),t)||}{||x(t)||} = 0$ i.e
+% \[
+% \forall \epsilon >0 \  , \ \exists \delta >0 \ \text{such that} \ || x(t)|| \leq \delta \Longrightarrow 
+% ||f(x(t),t)|| \leq \epsilon ||x(t)||
+% \]
+% thus 
+% \[
+% ||x(t)|| \leq Ke^{-\sigma t}||x(0)|| + K \epsilon \int_{0}^{t} e^{-\sigma(t-\theta)} ||x(\theta)|| d \theta
+% \]
+% put $\displaystyle \epsilon = \frac{\epsilon}{K}$ and multiply by  $e^{\sigma t}$
+% \[
+% e^{\sigma t}||x(t)|| \leq K||x(0)|| + \epsilon \int_{0}^{t} e^{\sigma \theta} ||x(\theta)|| d \theta
+% \]
+% as long as $||x(t)|| \leq \delta$
+
+% set $\displaystyle R(t) = \int_{0}^{t} e^{\sigma \theta} ||x(\theta)|| d \theta \dquad$ i.e. $\displaystyle \frac{dR(t)}{dt} = e^{\sigma t} ||x(t)||$
+% \begin{align*}
+%     \frac{dR(t)}{dt}  &\leq K ||x(0)|| + \epsilon R(t) \tag{3}
+%     \\
+%     \frac{dR(t)}{dt}  - \epsilon R(t) &\leq K ||x(0)||
+% \end{align*}
+% multiply by $e^{- \epsilon t}$
+% \begin{align*}
+%     e^{- \epsilon t} \left[\frac{dR(t)}{dt}  - \epsilon R(t)\right] &\leq K ||x(0)|| e^{- \epsilon t}
+%     \\
+%     \frac{d}{dt}\left[ e^{- \epsilon t} R(t)\right] &\leq K ||x(0)|| e^{- \epsilon t}
+% \end{align*}
+% integrate with respect to t 
+% \[
+% e^{- \epsilon t} R(t) \leq \frac{K \sigma}{\epsilon}  (1- e^{- \epsilon t})
+% \]
+% multiply by $e^{\epsilon t}$
+% \[
+% R(t) \leq \frac{K \sigma}{\epsilon}  (e^{\epsilon t} - 1)
+% \]
+% Substitute $\displaystyle \frac{dR(t)}{dt} = e^{\sigma t} ||x(t)||$ and $\displaystyle R(t) \leq \frac{K \sigma}{\epsilon}  (e^{\epsilon t} - 1)$ in equation (3)
+% \begin{align*}
+%     e^{\sigma t}||x(t)|| &\leq K||x(0)|| + \epsilon R(t)
+%                         \\
+%                         &\leq K \delta + K \delta e^{\epsilon t} - K \delta
+%                         \\
+%                         &\leq K \delta e^{\epsilon t}
+% \end{align*}
+% \[
+% ||x(t)|| \leq K \delta e^{(\epsilon-\sigma) t}
+% \]
+% put $\epsilon < \sigma$ and take the limit as $t \to \infty$
+% \[
+% \lim_{t \to \infty} ||x(t)|| \leq 0
+% \]
+% \[
+% \lim_{t \to \infty} ||x(t)|| = 0
+% \]
+% \end{proof}
+
+% \section{Lyapunov Function}
+% consider the Dynamical system or the autonomous system
+% \[
+% \frac{dx(t)}{dt} = f(x(t))
+% \]
+% \[
+% x(t) = \begin{bmatrix}
+%     x_{1}\\
+%     x_{2}\\
+%     \vdots\\
+%     x_{n}\\
+% \end{bmatrix}
+% \qquad
+% f(x(t)) = \begin{bmatrix}
+%     f_{1}\\
+%     f_{2}\\
+%     \vdots\\
+%     f_{n}\\
+% \end{bmatrix}
+% \]
+% \begin{theorem}[Lyapunov's theorem]
+%     suppose that there exist a function $V(x)$ , such that $||V(x)|| \geq 0 , \forall x$ and $||V(x)|| = 0$ only at $x = \begin{bmatrix}
+%         0\\
+%         \vdots\\
+%         0\\
+%     \end{bmatrix}$
+%     \[
+%     \frac{dV}{dt} = \sum_{i=1}^{n} \frac{\partial V}{\partial x_i}\frac{d x_i}{dt}
+%                             = \sum_{i=1}^{n} \frac{\partial V}{\partial x_i} f_i(x,t) \leq 0
+%     \]    
+%     in some neighborhood of $\begin{bmatrix}
+%         0\\
+%         \vdots\\
+%         0\\
+%     \end{bmatrix}$
+%     it's supposed that f(0) = $\begin{bmatrix}
+%         0\\
+%         \vdots\\
+%         0\\
+%     \end{bmatrix}$ then the rest point is stable 
+
+%     if also $\displaystyle \frac{dV}{dt} \leq -\beta ,  \beta > 0 \ \ \ \text{outside} \ \ \ ||x(t)|| \leq \delta $ 
+
+%     then the rest point is asymptotically stable 
+% \end{theorem}
+% \begin{example}
+%     check the stability of the system   
+%     \begin{equation*}
+%         \begin{cases}
+%             \displaystyle \frac{dx}{dt} = -y -x^3
+%             \\\\
+%             \displaystyle \frac{dy}{dt} = x -y^3
+%             \\\\
+%             \displaystyle V = x^2 + y^2
+%         \end{cases}
+%     \end{equation*} 
+%     for sure $V \geq 0 , \forall x,y$ and $V = 0$ only at $x=y=0 $
+%     \begin{align*}
+%         \frac{dV}{dt} &= 2x \frac{dx}{dt} + 2y \frac{dy}{dt}
+%     \\
+%     &= 2x (-y -x^3) + 2y(x -y^3)
+%     \\
+%     &= -2xy -2x^4 +2xy -2y^4
+%     \\
+%     &= -2 (x^4 + y^4)
+%     \end{align*}
+%     $\displaystyle \frac{dV}{dt}$ is negative and $< \beta $ then the system is asymptotically stable 
+% \end{example}
+% \begin{example}
+%     check the stability of the system   
+% \begin{equation*}
+%     \begin{cases}
+%         \displaystyle \frac{dx}{dt} = -xy^4
+%         \\\\
+%         \displaystyle \frac{dy}{dt} = yx^4
+%         \\\\
+%         \displaystyle V = x^4 + y^4
+%     \end{cases}
+% \end{equation*}
+% for sure $V \geq 0 , \forall x,y$ and $V = 0$ only at $x=y=0 $
+% \begin{align*}
+%     \frac{dV}{dt} &= 4x^3 \frac{dx}{dt} + 4y^3 \frac{dy}{dt}
+% \\
+% &= -4x^4y^4 + 4x^4y^4
+% \\ 
+% &= 0
+% \end{align*}
+% then the system is stable but not asymptotically stable
+% \end{example} 
+% \begin{enrichment}{Aleksandr Lyapunov}{Aleksandr_Lyapunov.jpg}{2.4}{.8}{.17}
+%     Aleksandr Mikhailovich Lyapunov was a Russian mathematician, mechanician and physicist. Lyapunov contributed to several fields, including differential equations, potential theory, dynamical systems and probability theory. His main preoccupations were the stability of equilibria and the motion of mechanical systems, especially rotating fluid masses, and the study of particles under the influence of gravity.
+%     Lyapunov's impact was significant, and the following mathematical concepts are named after him:
+%         Lyapunov equation ,
+%         Lyapunov exponent ,
+%         Lyapunov function ,
+%         Lyapunov fractal ,
+%         Lyapunov stability ,
+%         Lyapunov's central limit theorem ,
+%         Lyapunov vector
+% \end{enrichment}
+
+
+% \setcounter{section}{0}
+% \setcounter{equation}{0}
+% \newpage 
+% \vspace*{\fill}
+% \begingroup
+% \thispagestyle{empty}
+% \begin{center}
+%     \fontsize{50pt}{0} $\mathbf{Lecture \qquad 4}$    
+%     \par
+%     \hspace*{-1.5cm}\fontsize{50pt}{0} $\mathbf{Climate \qquad Change}$    
+%     \par
+%     \fontsize{50pt}{0} $\mathbf{Models}$    
+% \end{center}
+% \endgroup
+% \vspace*{\fill}
+% \newpage
+% Test for stability 
+% \begin{equation*}
+%     \begin{cases}
+%          \displaystyle \frac{dx(t)}{dt} = -y(t) - x^3(t) + z(t)
+%          \\\\
+%          \displaystyle \frac{dy(t)}{dt} = x(t) - y^3(t) - z(t)
+%          \\\\
+%          \displaystyle \frac{dz(t)}{dt} = y(t) - x(t) - z^3(t)
+%      \end{cases}
+%  \end{equation*}
+% set Lyapunov function as following 
+% \[
+% V = x^2 + y^2 + z^2
+% \]
+% for sure $V \geq 0$
+% \begin{align*}
+%     \frac{\partial V}{\partial t} &= 2x \dot{x} +2y\dot{y} +2z \dot{z}     
+%     \\
+%     &= 2x[-y - x^3 + z] +2y[x - y^3 - z] +2z[y - x - z^3]
+%     \\
+%     &=-2xy -2x^4 + 2xz +2xy -2y^4 -2yz +2zy -2zx -2z^4
+%     \\
+%     &= -2x^4 -2y^4 -2z^4
+%     \\
+%     \therefore \dot{V} &=  -2(x^4 + y^4 + z^4) \leq 0
+% \end{align*}
+% i.e. $\dot{V}$ outside $(0,0,0)$ is $<0$ then the system is asymptotically stable
+
+% \section{Climate Change Mathematical Models}
+
+% consider the following model
+% \begin{align*}
+%     R \frac{dT(t)}{dt} &= a - bT(t)
+%     \\
+%     a = (1-\alpha)Q-A &\dquad,\dquad b = B 
+% \end{align*}
+% This equation represents a simple energy balance model used in climate science.
+% This type of model is often used to study the Earth's energy budget, 
+% taking into account various factors that influence the planet's temperature over time. 
+% In this equation:
+% \begin{itemize}
+%     \item $\displaystyle \frac{dT(t)}{dt}$ represents the rate of change of temperature with respect to time.
+%     \item $Q$ represents the incoming solar radiation.
+%     \item $\alpha$ is the albedo, which represents the fraction of incoming solar radiation that is reflected back to space.
+%     \item $A$ represents the outgoing long wave radiation, which is the energy radiated back into space by the Earth.
+%     \item $B$ represents the climate feedback parameter, which accounts for the feedback mechanisms that can amplify or dampen the effects of changes in temperature.
+%     and they all are constants and present something in the real world
+% \end{itemize}
+% now let's try to solve it 
+% \[
+% \frac{dT(t)}{a - bT(t)} = \frac{1}{R} dt
+% \]
+% multiply both sides with $-b$ and integrating with respect to $t$
+% \begin{align*}
+%     \int_{0}^{t} \frac{-b dT(t)}{a - bT(t)} &= \frac{-bt}{R}    
+%     \\
+%     ln(a - bT(t)) - ln(a - bT(0)) &= \frac{-bt}{R}
+% \\
+% ln \left(\frac{a - bT(t)}{a - bT(0)}\right) &= \frac{-bt}{R}
+% \\
+% a - bT(t) &= (a - bT(0))e^{\frac{-bt}{R}}
+% \\
+% T(t) &= \frac{a}{b} + \frac{1}{b}(bT(0)-a)e^{\frac{-bt}{R}}
+% \end{align*}
+
+% when taking the limit of $T(t)$ as $t$ goes to $\infty$
+% \[
+% \lim_{t \to \infty} T(t) = \frac{a}{b}
+% \]
+% this is called the equilibrium point (or the zero solution that makes $T(t)$ constant)
+% \subsection{Kaper and Engler Climate Model}
+% Consider the next model
+% \[
+% R \frac{dT(t)}{dt} = (1-\alpha)Q - \sigma T^4(t) \qquad 0<\alpha <1
+% \]
+% The Kaper and Engler climate model is a simplified mathematical representation of the Earth's climate system. 
+% The model describes the rate of change of the Earth's temperature $T(t)$ over time $t$ where :
+
+% \begin{itemize}
+%     \item $\displaystyle \frac{dT(t)}{dt}$ represents the rate of change of temperature with respect to time.
+%     \item $Q$ is the incoming solar radiation (insolation) absorbed by the Earth.
+%     \item $\alpha$  is the albedo, which represents the fraction of incoming solar radiation that is reflected back to space.
+%     \item $\sigma$ is the Stefan-Boltzmann constant, which relates the temperature of a black body (in this case, the Earth) to the amount of radiation it emits.
+% \end{itemize}
+% This equation captures two main factors influencing the Earth's temperature change:
+% \begin{enumerate}
+%     \item Solar Radiation (First Term): The term $(1-\alpha)Q$ represents the solar radiation absorbed by the Earth.
+%     $(1-\alpha)$ is the fraction of incoming solar radiation that is absorbed (since $\alpha$ is the albedo, the fraction that is reflected), 
+%     and $Q$ represents the total incoming solar radiation.
+%     \item Radioactive Cooling (Second Term): The term $-\sigma T^4(t)$ represents the Earth's radioactive cooling. 
+%     This term describes how the Earth emits thermal radiation into space as a function of its temperature $T(t)$. 
+%     According to the Stefan-Boltzmann law, the rate at which a black body radiates energy is proportional to the fourth power of its temperature.
+% \end{enumerate}
+
+
+% the equilibrium point of this model is
+% \begin{align*}
+%     (1-\alpha)Q - \sigma T^4(t) &= 0
+%     \\
+%     T^4(t) &= \frac{(1-\alpha)Q}{\sigma}
+% \end{align*}
+
+% \section {Adomian Decomposition Method(A.D.M)}
+
+% consider the nonlinear differential equation 
+% \begin{equation}
+%     \begin{cases}
+%          \displaystyle \frac{\partial u(x,t)}{\partial t} = x^2 - \frac{1}{4}(\frac{\partial u(x,t)}{\partial x})^2
+%          \\
+%          \displaystyle u(x,0) = 0
+%      \end{cases}
+%  \end{equation}
+% this equation can be solved by successive approximation or the method that we will discuss which is A.D.M 
+% \newpage
+% steps of Adomian Method
+
+
+% Consider a nonlinear differential equation in the form $F(u)=0$, where $u$ is the unknown function.
+% \begin{enumerate}
+%     \item Decomposition: Decompose the unknown function $u$ into a series of components:
+%     \[
+%         u(t) = \sum_{n=0}^{\infty} u_n(t)
+%     \]
+%     \item  Nonlinear Operator: Express the nonlinear operator $N(u)$ in terms of the components $A_n(t)$. This might involve derivatives of y and nonlinear functions of $u$.
+%     \item Recursive Formulas: Use recursive formulas to find the components $A_n(t)$ iteratively. 
+%     The recursive formulas are derived from the nonlinear operator $N(u)$ and its components. 
+%     Typically, the $n$th component  $A_n(t)$ is determined using the previous components  $A_0(t),A_1(t),A_2(t),\dots,A_{n-1}(t)$.
+%     \item Solve for Components: Solve the recursive formulas to obtain the components  $A_n(t)$ iteratively. 
+%     The initial components $A_0(t),A_1(t)$ are often chosen based on the problem's initial or boundary conditions.
+%     \item Summation Sum the components to obtain the approximate solution $u(t)$
+%     \[
+%         u(t) \simeq \sum_{n=0}^{\infty} u_n(t)
+%     \]
+%     \item Analysis and Convergence: Analyze the obtained series solution and check for convergence. 
+%     Sometimes, it might be necessary to truncate the series at a certain order for practical computations.
+%     \item Validation: Validate the approximate solution by substituting it back into the original nonlinear equation 
+%     $F(u)=0$ to ensure it satisfies the equation approximately.
+% \end{enumerate}
+% set
+% \begin{align*}
+%     u(x,t) &= \sum_{n=0}^{\infty} u_n(x,t)
+% \\
+% N(u) &= \sum_{n=0}^{\infty} A_n(x,t)
+% \end{align*}
+% where $N(u)$ represents the nonlinear form of u in our case in equation (1) $N(u) = \left(\frac{\partial u}{\partial x}\right)^2$
+% \begin{align*}
+% A_n(x,t) &= \left[\frac{1}{n!} \frac{d^n}{d \lambda^n} N\left(\sum_{i=0}^{n}  \lambda^i u_i(x,t)\right)\right]_{\lambda = 0}
+% \\
+% A_n(x,t) &= \left[\frac{1}{n!} \frac{d^n}{d \lambda^n} \left(\sum_{i=0}^{n}  \lambda^i \frac{\partial u_i(x,t)}{\partial x}\right)^2\right]_{\lambda = 0}
+% \end{align*}
+% integrating equation (1) from $0 \to t$
+% \[
+%     u(x,t) = \sum_{n=0}^{\infty} u_n(x,t)  = x^2t - \frac{1}{4} \int_{0}^{t}\sum_{n=0}^{\infty} A_n(x,\theta) d\theta 
+% \]
+% now we get $A_0$,$A_1$,$A_2$...
+% \begin{align*}
+%     A_0(x,\theta) &= \left[\sum_{i=0}^{0}  \lambda^i \frac{\partial u_i(x,\theta)}{\partial x}^2\right]_{\lambda = 0} = \left(\frac{\partial u_0(x,\theta)}{\partial x}\right)^2
+%     \\    
+%     A_1(x,\theta) &= \left[\frac{d}{d \lambda} \left(\sum_{i=0}^{1}  \lambda^i \frac{\partial u_i(x,\theta)}{\partial x}\right)^2\right]_{\lambda = 0}
+%     \\  
+%     &= \left[\frac{d}{d \lambda} \left(\frac{\partial u_0(x,\theta)}{\partial x} + \lambda \frac{\partial u_1(x,\theta)}{\partial x}\right)^2\right]_{\lambda = 0}
+%     \\
+%     &=2\left[\left(\frac{\partial u_0(x,\theta)}{\partial x} + \lambda \frac{\partial u_1(x,\theta)}{\partial x}\right)\frac{\partial u_1(x,\theta)}{\partial x}\right]_{\lambda = 0} = 2\frac{\partial u_0(x,\theta)}{\partial x} \frac{\partial u_1(x,\theta)}{\partial x}
+%     \\
+%     A_2(x,\theta) &=\left[\frac{1}{2!} \frac{d^2}{d \lambda^2} \left(\sum_{i=0}^{2}  \lambda^i \frac{\partial u_i(x,\theta)}{\partial x}\right)^2\right]_{\lambda = 0}
+%     \\
+%     &= \left[\frac{1}{2} \frac{d^2}{d \lambda^2} \left(\frac{\partial u_0(x,\theta)}{\partial x} + \lambda \frac{\partial u_1(x,\theta)}{\partial x} + \lambda^2 \frac{\partial u_2(x,\theta)}{\partial x}\right)^2\right]_{\lambda = 0}
+%     \\
+%     &= \left(\frac{\partial u_1(x,\theta)}{\partial x}\right)^2 + 2 \left(\frac{\partial u_0(x,\theta)}{\partial x}\frac{\partial u_2(x,\theta)}{\partial x}\right)
+%     \\
+%     A_3(x,\theta) &= 2\frac{\partial u_1(x,\theta)}{\partial x}\frac{\partial u_2(x,\theta)}{\partial x} + 2\frac{\partial u_0(x,\theta)}{\partial x} \frac{\partial u_2(x,\theta)}{\partial x}
+% \end{align*}
+% now because 
+% \[
+% u_0 + u_1 + u_2 +\dots = u(x,t) = x^2t - \frac{1}{4}[A_0+A_1+A_2+\dots]
+% \]
+% then 
+% \begin{align*}
+%     u_0 &= x^2t  
+%     \\
+%     u_1 &= -\frac{1}{4}\int_{0}^{t}A_0d\theta = -\frac{1}{4}\int_{0}^{t}\left(\frac{\partial u_0(x,\theta)}{\partial x}\right)^2 = -\int_{0}^{t} x^2 \theta^2 d\theta = \frac{-1}{3}x^2t^3
+%     \\
+%     u_2 &= \frac{2}{15} x^2t^5
+%     \quad , \quad
+%     u_3 = \frac{-17}{315} x^2t^7 \quad , \quad \dots
+% \end{align*}
+% \[
+%     u(x,t) = x^2 \left[t-\frac{1}{3}t^3 + \frac{2}{15} t^5 - \frac{17}{315} t^7 \dots\right] = x^2 \tanh(t)
+% \]
+% \newpage
+% consider the nonlinear differential equation 
+% \begin{equation}
+%     \begin{cases}
+%          \displaystyle \frac{\partial u(x,t)}{\partial t} = x\frac{\partial u(x,t)}{\partial x} +u(x,t)\frac{\partial u(x,t)}{\partial x} -xt -xt^2 +x
+%          \\
+%          \displaystyle u(x,0) = 0
+%      \end{cases}
+%  \end{equation}
+% the solution of equation (2) is given by $u(x,t)=xt$ by Substitute in (2)
+% \[
+% L.H.S = x
+% \qquad
+% R.H.S = xt + xt^2 -xt -xt^2 +x = x
+% \]
+% now let's use A.D.M to solve it 
+% \\
+% integrating (2) with respect to $t$
+% \begin{align*}
+%     u(x,t) &= \int_{0}^{t}x\frac{\partial u(x,s)}{\partial x}ds + \int_{0}^{t}u(x,s)\frac{\partial u(x,s)}{\partial x}ds - \frac{xt^2}{2} - \frac{xt^3}{3} + xt
+%     \\
+%     &= \int_{0}^{t} L(u)ds + \int_{0}^{t} N(u)ds + g(x,t)
+% \end{align*}
+% $L(u)$ represents the linear part and $N(u)$ represents the nonlinear part
+
+% Now set
+% \begin{align*}
+%     u(x,t) &= \sum_{n=0}^{\infty} u_n(x,t)
+% \\
+% N(u) &= \sum_{n=0}^{\infty} A_n(x,t)
+% \end{align*}
+% in this case $N(u) = u \frac{\partial u}{\partial x}$
+% \begin{align*}
+% A_n(x,t) &= \left[\frac{1}{n!} \frac{d^n}{d \lambda^n} N\left(\sum_{i=0}^{n}  \lambda^i u_i(x,t)\right)\right]_{\lambda = 0}
+% \\
+% A_n(x,t) &= \left[\frac{1}{n!} \frac{d^n}{d \lambda^n} \left(\sum_{i=0}^{n}  \lambda^i u_i(x,t)\right)\left(\sum_{i=0}^{n}  \lambda^i \frac{\partial u_i(x,t)}{\partial x}\right)\right]_{\lambda = 0}
+% \end{align*}
+% and as before we get $A_0,A_1,A_2\dots$
+% \begin{align*}
+%     A_0 &= u_0\frac{\partial u_0}{\partial x}
+%     \\
+%     A_1 &= \left[\frac{d}{d \lambda} \left(\sum_{i=0}^{1}  \lambda^i u_i(x,t)\right)\left(\sum_{i=0}^{1}  \lambda^i \frac{\partial u_i(x,t)}{\partial x}\right)\right]_{\lambda = 0}
+%     \\
+%     &= \left[\frac{d}{d \lambda} \left(u_0 + \lambda u_1 \right)\left(\frac{\partial u_0}{\partial x} + \lambda\frac{\partial u_1}{\partial x}\right)\right]_{\lambda = 0}
+%     \\
+%     &= u_1 \frac{\partial u_0}{\partial x} + u_0 \frac{\partial u_1}{\partial x}
+%     \\
+%     A_2 &= u_0 \frac{\partial u_2}{\partial x} + u_1 \frac{\partial u_1}{\partial x} + u_2 \frac{\partial u_0}{\partial x}
+% \end{align*}
+% now 
+% \[
+% u_0 + u_1 + u_2+\dots = \int_{0}^{t}x\frac{\partial u(x,s)}{\partial x}ds + \int_{0}^{t}u(x,s)\frac{\partial u(x,s)}{\partial x}ds - \frac{xt^2}{2} - \frac{xt^3}{3} + xt
+% \]
+% put 
+% \begin{align*}
+%     u_0 &=  - \frac{xt^2}{2} - \frac{xt^3}{3} + xt
+%     \\
+%     u_1 &= \int_{0}^{t}x\frac{\partial u_0(x,s)}{\partial x}ds + \int_{0}^{t}A_0(x,s)ds
+%     \\
+%     u_2 &= \int_{0}^{t}x\frac{\partial u_1(x,s)}{\partial x}ds + \int_{0}^{t}A_1(x,s)ds
+%     \\
+%     \vdots
+%     \\
+%     u_n &= \int_{0}^{t}x\frac{\partial u_{n-1}(x,s)}{\partial x}ds + \int_{0}^{t}A_{n-1}(x,s)ds
+% \end{align*}
+
+% we get in the end that 
+% \[
+%     \sum_{n=0}^{\infty} u_n(x,t) = xt    
+% \]
+
+% \setcounter{section}{0}
+% \setcounter{equation}{0}
+% \newpage 
+% \vspace*{\fill}
+% \begingroup
+% \thispagestyle{empty}
+% \begin{center}
+%     \fontsize{50pt}{0} $\mathbf{Lecture \qquad 5}$    
+%     \par
+%     \fontsize{50pt}{0} $\mathbf{Continue \qquad Climate}$    
+%     \par
+%     \fontsize{50pt}{0} $\mathbf{Change \qquad Models}$    
+% \end{center}
+% \endgroup
+% \vspace*{\fill}
+% \newpage
+
+% consider the following system (Archana C. Varsdiwala , Twinkle R. Singh 2022)
+%  \begin{equation}
+%      \begin{cases}
+%          \displaystyle \pdv{m(x,t)}{t} + \textcolor{red}{m \pdv{m(x,t)}{x}} - fp(x,t) + g\pdv{\eta(x,t)}{x} = 0
+%          \\\\
+%          \displaystyle \pdv{p(x,t)}{t} + \textcolor{red}{m \pdv{p(x,t)}{x}} + fm(x,t) = 0
+%          \\\\
+%          \displaystyle \pdv{\eta(x,t)}{t} + \textcolor{red}{m \pdv{\eta(x,t)}{x}} + \textcolor{red}{\eta\pdv{\eta(x,t)}{x}} = 0
+%      \end{cases}
+%  \end{equation}
+ 
+% the problems that we has in this system are the nonlinear terms which are the terms colored in red
+% we will work on it as we did before but on bigger scale (system of 3 equations)
+% \par
+% set 
+% \[
+% m(x,t) = \sum_{n=0}^{\infty} m_n(x,t) 
+% \quad , \quad 
+% p(x,t) = \sum_{n=0}^{\infty} p_n(x,t) 
+% \quad , \quad 
+% \eta(x,t) = \sum_{n=0}^{\infty} \eta_n(x,t)
+% \]
+% and now we set the Summation that is equivalent to each nonlinear term  
+% \[
+% m\pdv{m(x,t)}{x} = \sum_{n=0}^{\infty} A_n(x,t) 
+% \quad , \quad 
+% m\pdv{p(x,t)}{x} = \sum_{n=0}^{\infty} B_n(x,t) 
+% \quad , \quad 
+% m \pdv{\eta(x,t)}{x} + \eta\pdv{\eta(x,t)}{x} = \sum_{n=0}^{\infty} C_n(x,t) 
+% \]
+% then we get the formula of $A_n , B_n , C_n$
+% \begin{align*}
+%      A_n(x,t) &= \frac{1}{n!} \frac{d^n}{d\lambda^n} \left[\left(\sum_{i=0}^{n}  \lambda^i m_i(x,t)\right)\left(\sum_{i=0}^{n}  \lambda^i \pdv{m_i(x,t)}{x}\right)\right]_{\lambda = 0}
+%      \\
+%      B_n(x,t) &= \frac{1}{n!} \frac{d^n}{d\lambda^n} \left[\left(\sum_{i=0}^{n}  \lambda^i m_i(x,t)\right)\left(\sum_{i=0}^{n}  \lambda^i \pdv{p_i(x,t)}{x}\right)\right]_{\lambda = 0}
+%      \\
+%      C_n(x,t) &= \frac{1}{n!} \frac{d^n}{d\lambda^n} \left[\left(\sum_{i=0}^{n}  \lambda^i m_i(x,t)\right)\left(\sum_{i=0}^{n}  \lambda^i \pdv{\eta_i(x,t)}{x}\right) + \left(\sum_{i=0}^{n}  \lambda^i \eta_i(x,t)\right)\left(\sum_{i=0}^{n}  \lambda^i \pdv{\eta_i(x,t)}{x}\right)\right]_{\lambda = 0}
+% \end{align*}
+% integrate each equation in (1) from $0 \to t $
+% \[
+% m(x,t) = m(x,0) - \int_{0}^{t}m(x,s) \pdv{m(x,s)}{x} ds + f\int_{0}^{t} p(x,s)ds - g\int_{0}^{t}\pdv{\eta(x,s)}{x} ds
+% \]
+% \[
+% p(x,t) = p(x,0) - \int_{0}^{t} m(x,s) \pdv{p(x,s)}{x} ds - f\int_{0}^{t} m(x,s)ds
+% \]
+% \[
+% \eta(x,t) = \eta(x,0) - \int_{0}^{t} m(x,s) \pdv{\eta(x,s)}{x} ds - \int_{0}^{t} \eta(x,s)\pdv{\eta(x,s)}{x} ds 
+% \]
+% now replace each nonlinear term with it's equivalent Summation
+% \[
+% \sum_{n=0}^{\infty} m_n(x,t)  = m(x,0) - \int_{0}^{t}\sum_{n=0}^{\infty} A_n(x,s)  ds + f\int_{0}^{t} \sum_{n=0}^{\infty} p_n(x,s) ds - g\int_{0}^{t}\sum_{n=0}^{\infty} \pdv{\eta_n(x,s)}{x} ds
+% \]
+% \[
+% \sum_{n=0}^{\infty} p_n(x,t)  = p(x,0) - \int_{0}^{t} \sum_{n=0}^{\infty} B_n(x,s)  ds - f\int_{0}^{t} \sum_{n=0}^{\infty} m_n(x,s) ds
+% \]
+% \[
+% \sum_{n=0}^{\infty} \eta_n(x,t)  = \eta(x,0) - \int_{0}^{t} \sum_{n=0}^{\infty} C_n(x,s)ds 
+% \]
+% now getting $m_1,m_2,m_3\dots$ , $p_1,p_2,p_3\dots$ , $\eta_1,\eta_2,\eta_3\dots$ will get us the solution of the system (1)
+
+% \newpage
+
+% Consider the nonlinear system of equations
+% \begin{equation}
+%     \begin{cases}
+%          \displaystyle \pdv{u}{t}= u\pdv{u}{x} + v\pdv{u}{y}
+%          \\
+%          \displaystyle \pdv{u}{t}= u\pdv{u}{x} + v\pdv{u}{y}
+%          \\
+%          \displaystyle u(x,y,0)=v(x,y,0)=x+y \Longrightarrow I.C
+%      \end{cases}
+%  \end{equation}
+% Integrate (4) with respect to t
+% \begin{align*} 
+%     u(x,y,t) &=x+y + \int_0^{t}\left( u(x,y,\theta)\pdv{u}{x} + v(x,y,\theta)\pdv{u}{y} \right)\, d\theta 
+%     \\
+%     v(x,y,t) &=x+y + \int_0^{t}\left(u(x,y,\theta)\pdv{v}{x} + v(x,y,\theta)\pdv{v}{y} \right) \, d\theta
+% \end{align*}
+% Let
+% \begin{align*}
+%     u(x,y,t) = \sum_{n=0}^{\infty} u_n \quad&\&\quad v(x,y,t) = \sum_{n=0}^\infty v_n
+%     \\
+%     u\pdv{u}{x}+v\pdv{u}{y} =\sum_{n=0}^\infty A_n \quad&\&\quad u\pdv{v}{x}+v\pdv{v}{y} =\sum_{n=0}^\infty B_n 
+% \end{align*}
+% where
+% \begin{align*}
+%     A_n &= \frac{1}{n!} \dv[n]{}{\lambda}\left[\left(\sum_{j=0}^{n} \lambda^j u_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{u_j}{x}\right)+ \left(\sum_{j=0}^{n} \lambda^j v_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{u_j}{y}\right)\right]_{\lambda=0}
+%     \\
+%     B_n &= \frac{1}{n!} \dv[n]{}{\lambda}\left[\left(\sum_{j=0}^{n} \lambda^j u_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{v_j}{x}\right)+ \left(\sum_{j=0}^{n} \lambda^j v_j\right)\left(\sum_{j=0}^{n} \lambda^j \pdv{v_j}{y}\right)\right]_{\lambda=0}
+% \end{align*}
+% And as before we get $A_0,A_1,A_2\dots$ and $B_0,B_1,B_2\dots$
+% \begin{align*}
+%     A_0 &= u_0 \pdv{u_0}{x}+v_0 \pdv{u_0}{y}
+%     \\
+%     A_1 &= u_0 \pdv{u_1}{x} + v_0 \pdv{u_1}{y} + u_1 \pdv{u_0}{x} + v_1 \pdv{u_0}{y}
+%     \\
+%     A_2 &= u_0 \pdv{u_2}{x} + v_0 \pdv{u_2}{y} + u_1 \pdv{u_1}{x} + v_1 \pdv{u_1}{y} + u_2 \pdv{u_0}{x} + v_2 \pdv{u_0}{y} 
+%     \\
+%     \vdots
+% \end{align*}
+% Similarly
+% \begin{align*}
+%     B_0 &= u_0 \pdv{v_0}{x}+v_0 \pdv{v_0}{y}
+%     \\
+%     B_1 &= u_0 \pdv{v_1}{x} + v_0 \pdv{v_1}{y} + u_1 \pdv{v_0}{x} + v_1 \pdv{v_0}{y}
+%     \\
+%    B_2 &= u_0 \pdv{v_2}{x} + v_0 \pdv{v_2}{y} + u_1 \pdv{v_1}{x} + v_1 \pdv{v_1}{y} + u_2 \pdv{v_0}{x} + v_2 \pdv{v_0}{y} 
+%     \\
+%     \vdots
+% \end{align*}
+% Now, We get that
+% \begin{equation*}
+% \begin{aligned}[c]
+%     u_0 &=  x+y
+%     \\
+%     u_1 &= (x+y)(2t)
+%     \\
+%     u_2 &= (x+y)(2t)^2
+%     \\
+%     \vdots
+%     \\
+%     u_n &= (x+y)(2t)^n
+% \end{aligned}
+% \qquad\qquad
+% \begin{aligned}[c]
+%     v_0 &=  x+y
+%     \\
+%     v_1 &= (x+y)(2t)
+%     \\
+%     v_2 &= (x+y)(2t)^2
+%     \\
+%     \vdots
+%     \\
+%     v_n &= (x+y)(2t)^n
+% \end{aligned}
+% \end{equation*}
+% Thus
+% \begin{align*}
+%     \sum_{n=0}^{\infty} u_n &=(x+y)\left[ 1+(2t) + (2t)^2 + \dots \right] \\
+%     u(x,y,t) &=(x+y)\frac{1}{1-2t} = \frac{x+y}{1-2t}\\
+%     \sum_{n=0}^{\infty} v_n &=(x+y)\left[ 1+(2t) + (2t)^2 + \dots \right] \\
+%     v(x,y,t) &=(x+y)\frac{1}{1-2t} = \frac{x+y}{1-2t}\\
+% \end{align*}
+
+
+
+
+\setcounter{section}{0}
+\setcounter{equation}{0}
+\newpage 
+\vspace*{\fill}
+\begingroup
+\thispagestyle{empty}
+\begin{center}
+    \fontsize{50pt}{0} $\mathbf{Lecture \qquad 6}$    
+    \par
+    \fontsize{50pt}{0} $\mathbf{Linear \qquad System}$    
+    \par
+    \fontsize{50pt}{0} $\mathbf{Of \qquad ODEs}$    
+\end{center}
+\endgroup
+\vspace*{\fill}
+\newpage
+\section{Linear ODE System}
+consider the system
+\begin{equation}
+    \begin{cases}
+        \displaystyle \frac{dX(t)}{dt} = A(t)X(t)
+        \\
+        \displaystyle X(t) = \begin{bmatrix}
+            x_{1}(t)\\
+            x_{2}(t)\\
+            \vdots\\
+            x_{n}(t)
+        \end{bmatrix}
+        \quad , \quad
+        A(t) = \begin{bmatrix}
+            a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
+            a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
+            \vdots &\vdots & &\vdots \\
+            a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+        \end{bmatrix}        
+    \end{cases}
+\end{equation}
+where $a_{ij}(t)$ are continuous functions on $[\alpha , \beta]$
+
+suppose that $\mathbf{S}(t)$ is a square matrix of order n such that 
+\[
+    \frac{d\mathbf{S}(t)}{dt} = A(t)\mathbf{S}(t)
+    \quad , \quad 
+    \mathbf{S}(t) = \begin{bmatrix}
+        s_{11}(t) & s_{12}(t) & \dots & s_{1n}(t)\\
+        s_{21}(t) & s_{22}(t) & \dots & s_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        s_{n1}(t) & s_{n2}(t) & \dots & s_{nn}(t)\\
+    \end{bmatrix}
+\]
+if the columns of 
+$
+\begin{bmatrix}
+    s_{11}(t)\\
+    s_{21}(t)\\
+    \vdots\\
+    s_{n1}(t)\\
+\end{bmatrix}
+$,
+$
+\begin{bmatrix}
+    s_{12}(t)\\
+    s_{22}(t)\\
+    \vdots\\
+    s_{n2}(t)\\
+\end{bmatrix}
+$
+,
+$\dots$
+,
+$
+\begin{bmatrix}
+    s_{1n}(t)\\
+    s_{2n}(t)\\
+    \vdots\\
+    s_{nn}(t)\\
+\end{bmatrix}
+$
+are Linearly independent then $\mathbf{S}(t)$ is called a fundamental solution
+of the system
+
+\begin{theorem}[]
+        The solution $\mathbf{S}(t)$ is fundamental iff $\det(\mathbf{S}(t))\neq 0$ on the interval $[\alpha , \beta]$
+        \\
+        i.e Linearly independent $\Longleftrightarrow$ $\det(\mathbf{S}(t))\neq 0$
+\end{theorem}
+
+\begin{theorem}[]
+    if $\mathbf{S}(t)$ is a fundamental solution of system (1) and if $\mathbf{C}$ is constant matrix such that $\det(\mathbf{C})\neq 0$ then $\mathbf{S}(t)\mathbf{C}$ is a fundamental
+    solution of system (1) 
+\end{theorem}
+\begin{proof}[Proof]
+    set
+    \[
+       f(t) = \mathbf{S}(t)\mathbf{C}
+    \]
+    where $\det(\mathbf{C})\neq 0$
+    \begin{align*}
+        \det f(t) &= \det[\mathbf{S}(t)\mathbf{C}]
+        \\
+                        &= \det\mathbf{S}(t)\det\mathbf{C}
+        \\
+                        &\neq 0
+    \end{align*}
+    now we proof that it's a solution
+    \[
+        \frac{df(t)}{dt} = \frac{d\mathbf{S}(t)}{dt}\mathbf{C} =A(t)\mathbf{S}(t)\mathbf{C} = A(t)f(t)
+    \]
+    then $\mathbf{S}(t)\mathbf{C}$ is a fundamental solution
+\end{proof}
+\newpage
+\begin{theorem}[]
+    if $\mathbf{S}_1(t)$ and $\mathbf{S}_2(t)$ are fundamental solution of system (1) then $\mathbf{S}_2(t) = \mathbf{S}_1(t)\mathbf{C}$ where $\mathbf{C}$ is constant matrix such that $\det(\mathbf{C})\neq 0$
+\end{theorem}
+
+\begin{proof}[Proof]
+    let $\mathbf{S}_1(t)$ and $\mathbf{S}_2(t)$ be fundamental solutions
+    \\
+    set 
+    \[
+        \mathbf{S}_2(t) = \mathbf{S}_1(t)\mathbf{G}(t)
+    \]
+    then 
+    \begin{align*}
+        \frac{d\mathbf{S}_2(t)}{dt} &= \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + \frac{d\mathbf{S}_1(t)}{dt}\mathbf{G}(t)
+        \\
+        A(t)\mathbf{S}_2(t) &= \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + A(t)\mathbf{S}_1(t)\mathbf{G}(t)
+        \\
+        A(t)\mathbf{S}_1(t)\mathbf{G}(t) &= \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + A(t)\mathbf{S}_1(t)\mathbf{G}(t)
+        \\
+\therefore \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} &= 0
+    \end{align*}
+because $\det(\mathbf{S}_1(t))\neq 0$ then it has inverse 
+\\
+then multiply by this inverse from the left
+\begin{align*}
+    \mathbf{S}_1^{-1}(t)\mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} &= 0
+    \\
+    \frac{d\mathbf{G}(t)}{dt} &= 0
+    \\
+    \therefore \mathbf{G}(t) &= \mathbf{C}
+\end{align*}
+then $\mathbf{G}(t)$ is a constant matrix
+\end{proof}
+
+\section{Matrix and Determinant Differentiation}
+if a differentiation applied on matrix then the result will be as following
+\[
+    \frac{d}{dt} \begin{bmatrix}
+        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
+        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+    \end{bmatrix} 
+    =
+    \begin{bmatrix}
+        \dot{a}_{11}(t) & \dot{a}_{12}(t) & \dots & \dot{a}_{1n}(t)\\
+        \dot{a}_{21}(t) & \dot{a}_{22}(t) & \dots & \dot{a}_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        \dot{a}_{n1}(t) & \dot{a}_{n2}(t) & \dots & \dot{a}_{nn}(t)\\
+    \end{bmatrix}  
+\]
+on the other hand if it's applied on Determinant
+\begin{align*}
+    \frac{d}{dt} \begin{vmatrix}
+        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
+        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+    \end{vmatrix} 
+    =&
+    \begin{vmatrix}
+        \dot{a}_{11}(t) & \dot{a}_{12}(t) & \dots & \dot{a}_{1n}(t)\\
+        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+    \end{vmatrix}
+    +
+    \begin{vmatrix}
+        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
+        \dot{a}_{21}(t) & \dot{a}_{22}(t) & \dots & \dot{a}_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+    \end{vmatrix}  
+    +
+    \dots
+    \\
+    &+
+    \begin{vmatrix}
+        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
+        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        \dot{a}_{n1}(t) & \dot{a}_{n2}(t) & \dots & \dot{a}_{nn}(t)\\
+    \end{vmatrix}
+\end{align*}
+
+property : 
+\\
+let $\displaystyle \mathbf{S}(t) = e^{\mathbf{A}t}$ where $\mathbf{A}$ is a constant matrix then
+\[
+    \frac{d\mathbf{S}(t)}{dt} = \mathbf{A}e^{\mathbf{A}t} = \mathbf{A}\mathbf{S}(t)
+\]
+where $\det(e^{\mathbf{A}t})\neq 0$
+then $e^{\mathbf{A}t}$ is a fundamental solution of $\displaystyle \frac{dX(t)}{dt} = AX(t)$
+\newpage
+\begin{theorem}[]
+    if $\mathbf{S}(t)$ is fundamental solution of system (1) i.e 
+    \[
+        \frac{d\mathbf{S}(t)}{dt} = \mathbf{A}(t)\mathbf{S}(t)
+    \]
+    then $\displaystyle \frac{d}{dt}\det(\mathbf{S}(t)) = \trace[\mathbf{A}(t)] \det(\mathbf{S}(t))$
+    \\
+    and Det($\mathbf{S}(t)$) = $\det(\mathbf{S}(t_0))e^{\int_{t_0}^{t}tr[\mathbf{A}(\theta)]d\theta}$
+    \\
+    where $\trace[\mathbf{A}(t)] = a_{11}(t) + a_{22}(t) + \dots + a_{nn}(t)$
+\end{theorem}
+\begin{proof}[Proof]
+    because
+    \[
+        \frac{d\mathbf{S}(t)}{dt} = \mathbf{A}(t)\mathbf{S}(t)
+    \]
+    let 
+    \[
+        \mathbf{A}(t)\mathbf{S}(t) = b_{ij}(t) = \sum_{k=1}^{n} a_{ik}(t)s_{kj}(t)
+    \]  
+    then 
+    \begin{align*}
+        \frac{d}{dt} \det(\mathbf{S}(t))
+        =&
+        \begin{vmatrix}
+            \sum_{k=1}^{n} a_{1k}(t)s_{k1}(t) & \sum_{k=1}^{n} a_{1k}(t)s_{k2}(t) & \dots & \sum_{k=1}^{n} a_{1k}(t)s_{kn}(t)\\
+            a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
+            \vdots &\vdots & &\vdots \\
+            a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+        \end{vmatrix}
+        +
+        \dots
+        \\
+        &+
+        \begin{vmatrix}
+            a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
+            a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
+            \vdots &\vdots & &\vdots \\
+            \sum_{k=1}^{n} a_{nk}(t)s_{k1}(t) & \sum_{k=1}^{n} a_{nk}(t)s_{k2}(t) & \dots & \sum_{k=1}^{n} a_{nk}(t)s_{kn}(t)\\
+        \end{vmatrix} 
+    \end{align*}
+using the properties of determinants we get 
+\[
+    \frac{d}{dt} \det(\mathbf{S}(t)) = a_{11}\det(\mathbf{S}(t)) + a_{22}\det(\mathbf{S}(t)) +\dots+a_{nn}\det(\mathbf{S}(t)) = \trace(\mathbf{A}(t))\det(\mathbf{S}(t))
+\]
+then we can write that 
+\begin{align*}
+    \frac{d}{dt} \det(\mathbf{S}(t)) &= \trace(\mathbf{A}(t))\det(\mathbf{S}(t))
+    \\
+    \frac{d \det(\mathbf{S}(t))}{\det(\mathbf{S}(t))} &= \trace(\mathbf{A}(t)) dt
+    \\
+    \ln \left( \frac{\det(\mathbf{S}(t))}{\det(\mathbf{S}(t_0))} \right)&= \int_{t_0}^{t}\trace[\mathbf{A}(\theta)]d\theta
+    \\
+    \det(\mathbf{S}(t)) &= \det(\mathbf{S}(t_0))e^{\int_{t_0}^{t}\trace[\mathbf{A}(\theta)]d\theta}
+\end{align*}
+\end{proof}
+special case :
+If $\mathbf{A}$ is a constant matrix and $t_0=0$ then 
+\[
+    \det(\mathbf{S}(t)) = \det(\mathbf{S}(0))e^{\trace[\mathbf{A}]}
+\]
+\begin{example}
+    if 
+    \(
+        \mathbf{A} = \begin{bmatrix}
+            8 & 5 & 2\\
+            9 & 1 & 3\\
+            4 & -5 & 6
+        \end{bmatrix}
+    \)
+    then 
+    \[
+        \det e^{\mathbf{A}} = \trace(\mathbf{A}) = 8+1+6 = 15
+    \]
+\end{example}
+\newpage
+now to find $e^{\mathbf{A}}$ , $\mathbf{A}$ is of order n
+\[
+    \frac{dX(t)}{dt}   = \mathbf{A}X(t)
+\]
+we find the $n^{\text{th}}$ solution
+$
+\begin{bmatrix}
+    x_{11}(t)\\
+    x_{21}(t)\\
+    \vdots\\
+    x_{n1}(t)\\
+\end{bmatrix}
+$,
+$
+\begin{bmatrix}
+    x_{12}(t)\\
+    x_{22}(t)\\
+    \vdots\\
+    x_{n2}(t)\\
+\end{bmatrix}
+$
+,
+$\dots$
+,
+$
+\begin{bmatrix}
+    x_{1n}(t)\\
+    x_{2n}(t)\\
+    \vdots\\
+    x_{nn}(t)\\
+\end{bmatrix}
+$
+and by compining them in one matrix we get the solution
+\[
+    X(t) = e^{\mathbf{A}} = \begin{bmatrix}
+        x_{11}(t) & x_{12}(t) & \dots & x_{1n}(t)\\
+        x_{21}(t) & x_{22}(t) & \dots & x_{2n}(t)\\
+        \vdots &\vdots & &\vdots \\
+        x_{n1}(t) & x_{n2}(t) & \dots & x_{nn}(t)\\
+    \end{bmatrix}  
+\]
+\begin{example}
+    solve 
+    \begin{equation}
+    \begin{cases}
+        \displaystyle \frac{dx(t)}{dt} = \mathbf{A}X(t)
+        \\
+        A = 
+        \begin{bmatrix}
+            1 & 12\\
+            3 & 1 
+        \end{bmatrix}
+        \\
+        x(0) = 
+        \begin{bmatrix}
+            1\\
+            0
+        \end{bmatrix}
+    \end{cases}
+\end{equation}
+let 
+\begin{align*}
+    X(t) &= e^{\lambda t}\mathbf{V} \quad, \quad \mathbf{V} = \begin{bmatrix}v_1\\v_2\end{bmatrix}
+    \\
+    \dot{X}(t) &= \lambda e^{\lambda t}\mathbf{V} = \mathbf{A}e^{\lambda t}\mathbf{V}
+    \\
+    \therefore e^{\lambda t} (\mathbf{A}-\lambda\mathbf{I})\mathbf{V} = 0 \quad, \quad \mathbf{A}\mathbf{V} = \lambda\mathbf{V}
+    \\
+    \det(\mathbf{A}-\lambda\mathbf{I}) &= 
+    \begin{vmatrix}
+        1-\lambda & 12\\
+        3 & 1-\lambda 
+    \end{vmatrix} = 0
+    \\
+    (1-\lambda)^2 &= 36
+    \\
+    1-\lambda &= \pm 6
+    \\
+    \lambda = -5 \quad&, \quad \lambda = 7
+\end{align*}
+because 
+\[
+    \mathbf{A}\mathbf{V} = \lambda\mathbf{V}    
+\] 
+then at $\lambda = 7$
+\begin{align*}
+    \begin{bmatrix}
+        1 & 12\\
+        3 & 1 
+    \end{bmatrix}
+    \begin{bmatrix}
+        v_1\\v_2
+    \end{bmatrix}
+    = 
+    7\begin{bmatrix}
+        v_1\\v_2
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        7v_1\\7v_2
+    \end{bmatrix}
+\end{align*}
+\end{example}
+
+\end{document}

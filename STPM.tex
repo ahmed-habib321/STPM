@@ -103,6 +103,21 @@ Then we can say that the fractional integral of order $\alpha$ is defined as
 \[
     0<\alpha\leq 1
 \]
+\begin{example}
+    Evaluate $I^{\frac{1}{2}}(t^{n})$\\
+    \[
+        I^{\frac{1}{2}}(t^{n}) = \frac{1}{\Gamma{(\frac{1}{2})}} \int_0^t (t-s)^{-\frac{1}{2}} s^n \, ds
+    \]
+    Let $s=t\theta \rightarrow ds=t d\theta$\\
+    \begin{align}
+        I^{\frac{1}{2}}(t^{n}) & = \frac{1}{\Gamma{(\frac{1}{2})}} \int_0^1 (t-t\theta)^{-\frac{1}{2}} (t\theta)^n \, td\theta                            \\
+                               & = \frac{1}{\Gamma{(\frac{1}{2})}} t^{n+\frac{1}{2}} \int_0^1 (1-\theta)^{-\frac{1}{2}} (\theta)^n \, d\theta             \\
+                               & = \frac{1}{\Gamma{(\frac{1}{2})}} t^{n+\frac{1}{2}} \beta{(\frac{1}{2},n+1)}                                             \\
+                               & = \frac{1}{\Gamma{(\frac{1}{2})}} t^{n+\frac{1}{2}}\frac{\Gamma{(\frac{1}{2})\Gamma{(n+1)} } }{\Gamma{(n+\frac{3}{2})} } \\
+                               & =  t^{n+\frac{1}{2}}\frac{\Gamma{(n+1)} } {\Gamma{(n+\frac{3}{2})} }                                                     \\
+    \end{align}
+\end{example}
+
 \subsection{Fractional Derivative}
 The fractional derivative is defined by
 \begin{align}
@@ -110,9 +125,9 @@ The fractional derivative is defined by
 \end{align}
 Or
 \begin{align}
-    D^{\alpha}f(t) & = \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt}\int_{0}^{t}(t-s)^{-\alpha}f(s)ds
+    D_*^{\alpha}f(t) & = \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt}\int_{0}^{t}(t-s)^{-\alpha}f(s)ds
     \\\notag
-                   & \fquad0\leq \alpha < 1
+                     & \fquad0\leq \alpha < 1
 \end{align}
 Where $\alpha$ is the order of differentiation
 \\
@@ -120,12 +135,33 @@ The need of having 2 formulas that each has a problem that the other solves
 like that formula (2) need the $1^{\text{st}}$ derivative to exist to get the fractional derivative
 and formula (3) the derivative of the constant not equal zero
 \begin{align*}
-    D^{\alpha} 1 & = \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt}\int_{0}^{t}(t-s)^{-\alpha}ds
+    D_*^{\alpha} 1 & = \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt}\int_{0}^{t}(t-s)^{-\alpha}ds
     \\
-                 & = \frac{-1}{\Gamma(1-\alpha)}\frac{d}{dt} \left[\frac{(t-s)^{-\alpha+1}}{-\alpha+1}\right]_{0}^{t}
+                   & = \frac{-1}{\Gamma(1-\alpha)}\frac{d}{dt} \left[\frac{(t-s)^{-\alpha+1}}{-\alpha+1}\right]_{0}^{t}
     \\
-                 & = \frac{-1}{\Gamma(1-\alpha)} \frac{t^{1-\alpha}}{1-\alpha} \neq 0
+                   & = \frac{-1}{\Gamma(1-\alpha)} \frac{t^{1-\alpha}}{1-\alpha} \neq 0
 \end{align*}
+
+\begin{example}
+    Evaluate $D^{\frac{1}{2}}(t^n)$\\
+    using defintion  $D_*^\alpha$\\
+    $$D^{\frac{1}{2}}(t^n) = \frac{1}{\Gamma{(\frac{1}{2})}} \dv{}{t} \int_0^t (t-s)^{-\frac{1}{2}} s^n \, ds$$
+    Let $s = t\xi \rightarrow ds=td\xi$\\
+    \begin{align*}
+        D^{\frac{1}{2}}(t^n) & = \frac{1}{\Gamma{(\frac{1}{2})}} \dv{}{t} \int_0^1 (t-t\xi)^{-\frac{1}{2}} (t\xi)^n \, td\xi                 \\
+                             & = \frac{1}{\Gamma{(\frac{1}{2})}}  \dv{}{t} t^{n+\frac{1}{2}} \int_0^1 (1-\xi)^{-\frac{1}{2}} (\xi)^n \, d\xi \\
+                             & = \frac{1}{\Gamma{(\frac{1}{2})}}  \dv{}{t} t^{n+\frac{1}{2}} \beta{(\frac{1}{2}, n+1)}                       \\
+                             & = (n+\frac{1}{2}) \frac{\Gamma{(n+1)}}{\Gamma{(n+\frac{3}{2})}}      t^{n-\frac{1}{2}}                        \\
+                             & = \frac{\Gamma{(n+1)}}{\Gamma{(n+\frac{1}{2})}}  t^{n-\frac{1}{2}}                                            \\
+    \end{align*}
+\end{example}
+
+
+
+
+
+
+
 \subsection{Laplace transform for fractional integral}
 We know that
 \[

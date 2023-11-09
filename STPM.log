@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.7)  7 NOV 2023 18:07
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.7)  9 NOV 2023 20:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1335,88 +1335,107 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 83
 
 (C:\Program Files\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [3] [4] [5]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 240.
- [6] [7]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 318.
-Package mdframed Info: Not enough space on this page on input line 340.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
-[8]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 146--148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
+
+ []
+
+[4] [5] [6]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 276.
+ [7] [8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 354.
+Package mdframed Info: Not enough space on this page on input line 376.
+ [9]
 File: Rudolf Lipschitz.jpg Graphic file (type bmp)
 <Rudolf Lipschitz.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 445--445
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 481--481
 [][] 
  []
 
-[9]
+[10]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 449.
-Package mdframed Info: Not enough space on this page on input line 503.
- [10] [11]
+(mdframed)              on input line 485.
+Package mdframed Info: Not enough space on this page on input line 539.
+ [11] [12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 612.
- [12]
-Underfull \hbox (badness 2426) in paragraph at lines 715--724
+(mdframed)              on input line 648.
+ [13]
+Underfull \hbox (badness 2426) in paragraph at lines 751--760
 []\TU/lmr/m/n/10 Aleksandr Mikhailovich Lyapunov was a Russian mathematician,
  []
 
 File: Aleksandr_Lyapunov.jpg Graphic file (type bmp)
 <Aleksandr_Lyapunov.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 724--724
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 760--760
 [][] 
  []
 
-[13] [14] [15]
-Overfull \hbox (10.05858pt too wide) in paragraph at lines 847--857
+[14] [15] [16]
+Overfull \hbox (10.05858pt too wide) in paragraph at lines 883--893
 []\TU/lmr/m/n/10 Note that The Adomian Decomposition Method (ADM) is a numerica
 l technique used to approximate
  []
 
 
-Underfull \hbox (badness 3557) in paragraph at lines 877--889
+Underfull \hbox (badness 3557) in paragraph at lines 913--925
 []\TU/lmr/m/n/10 George Adomian (March 21, 1922 – June 17, 1996) was an
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 877--889
+Underfull \hbox (badness 1117) in paragraph at lines 913--925
 \TU/lmr/m/n/10 American mathematician of Armenian descent who developed the
  []
 
 File: adom.jpg Graphic file (type bmp)
 <adom.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 889--889
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 925--925
 [][] 
  []
 
-[16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 1032--1033
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
 
  []
 
-[18] [19] [20]
+[19] [20] [21]
 File: archana_link.png Graphic file (type bmp)
 <archana_link.png>
 
-Overfull \hbox (4.34534pt too wide) in paragraph at lines 1186--1187
+Overfull \hbox (4.34534pt too wide) in paragraph at lines 1222--1223
 []| [] 
  []
 
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 1185--1200
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 1221--1236
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (1.39783pt too wide) detected at line 1219
+Overfull \hbox (1.39783pt too wide) detected at line 1255
 \OML/lmm/m/it/10 m[] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 A[]\OT1/lmr/m/n/10 (
 \OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 ) \OML/lmm/m/it/10 ;  m[] \OT1/lmr/m/n/10 
 = [] \OML/lmm/m/it/10 B[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 
@@ -1426,11 +1445,11 @@ Overfull \hbox (1.39783pt too wide) detected at line 1219
  []
 
 
-Overfull \hbox (2.31496pt too wide) detected at line 1227
+Overfull \hbox (2.31496pt too wide) detected at line 1263
 []
  []
 
-[21] [22]
+[22] [23]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: xetex
 * paper: a4paper
@@ -1464,7 +1483,7 @@ Overfull \hbox (2.31496pt too wide) detected at line 1227
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (33.50638pt too wide) in paragraph at lines 1335--1339
+Overfull \hbox (33.50638pt too wide) in paragraph at lines 1371--1375
 \TU/EBGaramond-Medium(0)/m/n/15 profound connections between stability and clim
 ate change, offering fresh perspectives
  []
@@ -1494,33 +1513,33 @@ Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
 (fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;"
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1379--1388
 
  []
 
 File: back.jpg Graphic file (type bmp)
 <back.jpg>
-[23
+[24
 
 ] (STPM.aux)
  ***********
@@ -1539,4 +1558,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  89i,15n,92p,1303b,919s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (24 pages).
+Output written on STPM.pdf (25 pages).

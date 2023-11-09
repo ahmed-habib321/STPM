@@ -1446,7 +1446,7 @@ let
     \\
     \dot{X}(t) &= \lambda e^{\lambda t}\mathbf{V} = \mathbf{A}e^{\lambda t}\mathbf{V}
     \\
-    \therefore e^{\lambda t} (\mathbf{A}-\lambda\mathbf{I})\mathbf{V} = 0 \quad, \quad \mathbf{A}\mathbf{V} = \lambda\mathbf{V}
+    \therefore e^{\lambda t} (\mathbf{A}-\lambda\mathbf{I})\mathbf{V} &= 0 \quad, \quad \mathbf{A}\mathbf{V} = \lambda\mathbf{V}
     \\
     \det(\mathbf{A}-\lambda\mathbf{I}) &= 
     \begin{vmatrix}
@@ -1473,7 +1473,12 @@ then at $\lambda = 7$
     \begin{bmatrix}
         v_1\\v_2
     \end{bmatrix}
-    = 
+    =
+    \begin{bmatrix}
+        v_1 + 12v_2\\
+        3v_1 + v_2 
+    \end{bmatrix} 
+    =
     7\begin{bmatrix}
         v_1\\v_2
     \end{bmatrix}
@@ -1482,6 +1487,49 @@ then at $\lambda = 7$
         7v_1\\7v_2
     \end{bmatrix}
 \end{align*}
+solving this system we get 
+\[
+v_1 = 2v_2    
+\]
+Next at $\lambda = -5$
+\begin{align*}
+    \begin{bmatrix}
+        1 & 12\\
+        3 & 1 
+    \end{bmatrix}
+    \begin{bmatrix}
+        v_1\\v_2
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        v_1 + 12v_2\\
+        3v_1 + v_2 
+    \end{bmatrix} 
+    =
+    -5\begin{bmatrix}
+        v_1\\v_2
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        -5v_1\\-5v_2
+    \end{bmatrix}
+\end{align*}
+solving this system we get 
+\[
+v_1 = -2v_2    
+\]
+then the solution of (2) is 
+\[
+X(t) = e^{7t}v\begin{bmatrix}
+                2\\1
+               \end{bmatrix}   
+\]
+or
+\[
+X(t) = e^{-5t}v\begin{bmatrix}
+                2\\-1
+               \end{bmatrix}   
+\] 
 \end{example}
 
 \end{document}

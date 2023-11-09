@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  9 NOV 2023 23:29
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  9 NOV 2023 23:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1220,7 +1220,7 @@ n;language=dflt;+smcp;"
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 29.
 
-(STPM.aux)
+(STPM.aux (BookStarter.aux) (BookBody.aux) (BookEnd.aux))
 \openout1 = `STPM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -1255,9 +1255,6 @@ Package hyperref Info: Link coloring OFF on input line 29.
 \@outlinefile=\write5
 \openout5 = `STPM.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1521,23 +1518,25 @@ Overfull \hbox (2.31496pt too wide) detected at line 1164
 [22] [23]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1280.
+(mdframed)              on input line 1302.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1286.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1309.
+(mdframed)              on input line 1308.
  [24]
-Overfull \hbox (19.96689pt too wide) detected at line 1392
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1332.
+Package mdframed Info: Not enough space on this page on input line 1334.
+
+Overfull \hbox (19.96689pt too wide) detected at line 1415
 []
  []
 
 [25]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1423.
-Package mdframed Info: Not enough space on this page on input line 1433.
+(mdframed)              on input line 1425.
+Package mdframed Info: Not enough space on this page on input line 1435.
  [26] [27] [28]) [29]
 \openout2 = `BookEnd.aux'.
 
@@ -1641,21 +1640,14 @@ File: back.jpg Graphic file (type bmp)
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
-
-
-Package rerunfilecheck Warning: File `STPM.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `STPM.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  169B9AAB945C8F4EA2CCBEDB514E411C;2444.
+Package rerunfilecheck Info: File `STPM.out' has not changed.
+(rerunfilecheck)             Checksum: 169B9AAB945C8F4EA2CCBEDB514E411C;2444.
  ) 
 Here is how much of TeX's memory you used:
- 34886 strings out of 410633
- 739088 string characters out of 5792050
+ 34900 strings out of 410633
+ 739245 string characters out of 5792050
  1937879 words of memory out of 5000000
- 55383 multiletter control sequences out of 15000+600000
+ 55391 multiletter control sequences out of 15000+600000
  583334 words of font info for 103 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,16n,92p,1239b,930s stack positions out of 10000i,1000n,20000p,200000b,200000s

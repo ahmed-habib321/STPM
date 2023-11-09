@@ -1235,6 +1235,28 @@ It's important to note that ADM is not guaranteed to converge for all problems, 
 \setcounter{equation}{0}
 \newpage
 \section{Linear ODE System}
+Consider the system
+\begin{equation}
+    \begin{cases}
+        \displaystyle \frac{dX(t)}{dt} = A(t)X(t)
+        \\
+        \displaystyle X(t) = \begin{bmatrix}
+                                 x_{1}(t) \\
+                                 x_{2}(t) \\
+                                 \vdots   \\
+                                 x_{n}(t)
+                             \end{bmatrix}
+        \quad , \quad
+        A(t) = \begin{bmatrix}
+                   a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t) \\
+                   a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t) \\
+                   \vdots    & \vdots    &       & \vdots    \\
+                   a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t) \\
+               \end{bmatrix}
+    \end{cases}
+\end{equation}
+Where $a_{ij}(t)$ are continuous functions on $[\alpha , \beta]$
+\par
 Suppose that $\mathbf{S}(t)$ is a square matrix of order $n$ such that
 \[
     \frac{d\mathbf{S}(t)}{dt} = A(t)\mathbf{S}(t)
@@ -1275,7 +1297,7 @@ $
     \end{bmatrix}
 $
 are Linearly independent then $\mathbf{S}(t)$ is called a fundamental solution
-of the system
+of system (1)
 
 \begin{theorem}[]
     The solution $\mathbf{S}(t)$ is fundamental iff $\det(\mathbf{S}(t))\neq 0$ on the interval $[\alpha , \beta]$
@@ -1306,6 +1328,7 @@ of the system
     \]
     Then $\mathbf{S}(t)\mathbf{C}$ is a fundamental solution
 \end{proof}
+\newpage
 \begin{theorem}[]
     If $\mathbf{S}_1(t)$ and $\mathbf{S}_2(t)$ are fundamental solution of system (1) then $\mathbf{S}_2(t) = \mathbf{S}_1(t)\mathbf{C}$ where $\mathbf{C}$ is constant matrix such that $\det(\mathbf{C})\neq 0$
 \end{theorem}
@@ -1390,27 +1413,6 @@ On the other hand if it's applied on Determinant
         \dot{a}_{n1}(t) & \dot{a}_{n2}(t) & \dots & \dot{a}_{nn}(t) \\
     \end{vmatrix}
 \end{align*}
-Consider the system
-\begin{equation}
-    \begin{cases}
-        \displaystyle \frac{dX(t)}{dt} = A(t)X(t)
-        \\
-        \displaystyle X(t) = \begin{bmatrix}
-                                 x_{1}(t) \\
-                                 x_{2}(t) \\
-                                 \vdots   \\
-                                 x_{n}(t)
-                             \end{bmatrix}
-        \quad , \quad
-        A(t) = \begin{bmatrix}
-                   a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t) \\
-                   a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t) \\
-                   \vdots    & \vdots    &       & \vdots    \\
-                   a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t) \\
-               \end{bmatrix}
-    \end{cases}
-\end{equation}
-Where $a_{ij}(t)$ are continuous functions on $[\alpha , \beta]$
 \begin{lemma}
     Let $\displaystyle \mathbf{S}(t) = e^{\mathbf{A}t}$ where $\mathbf{A}$ is a constant matrix then
     \[

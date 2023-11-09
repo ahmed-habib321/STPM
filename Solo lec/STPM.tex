@@ -962,7 +962,7 @@
 %          \displaystyle \pdv{\eta(x,t)}{t} + \textcolor{red}{m \pdv{\eta(x,t)}{x}} + \textcolor{red}{\eta\pdv{\eta(x,t)}{x}} = 0
 %      \end{cases}
 %  \end{equation}
- 
+
 % the problems that we has in this system are the nonlinear terms which are the terms colored in red
 % we will work on it as we did before but on bigger scale (system of 3 equations)
 % \par
@@ -1101,16 +1101,16 @@
 
 \setcounter{section}{0}
 \setcounter{equation}{0}
-\newpage 
+\newpage
 \vspace*{\fill}
 \begingroup
 \thispagestyle{empty}
 \begin{center}
-    \fontsize{50pt}{0} $\mathbf{Lecture \qquad 6}$    
+    \fontsize{50pt}{0} $\mathbf{Lecture \qquad 6}$
     \par
-    \fontsize{50pt}{0} $\mathbf{Linear \qquad System}$    
+    \fontsize{50pt}{0} $\mathbf{Linear \qquad System}$
     \par
-    \fontsize{50pt}{0} $\mathbf{Of \qquad ODEs}$    
+    \fontsize{50pt}{0} $\mathbf{Of \qquad ODEs}$
 \end{center}
 \endgroup
 \vspace*{\fill}
@@ -1122,86 +1122,86 @@ consider the system
         \displaystyle \frac{dX(t)}{dt} = A(t)X(t)
         \\
         \displaystyle X(t) = \begin{bmatrix}
-            x_{1}(t)\\
-            x_{2}(t)\\
-            \vdots\\
-            x_{n}(t)
-        \end{bmatrix}
+                                 x_{1}(t) \\
+                                 x_{2}(t) \\
+                                 \vdots   \\
+                                 x_{n}(t)
+                             \end{bmatrix}
         \quad , \quad
         A(t) = \begin{bmatrix}
-            a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
-            a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
-            \vdots &\vdots & &\vdots \\
-            a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
-        \end{bmatrix}        
+                   a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t) \\
+                   a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t) \\
+                   \vdots    & \vdots    &       & \vdots    \\
+                   a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t) \\
+               \end{bmatrix}
     \end{cases}
 \end{equation}
 where $a_{ij}(t)$ are continuous functions on $[\alpha , \beta]$
 
-suppose that $\mathbf{S}(t)$ is a square matrix of order n such that 
+suppose that $\mathbf{S}(t)$ is a square matrix of order n such that
 \[
     \frac{d\mathbf{S}(t)}{dt} = A(t)\mathbf{S}(t)
-    \quad , \quad 
+    \quad , \quad
     \mathbf{S}(t) = \begin{bmatrix}
-        s_{11}(t) & s_{12}(t) & \dots & s_{1n}(t)\\
-        s_{21}(t) & s_{22}(t) & \dots & s_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        s_{n1}(t) & s_{n2}(t) & \dots & s_{nn}(t)\\
+        s_{11}(t) & s_{12}(t) & \dots & s_{1n}(t) \\
+        s_{21}(t) & s_{22}(t) & \dots & s_{2n}(t) \\
+        \vdots    & \vdots    &       & \vdots    \\
+        s_{n1}(t) & s_{n2}(t) & \dots & s_{nn}(t) \\
     \end{bmatrix}
 \]
-if the columns of 
+if the columns of
 $
-\begin{bmatrix}
-    s_{11}(t)\\
-    s_{21}(t)\\
-    \vdots\\
-    s_{n1}(t)\\
-\end{bmatrix}
+    \begin{bmatrix}
+        s_{11}(t) \\
+        s_{21}(t) \\
+        \vdots    \\
+        s_{n1}(t) \\
+    \end{bmatrix}
 $,
 $
-\begin{bmatrix}
-    s_{12}(t)\\
-    s_{22}(t)\\
-    \vdots\\
-    s_{n2}(t)\\
-\end{bmatrix}
+    \begin{bmatrix}
+        s_{12}(t) \\
+        s_{22}(t) \\
+        \vdots    \\
+        s_{n2}(t) \\
+    \end{bmatrix}
 $
 ,
 $\dots$
 ,
 $
-\begin{bmatrix}
-    s_{1n}(t)\\
-    s_{2n}(t)\\
-    \vdots\\
-    s_{nn}(t)\\
-\end{bmatrix}
+    \begin{bmatrix}
+        s_{1n}(t) \\
+        s_{2n}(t) \\
+        \vdots    \\
+        s_{nn}(t) \\
+    \end{bmatrix}
 $
 are Linearly independent then $\mathbf{S}(t)$ is called a fundamental solution
 of the system
 
 \begin{theorem}[]
-        The solution $\mathbf{S}(t)$ is fundamental iff $\det(\mathbf{S}(t))\neq 0$ on the interval $[\alpha , \beta]$
-        \\
-        i.e Linearly independent $\Longleftrightarrow$ $\det(\mathbf{S}(t))\neq 0$
+    The solution $\mathbf{S}(t)$ is fundamental iff $\det(\mathbf{S}(t))\neq 0$ on the interval $[\alpha , \beta]$
+    \\
+    i.e Linearly independent $\Longleftrightarrow$ $\det(\mathbf{S}(t))\neq 0$
 \end{theorem}
 
 \begin{theorem}[]
     if $\mathbf{S}(t)$ is a fundamental solution of system (1) and if $\mathbf{C}$ is constant matrix such that $\det(\mathbf{C})\neq 0$ then $\mathbf{S}(t)\mathbf{C}$ is a fundamental
-    solution of system (1) 
+    solution of system (1)
 \end{theorem}
 \begin{proof}[Proof]
     set
     \[
-       f(t) = \mathbf{S}(t)\mathbf{C}
+        f(t) = \mathbf{S}(t)\mathbf{C}
     \]
     where $\det(\mathbf{C})\neq 0$
     \begin{align*}
-        \det f(t) &= \det[\mathbf{S}(t)\mathbf{C}]
+        \det f(t) & = \det[\mathbf{S}(t)\mathbf{C}]
         \\
-                        &= \det\mathbf{S}(t)\det\mathbf{C}
+                  & = \det\mathbf{S}(t)\det\mathbf{C}
         \\
-                        &\neq 0
+                  & \neq 0
     \end{align*}
     now we proof that it's a solution
     \[
@@ -1217,85 +1217,85 @@ of the system
 \begin{proof}[Proof]
     let $\mathbf{S}_1(t)$ and $\mathbf{S}_2(t)$ be fundamental solutions
     \\
-    set 
+    set
     \[
         \mathbf{S}_2(t) = \mathbf{S}_1(t)\mathbf{G}(t)
     \]
-    then 
+    then
     \begin{align*}
-        \frac{d\mathbf{S}_2(t)}{dt} &= \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + \frac{d\mathbf{S}_1(t)}{dt}\mathbf{G}(t)
+        \frac{d\mathbf{S}_2(t)}{dt}                         & = \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + \frac{d\mathbf{S}_1(t)}{dt}\mathbf{G}(t)
         \\
-        A(t)\mathbf{S}_2(t) &= \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + A(t)\mathbf{S}_1(t)\mathbf{G}(t)
+        A(t)\mathbf{S}_2(t)                                 & = \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + A(t)\mathbf{S}_1(t)\mathbf{G}(t)
         \\
-        A(t)\mathbf{S}_1(t)\mathbf{G}(t) &= \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + A(t)\mathbf{S}_1(t)\mathbf{G}(t)
+        A(t)\mathbf{S}_1(t)\mathbf{G}(t)                    & = \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} + A(t)\mathbf{S}_1(t)\mathbf{G}(t)
         \\
-\therefore \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} &= 0
+        \therefore \mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} & = 0
     \end{align*}
-because $\det(\mathbf{S}_1(t))\neq 0$ then it has inverse 
-\\
-then multiply by this inverse from the left
-\begin{align*}
-    \mathbf{S}_1^{-1}(t)\mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} &= 0
+    because $\det(\mathbf{S}_1(t))\neq 0$ then it has inverse
     \\
-    \frac{d\mathbf{G}(t)}{dt} &= 0
-    \\
-    \therefore \mathbf{G}(t) &= \mathbf{C}
-\end{align*}
-then $\mathbf{G}(t)$ is a constant matrix
+    then multiply by this inverse from the left
+    \begin{align*}
+        \mathbf{S}_1^{-1}(t)\mathbf{S}_1(t)\frac{d\mathbf{G}(t)}{dt} & = 0
+        \\
+        \frac{d\mathbf{G}(t)}{dt}                                    & = 0
+        \\
+        \therefore \mathbf{G}(t)                                     & = \mathbf{C}
+    \end{align*}
+    then $\mathbf{G}(t)$ is a constant matrix
 \end{proof}
 
 \section{Matrix and Determinant Differentiation}
 if a differentiation applied on matrix then the result will be as following
 \[
     \frac{d}{dt} \begin{bmatrix}
-        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
-        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
-    \end{bmatrix} 
+        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t) \\
+        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t) \\
+        \vdots    & \vdots    &       & \vdots    \\
+        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t) \\
+    \end{bmatrix}
     =
     \begin{bmatrix}
-        \dot{a}_{11}(t) & \dot{a}_{12}(t) & \dots & \dot{a}_{1n}(t)\\
-        \dot{a}_{21}(t) & \dot{a}_{22}(t) & \dots & \dot{a}_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        \dot{a}_{n1}(t) & \dot{a}_{n2}(t) & \dots & \dot{a}_{nn}(t)\\
-    \end{bmatrix}  
+        \dot{a}_{11}(t) & \dot{a}_{12}(t) & \dots & \dot{a}_{1n}(t) \\
+        \dot{a}_{21}(t) & \dot{a}_{22}(t) & \dots & \dot{a}_{2n}(t) \\
+        \vdots          & \vdots          &       & \vdots          \\
+        \dot{a}_{n1}(t) & \dot{a}_{n2}(t) & \dots & \dot{a}_{nn}(t) \\
+    \end{bmatrix}
 \]
 on the other hand if it's applied on Determinant
 \begin{align*}
     \frac{d}{dt} \begin{vmatrix}
-        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
-        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
-    \end{vmatrix} 
-    =&
+                     a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t) \\
+                     a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t) \\
+                     \vdots    & \vdots    &       & \vdots    \\
+                     a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t) \\
+                 \end{vmatrix}
+    = &
     \begin{vmatrix}
-        \dot{a}_{11}(t) & \dot{a}_{12}(t) & \dots & \dot{a}_{1n}(t)\\
-        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+        \dot{a}_{11}(t) & \dot{a}_{12}(t) & \dots & \dot{a}_{1n}(t) \\
+        a_{21}(t)       & a_{22}(t)       & \dots & a_{2n}(t)       \\
+        \vdots          & \vdots          &       & \vdots          \\
+        a_{n1}(t)       & a_{n2}(t)       & \dots & a_{nn}(t)       \\
     \end{vmatrix}
     +
     \begin{vmatrix}
-        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
-        \dot{a}_{21}(t) & \dot{a}_{22}(t) & \dots & \dot{a}_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
-    \end{vmatrix}  
+        a_{11}(t)       & a_{12}(t)       & \dots & a_{1n}(t)       \\
+        \dot{a}_{21}(t) & \dot{a}_{22}(t) & \dots & \dot{a}_{2n}(t) \\
+        \vdots          & \vdots          &       & \vdots          \\
+        a_{n1}(t)       & a_{n2}(t)       & \dots & a_{nn}(t)       \\
+    \end{vmatrix}
     +
     \dots
     \\
-    &+
+      & +
     \begin{vmatrix}
-        a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
-        a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        \dot{a}_{n1}(t) & \dot{a}_{n2}(t) & \dots & \dot{a}_{nn}(t)\\
+        a_{11}(t)       & a_{12}(t)       & \dots & a_{1n}(t)       \\
+        a_{21}(t)       & a_{22}(t)       & \dots & a_{2n}(t)       \\
+        \vdots          & \vdots          &       & \vdots          \\
+        \dot{a}_{n1}(t) & \dot{a}_{n2}(t) & \dots & \dot{a}_{nn}(t) \\
     \end{vmatrix}
 \end{align*}
 
-property : 
+property :
 \\
 let $\displaystyle \mathbf{S}(t) = e^{\mathbf{A}t}$ where $\mathbf{A}$ is a constant matrix then
 \[
@@ -1305,7 +1305,7 @@ where $\det(e^{\mathbf{A}t})\neq 0$
 then $e^{\mathbf{A}t}$ is a fundamental solution of $\displaystyle \frac{dX(t)}{dt} = AX(t)$
 \newpage
 \begin{theorem}[]
-    if $\mathbf{S}(t)$ is fundamental solution of system (1) i.e 
+    if $\mathbf{S}(t)$ is fundamental solution of system (1) i.e
     \[
         \frac{d\mathbf{S}(t)}{dt} = \mathbf{A}(t)\mathbf{S}(t)
     \]
@@ -1320,216 +1320,394 @@ then $e^{\mathbf{A}t}$ is a fundamental solution of $\displaystyle \frac{dX(t)}{
     \[
         \frac{d\mathbf{S}(t)}{dt} = \mathbf{A}(t)\mathbf{S}(t)
     \]
-    let 
+    let
     \[
         \mathbf{A}(t)\mathbf{S}(t) = b_{ij}(t) = \sum_{k=1}^{n} a_{ik}(t)s_{kj}(t)
-    \]  
-    then 
+    \]
+    then
     \begin{align*}
         \frac{d}{dt} \det(\mathbf{S}(t))
-        =&
+        = &
         \begin{vmatrix}
-            \sum_{k=1}^{n} a_{1k}(t)s_{k1}(t) & \sum_{k=1}^{n} a_{1k}(t)s_{k2}(t) & \dots & \sum_{k=1}^{n} a_{1k}(t)s_{kn}(t)\\
-            a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
-            \vdots &\vdots & &\vdots \\
-            a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t)\\
+            \sum_{k=1}^{n} a_{1k}(t)s_{k1}(t) & \sum_{k=1}^{n} a_{1k}(t)s_{k2}(t) & \dots & \sum_{k=1}^{n} a_{1k}(t)s_{kn}(t) \\
+            s_{21}(t)                         & s_{22}(t)                         & \dots & s_{2n}(t)                         \\
+            \vdots                            & \vdots                            &       & \vdots                            \\
+            s_{n1}(t)                         & s_{n2}(t)                         & \dots & s_{nn}(t)                         \\
         \end{vmatrix}
         +
         \dots
         \\
-        &+
+        \\
+          & +
         \begin{vmatrix}
-            a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t)\\
-            a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t)\\
-            \vdots &\vdots & &\vdots \\
-            \sum_{k=1}^{n} a_{nk}(t)s_{k1}(t) & \sum_{k=1}^{n} a_{nk}(t)s_{k2}(t) & \dots & \sum_{k=1}^{n} a_{nk}(t)s_{kn}(t)\\
-        \end{vmatrix} 
+            s_{11}(t)                         & s_{12}(t)                         & \dots & a_{1n}(t)                         \\
+            s_{21}(t)                         & s_{22}(t)                         & \dots & a_{2n}(t)                         \\
+            \vdots                            & \vdots                            &       & \vdots                            \\
+            \sum_{k=1}^{n} a_{nk}(t)s_{k1}(t) & \sum_{k=1}^{n} a_{nk}(t)s_{k2}(t) & \dots & \sum_{k=1}^{n} a_{nk}(t)s_{kn}(t) \\
+        \end{vmatrix}
     \end{align*}
-using the properties of determinants we get 
-\[
-    \frac{d}{dt} \det(\mathbf{S}(t)) = a_{11}\det(\mathbf{S}(t)) + a_{22}\det(\mathbf{S}(t)) +\dots+a_{nn}\det(\mathbf{S}(t)) = \trace(\mathbf{A}(t))\det(\mathbf{S}(t))
-\]
-then we can write that 
-\begin{align*}
-    \frac{d}{dt} \det(\mathbf{S}(t)) &= \trace(\mathbf{A}(t))\det(\mathbf{S}(t))
-    \\
-    \frac{d \det(\mathbf{S}(t))}{\det(\mathbf{S}(t))} &= \trace(\mathbf{A}(t)) dt
-    \\
-    \ln \left( \frac{\det(\mathbf{S}(t))}{\det(\mathbf{S}(t_0))} \right)&= \int_{t_0}^{t}\trace[\mathbf{A}(\theta)]d\theta
-    \\
-    \det(\mathbf{S}(t)) &= \det(\mathbf{S}(t_0))e^{\int_{t_0}^{t}\trace[\mathbf{A}(\theta)]d\theta}
-\end{align*}
+    using the properties of determinants we get
+    \[
+        \frac{d}{dt} \det(\mathbf{S}(t)) = a_{11}\det(\mathbf{S}(t)) + a_{22}\det(\mathbf{S}(t)) +\dots+a_{nn}\det(\mathbf{S}(t)) = \trace(\mathbf{A}(t))\det(\mathbf{S}(t))
+    \]
+    then we can write that
+    \begin{align*}
+        \frac{d}{dt} \det(\mathbf{S}(t))                                     & = \trace(\mathbf{A}(t))\det(\mathbf{S}(t))
+        \\
+        \frac{d \det(\mathbf{S}(t))}{\det(\mathbf{S}(t))}                    & = \trace(\mathbf{A}(t)) dt
+        \\
+        \ln \left( \frac{\det(\mathbf{S}(t))}{\det(\mathbf{S}(t_0))} \right) & = \int_{t_0}^{t}\trace[\mathbf{A}(\theta)]d\theta
+        \\
+        \det(\mathbf{S}(t))                                                  & = \det(\mathbf{S}(t_0))e^{\int_{t_0}^{t}\trace[\mathbf{A}(\theta)]d\theta}
+    \end{align*}
 \end{proof}
-special case :
-If $\mathbf{A}$ is a constant matrix and $t_0=0$ then 
+\textit{special case} :
+If $\mathbf{A}$ is a constant matrix and $t_0=0$ then
 \[
-    \det(\mathbf{S}(t)) = \det(\mathbf{S}(0))e^{\trace[\mathbf{A}]}
+    \det(\mathbf{S}(t)) = \det(\mathbf{S}(0))e^{t.\trace[\mathbf{A}]}
 \]
+
+Consider the linear homogeneous system
+\begin{equation}
+    \begin{cases}
+        \displaystyle \frac{dX(t)}{dt} = \mathbf{A}X(t)
+    \end{cases}
+\end{equation}
+We try to find a solution $X(t)$ of the form
+$$X(t) = e^{\lambda t} \mathbf{v}$$
+Where $
+    \begin{bmatrix}
+        v_{1}  \\
+        v_{2}  \\
+        \vdots \\
+        v_{n}  \\
+    \end{bmatrix}
+$\\
+We notice that
+$$\dv{X(t)}{t} = \lambda e^{\lambda t} \mathbf{v} = e^{\lambda t}\mathbf{A}\mathbf{v}$$
+Hence $X(t)=e^{\lambda t}$ is a solution of system $\iff$ $\mathbf{A}\mathbf{v}=\lambda \mathbf{v}$\\
+A non zero vector $\mathbf{v}$ satisfying the last equation is called \textbf{eigenvector} of matrix $\mathbf{A}$ corresponding to \textbf{eigenvalue} $\lambda$\\
+
+
+
+
+
+
+
+
 \begin{example}
-    if 
+    if
     \(
-        \mathbf{A} = \begin{bmatrix}
-            8 & 5 & 2\\
-            9 & 1 & 3\\
-            4 & -5 & 6
-        \end{bmatrix}
+    \mathbf{A} = \begin{bmatrix}
+        8 & 5  & 2 \\
+        9 & 1  & 3 \\
+        4 & -5 & 6
+    \end{bmatrix}
     \)
-    then 
+    then
     \[
         \det e^{\mathbf{A}} = \trace(\mathbf{A}) = 8+1+6 = 15
     \]
 \end{example}
-\newpage
-now to find $e^{\mathbf{A}}$ , $\mathbf{A}$ is of order n
+\textbf{Remark}\\
+Now, to find $e^{\mathbf{A}}$ , $\mathbf{A}$ is of order n
 \[
     \frac{dX(t)}{dt}   = \mathbf{A}X(t)
 \]
 we find the $n^{\text{th}}$ solution
 $
-\begin{bmatrix}
-    x_{11}(t)\\
-    x_{21}(t)\\
-    \vdots\\
-    x_{n1}(t)\\
-\end{bmatrix}
+    \begin{bmatrix}
+        x_{11}(t) \\
+        x_{21}(t) \\
+        \vdots    \\
+        x_{n1}(t) \\
+    \end{bmatrix}
 $,
 $
-\begin{bmatrix}
-    x_{12}(t)\\
-    x_{22}(t)\\
-    \vdots\\
-    x_{n2}(t)\\
-\end{bmatrix}
+    \begin{bmatrix}
+        x_{12}(t) \\
+        x_{22}(t) \\
+        \vdots    \\
+        x_{n2}(t) \\
+    \end{bmatrix}
 $
 ,
 $\dots$
 ,
 $
-\begin{bmatrix}
-    x_{1n}(t)\\
-    x_{2n}(t)\\
-    \vdots\\
-    x_{nn}(t)\\
-\end{bmatrix}
+    \begin{bmatrix}
+        x_{1n}(t) \\
+        x_{2n}(t) \\
+        \vdots    \\
+        x_{nn}(t) \\
+    \end{bmatrix}
 $
 and by compining them in one matrix we get the solution
 \[
     X(t) = e^{\mathbf{A}} = \begin{bmatrix}
-        x_{11}(t) & x_{12}(t) & \dots & x_{1n}(t)\\
-        x_{21}(t) & x_{22}(t) & \dots & x_{2n}(t)\\
-        \vdots &\vdots & &\vdots \\
-        x_{n1}(t) & x_{n2}(t) & \dots & x_{nn}(t)\\
-    \end{bmatrix}  
+        x_{11}(t) & x_{12}(t) & \dots & x_{1n}(t) \\
+        x_{21}(t) & x_{22}(t) & \dots & x_{2n}(t) \\
+        \vdots    & \vdots    &       & \vdots    \\
+        x_{n1}(t) & x_{n2}(t) & \dots & x_{nn}(t) \\
+    \end{bmatrix}
 \]
 \begin{example}
-    solve 
+    Solve the IVP
     \begin{equation}
-    \begin{cases}
-        \displaystyle \frac{dx(t)}{dt} = \mathbf{A}X(t)
+        \begin{cases}
+            \displaystyle \frac{dx(t)}{dt} = \mathbf{A}X(t)
+            \\
+            A =
+            \begin{bmatrix}
+                1 & 12 \\
+                3 & 1
+            \end{bmatrix}
+            \\
+            x(0) =
+            \begin{bmatrix}
+                0 \\
+                1
+            \end{bmatrix}
+        \end{cases}
+    \end{equation}
+    Characteristic polynomial of $\mathbf{A}$ is given by
+    %let
+
+    %    X(t)                                                              & = e^{\lambda t}\mathbf{V} \quad, \quad \mathbf{V} = \begin{bmatrix}v_1\\v_2\end{bmatrix}
+    %    \\
+    %    \dot{X}(t)                                                        & = \lambda e^{\lambda t}\mathbf{V} = \mathbf{A}e^{\lambda t}\mathbf{V}
+    %    \\
+    %    \therefore e^{\lambda t} (\mathbf{A}-\lambda\mathbf{I})\mathbf{V} & = 0 \quad, \quad \mathbf{A}\mathbf{V} = \lambda\mathbf{V}
+    %    \\
+    %    \det(\mathbf{A}-\lambda\mathbf{I})  
+    \begin{center}
+        $
+            \begin{vmatrix}
+                1-\lambda & 12        \\
+                3         & 1-\lambda
+            \end{vmatrix} = 0
+        $
+    \end{center}
+    \begin{align*}
+        (1-\lambda)^2      & = 36
         \\
-        A = 
+        1-\lambda          & = \pm 6
+        \\
+        \lambda = -5 \quad & , \quad \lambda = 7
+    \end{align*}
+    %because
+    %\[
+    %    \mathbf{A}\mathbf{V} = \lambda\mathbf{V}
+    %\]
+    At $\lambda = 7$, we seek a non zero vector $\mathbf{v}$ such that\\
+    $$(\mathbf{A} - 7 I) \mathbf{v} =
         \begin{bmatrix}
-            1 & 12\\
-            3 & 1 
+            -6 & 12 \\
+            3  & -6
         \end{bmatrix}
-        \\
-        x(0) = 
         \begin{bmatrix}
-            1\\
+            v_{1} \\
+            v_{2}
+        \end{bmatrix}=
+        \begin{bmatrix}
+            0 \\
             0
         \end{bmatrix}
-    \end{cases}
-\end{equation}
-let 
-\begin{align*}
-    X(t) &= e^{\lambda t}\mathbf{V} \quad, \quad \mathbf{V} = \begin{bmatrix}v_1\\v_2\end{bmatrix}
-    \\
-    \dot{X}(t) &= \lambda e^{\lambda t}\mathbf{V} = \mathbf{A}e^{\lambda t}\mathbf{V}
-    \\
-    \therefore e^{\lambda t} (\mathbf{A}-\lambda\mathbf{I})\mathbf{V} &= 0 \quad, \quad \mathbf{A}\mathbf{V} = \lambda\mathbf{V}
-    \\
-    \det(\mathbf{A}-\lambda\mathbf{I}) &= 
-    \begin{vmatrix}
-        1-\lambda & 12\\
-        3 & 1-\lambda 
-    \end{vmatrix} = 0
-    \\
-    (1-\lambda)^2 &= 36
-    \\
-    1-\lambda &= \pm 6
-    \\
-    \lambda = -5 \quad&, \quad \lambda = 7
-\end{align*}
-because 
-\[
-    \mathbf{A}\mathbf{V} = \lambda\mathbf{V}    
-\] 
-then at $\lambda = 7$
-\begin{align*}
-    \begin{bmatrix}
-        1 & 12\\
-        3 & 1 
-    \end{bmatrix}
-    \begin{bmatrix}
-        v_1\\v_2
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-        v_1 + 12v_2\\
-        3v_1 + v_2 
-    \end{bmatrix} 
-    =
-    7\begin{bmatrix}
-        v_1\\v_2
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-        7v_1\\7v_2
-    \end{bmatrix}
-\end{align*}
-solving this system we get 
-\[
-v_1 = 2v_2    
-\]
-Next at $\lambda = -5$
-\begin{align*}
-    \begin{bmatrix}
-        1 & 12\\
-        3 & 1 
-    \end{bmatrix}
-    \begin{bmatrix}
-        v_1\\v_2
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-        v_1 + 12v_2\\
-        3v_1 + v_2 
-    \end{bmatrix} 
-    =
-    -5\begin{bmatrix}
-        v_1\\v_2
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-        -5v_1\\-5v_2
-    \end{bmatrix}
-\end{align*}
-solving this system we get 
-\[
-v_1 = -2v_2    
-\]
-then the solution of (2) is 
-\[
-X(t) = e^{7t}v\begin{bmatrix}
-                2\\1
-               \end{bmatrix}   
-\]
-or
-\[
-X(t) = e^{-5t}v\begin{bmatrix}
-                2\\-1
-               \end{bmatrix}   
-\] 
+    $$
+    \begin{comment}
+    \begin{align*}
+        \begin{bmatrix}
+            1 & 12 \\
+            3 & 1
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\v_2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            v_1 + 12v_2 \\
+            3v_1 + v_2
+        \end{bmatrix}
+        =
+        7\begin{bmatrix}
+             v_1 \\v_2
+         \end{bmatrix}
+        =
+        \begin{bmatrix}
+            7v_1 \\7v_2
+        \end{bmatrix}
+    \end{align*}
+    \end{comment}
+    By solving this system we get
+    \[
+        v_1 = 2v_2
+    \]
+    Consequently, every vector $\mathbf{v} = \mathbf{c}
+        \begin{bmatrix}
+            2 \\
+            1
+        \end{bmatrix}
+    $ is an eigen vector of $\mathbf{A}$ corresponding to eigenvector $\lambda = 7$\\
+    Thus,
+    $$X(t) = e^{7t}
+        \begin{bmatrix}
+            2 \\
+            1
+        \end{bmatrix}
+    $$
+    is a solution of our system\\
+    Similarly, At $\lambda = -5$
+    $$(\mathbf{A} + 5 I) \mathbf{v} =
+        \begin{bmatrix}
+            6 & 12 \\
+            3 & 6
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_{1} \\
+            v_{2}
+        \end{bmatrix}=
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix}
+    $$
+    By solving this system we get
+    \[
+        v_1 = -2v_2
+    \]
+    Consequently, every vector $\mathbf{v} = \mathbf{c}
+        \begin{bmatrix}
+            -2 \\
+            1
+        \end{bmatrix}
+    $ is an eigen vector of $\mathbf{A}$ corresponding to eigenvector $\lambda = 7$\\
+    Thus,
+    $$X(t) = e^{-5t}
+        \begin{bmatrix}
+            -2 \\
+            1
+        \end{bmatrix}
+    $$
+
+    \begin{comment}
+    \begin{align*}
+        \begin{bmatrix}
+            1 & 12 \\
+            3 & 1
+        \end{bmatrix}
+        \begin{bmatrix}
+            v_1 \\v_2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            v_1 + 12v_2 \\
+            3v_1 + v_2
+        \end{bmatrix}
+        =
+        -5\begin{bmatrix}
+              v_1 \\v_2
+          \end{bmatrix}
+        =
+        \begin{bmatrix}
+            -5v_1 \\-5v_2
+        \end{bmatrix}
+    \end{align*}
+    \end{comment}
+    Then the general solution is given by
+    \[
+        X(t) =\mathbf{c_1} e^{7t}\begin{bmatrix}
+            2 \\1
+        \end{bmatrix}
+        + \mathbf{c_2}e^{-5t}\begin{bmatrix}
+            -2 \\1
+        \end{bmatrix}
+    \]
+    The constants $\mathbf{c_1}$ and $\mathbf{c_2}$ are determined from initial condition
+    \[
+        X(0) =\begin{bmatrix}
+            0 \\1
+        \end{bmatrix} =
+        \mathbf{c_1} \begin{bmatrix}
+            2 \\1
+        \end{bmatrix}
+        + \mathbf{c_2}\begin{bmatrix}
+            -2 \\1
+        \end{bmatrix}
+    \]
+    We get
+    \begin{align*}
+        0 & = 2c_1 - 2 c_2 \\
+        1 & = c_1 + c_2
+    \end{align*}
+    $c_1 =  c_2 = \frac{1}{2}$\\
+
+    Thus, The general solution is given by
+    \[
+        X(t) =\frac{1}{2} e^{7t}\begin{bmatrix}
+            2 \\1
+        \end{bmatrix}
+        +\frac{1}{2}e^{-5t}\begin{bmatrix}
+            -2 \\1
+        \end{bmatrix}
+    \]
+
 \end{example}
+Moreover, Evaluate $e^{\mathbf{A}}$\\
+Remember we considered that the solution of the form $X(t) = e^{\lambda t} \mathbf{v}$ and we know that $\mathbf{A}\mathbf{v} = \lambda \mathbf{v}$\\
+$X(t) = e^{\mathbf{A} t} \mathbf{v}$\\
+We can get $\mathbf{v}$ easily from initial condition $\mathbf{v} =
+    \begin{bmatrix}
+        0 \\
+        1
+    \end{bmatrix}
+$
+\\
+$$
+    e^{\mathbf{A} t}
+    \begin{bmatrix}
+        0 \\
+        1
+    \end{bmatrix}=\begin{bmatrix}
+        e^{7t}   -e^{-5t} \\
+        \frac{1}{2}e^{7t} + \frac{1}{2}e^{-5t}
+    \end{bmatrix}
+$$
+Assume $ e^{\mathbf{A} t} = \begin{bmatrix}
+        b_{11} & b_{12} \\
+        b_{21} & b_{22}
+    \end{bmatrix}
+$
+We can deduce that\\
+\begin{align*}
+    b_{12} & = e^{7t} - e^{-5t}                       \\
+    b_{22} & = \frac{1}{2}e^{7t} +\frac{1}{2} e^{-5t} \\
+\end{align*}
+If we consider a new initial condition. It is easy to obtain that\\
+$$
+    e^{\mathbf{A} t}
+    \begin{bmatrix}
+        1 \\
+        0
+    \end{bmatrix}=\begin{bmatrix}
+        \frac{1}{2}e^{7t} + \frac{1}{2}e^{7t} \\
+        \frac{1}{4}e^{7t} - \frac{1}{4}e^{-5t}
+    \end{bmatrix}
+$$
+Thus, we get
+\begin{align*}
+    b_{11} & = \frac{1}{2}e^{7t} + \frac{1}{2}e^{7t}  \\
+    b_{21} & = \frac{1}{4}e^{7t} - \frac{1}{4}e^{-5t} \\
+\end{align*}
+$$e^{\mathbf{A}t} =
+    \begin{bmatrix}
+        \frac{1}{2}e^{7t} + \frac{1}{2}e^{7t}  & e^{7t} - e^{-5t}                       \\
+        \frac{1}{4}e^{7t} - \frac{1}{4}e^{-5t} & \frac{1}{2}e^{7t} +\frac{1}{2} e^{-5t}
+    \end{bmatrix}$$
+At t=1
+$$e^{\mathbf{A}} =
+    \begin{bmatrix}
+        \frac{1}{2}e^{7} + \frac{1}{2}e^{7}  & e^{7} - e^{-5}                       \\
+        \frac{1}{4}e^{7} - \frac{1}{4}e^{-5} & \frac{1}{2}e^{7} +\frac{1}{2} e^{-5}
+    \end{bmatrix}$$
 
 \end{document}

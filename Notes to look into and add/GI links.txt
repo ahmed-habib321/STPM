@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/Generalized_inverse
+
+https://en.wikipedia.org/wiki/Moore-Penrose_inverse

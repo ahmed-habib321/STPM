@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  9 NOV 2023 23:45
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  23 NOV 2023 22:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1220,7 +1220,7 @@ n;language=dflt;+smcp;"
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 29.
 
-(STPM.aux (BookStarter.aux) (BookBody.aux) (BookEnd.aux))
+(STPM.aux (SoloLecStarter.aux))
 \openout1 = `STPM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -1311,345 +1311,132 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 29.
-\openout2 = `BookStarter.aux'.
+\openout2 = `SoloLecStarter.aux'.
 
- (BookStarter.tex
-File: front.jpg Graphic file (type bmp)
-<front.jpg>
- [1
-
-
-]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: xetex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(57.81621pt, 467.42168pt, 72.26999pt)
-* v-part:(T,H,B)=(57.81621pt, 685.82399pt, 101.40665pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=467.42168pt
-* \textheight=685.82399pt
-* \oddsidemargin=-14.45378pt
-* \evensidemargin=-14.45378pt
-* \topmargin=-51.45378pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-File: collage logo.png Graphic file (type bmp)
-<collage logo.png>
- [1
-
-] (STPM.toc)
-\tf@toc=\write6
-\openout6 = `STPM.toc'.
-
-
-[2
-
-])
-\openout2 = `BookBody.aux'.
-
- (BookBody.tex
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+ (SoloLecStarter.tex
+LaTeX Font Info:    Calculating math sizes for size <50> on input line 8.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
 .
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
 .
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-3.
+8.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-3.
+8.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 3.
+(Font)              <50> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <34.99985> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+(Font)              <25> on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 3.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
 
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <50> not available
+(Font)              size <24.88> substituted on input line 8.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <34.99985> not available
+(Font)              size <24.88> substituted on input line 8.
+
+
+Overfull \hbox (4.4779pt too wide) in paragraph at lines 10--11
+ []$[]$ 
  []
 
-[3
+
+Overfull \hbox (29.92142pt too wide) in paragraph at lines 12--13
+ []|  $[]$ 
+ []
+
+[1
 
 
-
-] [4] [5] [6]
+])
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 37.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 37.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 37.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 190.
- [7] [8]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 269.
-Package mdframed Info: Not enough space on this page on input line 291.
- [9]
-File: Rudolf Lipschitz.jpg Graphic file (type bmp)
-<Rudolf Lipschitz.jpg>
+(mdframed)              on input line 69.
+ [2
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 391--391
+
+]
+Overfull \hbox (15.4493pt too wide) in paragraph at lines 167--170
+[]\TU/lmr/m/n/10 it’s clear that $\OML/lmm/m/it/10 B[]B$\TU/lmr/m/n/10 ,$\OML/l
+mm/m/it/10 CC[]$ \TU/lmr/m/n/10 are square matrices of order $\OML/lmm/m/it/10 
+r$ \TU/lmr/m/n/10 now to proof that $[][][]\OML/lmm/m/it/10 ; [][][] []
+ []
+
+[3]
+File: Roger_Penrose.jpg Graphic file (type bmp)
+<Roger_Penrose.jpg>
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 313--313
 [][] 
  []
 
-[10]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 395.
-Package mdframed Info: Not enough space on this page on input line 448.
- [11] [12]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 557.
- [13]
-Underfull \hbox (badness 2426) in paragraph at lines 656--665
-[]\TU/lmr/m/n/10 Aleksandr Mikhailovich Lyapunov was a Russian mathematician,
- []
+File: moore.jpg Graphic file (type bmp)
+<moore.jpg>
 
-File: Aleksandr_Lyapunov.jpg Graphic file (type bmp)
-<Aleksandr_Lyapunov.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 665--665
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 323--323
 [][] 
  []
 
-[14] [15] [16]
-Overfull \hbox (10.05858pt too wide) in paragraph at lines 784--794
-[]\TU/lmr/m/n/10 Note that The Adomian Decomposition Method (ADM) is a numerica
-l technique used to approximate
- []
-
-
-Underfull \hbox (badness 3557) in paragraph at lines 814--826
-[]\TU/lmr/m/n/10 George Adomian (March 21, 1922 – June 17, 1996) was an
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 814--826
-\TU/lmr/m/n/10 American mathematician of Armenian descent who developed the
- []
-
-File: adom.jpg Graphic file (type bmp)
-<adom.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 826--826
-[][] 
- []
-
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 969--970
-
- []
-
-[19] [20] [21]
-File: archana_link.png Graphic file (type bmp)
-<archana_link.png>
-
-Overfull \hbox (4.34534pt too wide) in paragraph at lines 1123--1124
-[]| [] 
- []
-
-
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 1122--1137
-[]$[]$ $[]$ 
- []
-
-
-Overfull \hbox (1.39783pt too wide) detected at line 1156
-\OML/lmm/m/it/10 m[] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 A[]\OT1/lmr/m/n/10 (
-\OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 ) \OML/lmm/m/it/10 ;  m[] \OT1/lmr/m/n/10 
-= [] \OML/lmm/m/it/10 B[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 
-) \OML/lmm/m/it/10 ;  m[] \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 ^^Q[] \OT1/lmr/m/n
-/10 = [] \OML/lmm/m/it/10 C[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x; t\OT1/lmr/m/n
-/10 )
- []
-
-
-Overfull \hbox (2.31496pt too wide) detected at line 1164
-[]
- []
-
-[22] [23]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1302.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1308.
- [24]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1332.
-Package mdframed Info: Not enough space on this page on input line 1334.
-
-Overfull \hbox (19.96689pt too wide) detected at line 1415
-[]
- []
-
-[25]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1425.
-Package mdframed Info: Not enough space on this page on input line 1435.
- [26] [27] [28]) [29]
-\openout2 = `BookEnd.aux'.
-
- (BookEnd.tex
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: xetex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(57.81621pt, 467.42168pt, 72.26999pt)
-* v-part:(T,H,B)=(57.81621pt, 729.41443pt, 57.81621pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=467.42168pt
-* \textheight=729.41443pt
-* \oddsidemargin=-14.45378pt
-* \evensidemargin=-14.45378pt
-* \topmargin=-51.45378pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-Overfull \hbox (33.50638pt too wide) in paragraph at lines 29--33
-\TU/EBGaramond-Medium(0)/m/n/15 profound connections between stability and clim
-ate change, offering fresh perspectives
- []
-
-
-Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
-(fontspec)             options [].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"Arial/OT:script=latn;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->"Arial/OT:script=latn;language=dflt;+smcp;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
-(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;+smcp;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;+smcp;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
-(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;"
-(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
-(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;"
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--46
-
- []
-
-File: back.jpg Graphic file (type bmp)
-<back.jpg>
-[30
-
-
-
-
-]) (STPM.aux (BookStarter.aux) (BookBody.aux) (BookEnd.aux))
+[4] [5] (STPM.aux (SoloLecStarter.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 25.12pt have occurred.
+
 Package rerunfilecheck Info: File `STPM.out' has not changed.
-(rerunfilecheck)             Checksum: 169B9AAB945C8F4EA2CCBEDB514E411C;2444.
+(rerunfilecheck)             Checksum: 8036681A47A920C3A0910812D1838ACD;141.
  ) 
 Here is how much of TeX's memory you used:
- 34900 strings out of 410633
- 739245 string characters out of 5792050
+ 34752 strings out of 410633
+ 735577 string characters out of 5792050
  1937879 words of memory out of 5000000
- 55391 multiletter control sequences out of 15000+600000
- 583334 words of font info for 103 fonts, out of 8000000 for 9000
+ 55291 multiletter control sequences out of 15000+600000
+ 604265 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,16n,92p,1239b,930s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,16n,92p,1239b,938s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (31 pages).
+Output written on STPM.pdf (5 pages).

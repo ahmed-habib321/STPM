@@ -1,0 +1,596 @@
+[Music]
+
+when learning calculus you are probably
+
+accustomed to the idea of higher order
+
+derivatives the first derivative
+
+indicates the slope of a graph the
+
+second derivative indicates concavity
+
+and so on calculating the nth derivative
+
+of a function is taking the derivative
+
+at the function n times and this made
+
+sense but what does it mean to take a
+
+fractional derivative today we're going
+
+to be exploring another branch of
+
+calculus fractional calculus this
+
+expression can have multiple meanings
+
+first it can be thought of as a repeated
+
+differentiation so if we take the nth
+
+derivative of a function it means taking
+
+the derivative n times however this only
+
+makes sense for positive integers if we
+
+are to extend this to other numbers we
+
+must think of this expression as a
+
+transformation something that takes in a
+
+function as an input and gives a
+
+function as an output and not repeated
+
+differentiation now we look at D to the
+
+N F by DX to the N as an operator that
+
+transforms F into its nth derivative
+
+let's establish a bit of notation when I
+
+put I next to a function I mean the
+
+indefinite integral of the function from
+
+0 to X as we talked about earlier we can
+
+think of this as a transformation
+
+something that takes in a function and
+
+outputs a function similar to
+
+differentiation we put an exponent like
+
+thing to denote the nth integral of F so
+
+for example the third and integral would
+
+look something like this
+
+as we increase the number the expression
+
+gets more and more complicated and
+
+complex analysis legend Augustin Louis
+
+oh she found a way to look at repeated
+
+and the girls like this in a much
+
+simpler way he proved the following
+
+formula I to the N f of X is equal to 1
+
+over n minus 1 factorial times the
+
+integral from a to X of excellent minus
+
+T to the N minus 1 F of T DT let's see
+
+if we can prove this for n is equal to
+
+plugging in the formula we get the
+
+second integral of F is equal to the
+
+integral from 0 to X of X minus T times
+
+f of T DT for simplicity I'm going to
+
+assign G of X to the second integral of
+
+F so our goal now is to show that G of X
+
+is equal to I squared f of X using
+
+properties of integrals we can split
+
+this into two integrals
+
+now let's differentiate both sides the
+
+first term requires the use of the
+
+product rule and we can also use the
+
+first fundamental theorem of calculus
+
+evaluating all this it's equal to the
+
+first integral of F since G of 0 is
+
+equal is 0 G of X is equal to G of X
+
+minus G of 0 which is simply the
+
+integral from 0 to X of G prime of X by
+
+the second fundamental theorem of
+
+calculus this is equal to the second
+
+integral of f of X so we have proved G
+
+of X is equal to I squared f of X and so
+
+the formula works for n is equal to 2 a
+
+proof for all positive integers and can
+
+be accomplished by using the binomial
+
+theorem but that's a challenge I'm going
+
+to leave for you to do for now let's
+
+assume this formula works for all
+
+positive integers and now the real
+
+question is how do we define this
+
+function for any positive number the
+
+answer lies within the gamma function
+
+the gamma function which looks like this
+
+is equal to n minus 1 factorial for all
+
+positive n the gamma function is an
+
+extremely important function that
+
+appears oliver math and deserves a whole
+
+video if you want the video on the gamma
+
+function let me know in the comments it
+
+gives us a way to extend the familiar
+
+domain of factorials from positive
+
+integers the positive real and even
+
+complex numbers basically the goal of
+
+the gamma function was to define a
+
+smooth curve that would go through
+
+factorial points here I've plotted three
+
+points which all satisfy f of X is equal
+
+to n minus 1 factorial so for X minus 1
+
+the y-coordinate is 1 minus 1 factorial
+
+which is 1 similarly for X is equal to 2
+
+the y-coordinate is 2 minus 1 factorial
+
+which is equal to 1 and finally for X is
+
+equal to 3 the y-coordinate is 3 minus 1
+
+factorial which is equal to 2 the gamma
+
+function is defined as follows it's the
+
+integral from 0 to infinity of e to the
+
+negative T times T to the power of Z
+
+minus 1 here's a challenge for you try
+
+to see why this equals n minus 1 for
+
+positive integers hint it has to do with
+
+integration by parts
+
+since the main thing restricting the
+
+domain of a formula for repeated
+
+integration is the factorial we can
+
+replace this with the gamma function
+
+recall gamma of X is equal to X minus 1
+
+factorial so it still works for positive
+
+integers as it should but now we can
+
+plug in any positive number for N and
+
+get a value for this integral fractional
+
+integrals sound absurd but this is a
+
+valid operator this particular operator
+
+is called the Riemann Lousiville
+
+integral or RL integral for short
+
+although there are many other ways of
+
+going about fractional integration the
+
+RL integral is probably the easiest to
+
+understand we can also plug in complex
+
+numbers in the end for refn greater than
+
+zero there are few important relations
+
+to understand with RL integration the
+
+first is that I to the a times I to the
+
+B of f of X is equal to I to the A plus
+
+B of f of X and the second one is that
+
+the derivative of I to the A plus 1 is
+
+simply I to the a notice how we are
+
+still preserving the first fundamental
+
+theorem of calculus by the second
+
+Formula one might assume that fractional
+
+differentiation can be accomplished by
+
+assuming that D to the N f of X by D X
+
+to the N is equal to I to the negative n
+
+over F but this doesn't really work
+
+because the gamma function is not
+
+defined for numbers with real components
+
+less than zero we're gonna have to be a
+
+bit more creative let's remember that
+
+for all positive integers n we
+
+understand that the nth derivative of
+
+the nth integral is the function itself
+
+so as we define fractional derivatives
+
+for any positive number we must follow
+
+this property to one other thing that
+
+we'd like is to write this in terms of
+
+functions we understand we understand
+
+positive integer derivatives and
+
+positive number integrals so a
+
+fractional differentiation operator that
+
+follows this property written in terms
+
+of operators we understand can look like
+
+this
+
+D to the N F is equal to D to the seal
+
+of n divided by D X to the Selah fan of
+
+I to the seal of n minus n of F that was
+
+a mouthful the operator seal is the
+
+sealing function which basically rounds
+
+up any decimal for example seal of four
+
+point one is five seal of four point six
+
+is five and seal of four is four now
+
+using the Cauchy formula for repeated
+
+integration we can write a formula for
+
+the fractional derivative in terms of
+
+regular positive integer differentiation
+
+and fractional integration this is the
+
+left Riemann Louisville fractional
+
+derivative looking at this monstrosity
+
+it's pretty clear why there hasn't been
+
+any significant applications of
+
+fractional differentiation in the past
+
+300 years computing these without a
+
+computer is pretty tedious and difficult
+
+when n is equal to 0.5 we call this a
+
+semi derivative combining fractional
+
+differentiation and fractional
+
+integration we can define an operator
+
+called a differ integral by the
+
+following piecewise definition
+
+let's look at a nice animation that
+
+demos are different ago operator let's
+
+start with the function f of X is equal
+
+to X the first derivative is f of X is
+
+equal to 1 and the first integral is f
+
+of X is equal 1/2 x squared now let's
+
+see how the function varies applying our
+
+differ integral operator from n is equal
+
+to negative 1 to 1
+
+[Music]
+
+one thing to note is that familiar
+
+properties like the chain rule and the
+
+product rule don't really work as well
+
+anymore
+
+well this is to be expected and they can
+
+exist in much more complicated forms
+
+there is one property that makes
+
+fractional derivatives useful normally
+
+when we take first or second derivatives
+
+the output of the derivative only
+
+depends on the input we give it this is
+
+called locality if we go back to the
+
+definition of a fractional derivative we
+
+have this little constant a at the
+
+bottom of the integral
+
+thus the fractional derivative has
+
+nonlocality which means it doesn't only
+
+depend on an input this is useful in
+
+analyzing functions that only don't
+
+depend on time for example some
+
+phenomenon in the real world have
+
+something called a memory effect which
+
+means that the current state not only
+
+depends on time but also in previous
+
+States traditional differential
+
+equations have a hard time modeling
+
+phenomenon like this but fractional
+
+derivatives can make the task easier
+
+let's look at a few examples of
+
+fractional derv lives the fractional
+
+derivative for x to the n for n is
+
+greater than zero which is our power
+
+rule is given by D to the a X to the N
+
+is gamma of n plus 1 divided by gamma of
+
+n plus 1 minus a times X to the n minus
+
+a a special case of this is the semi
+
+derivative of f of X is equal to 1 d to
+
+the 1/2 of 1 is 1 over the square root
+
+of pi times X and for f of X is equal to
+
+sine X we have d to DA sine of X is sine
+
+of X plus a PI over 2 for the
+
+exponential function the fractional
+
+derivative is given by D to the a e to
+
+the K X is K to the a times e to the X K
+
+[Music]
+
+let's look at one application of
+
+fractional derivatives the tata crown
+
+problem the tata crown problem looks for
+
+a curve that does not depend on the
+
+initial height for the time it takes to
+
+reach the bottom of the curve what that
+
+means is let's say we let an object go
+
+from any point on the curve and the only
+
+pulling force is gravity it will always
+
+take a certain time to reach the bottom
+
+of the curve you can see that by the
+
+animation here Neil's able the one known
+
+to solve this problem came up with the
+
+following equation to calculate the time
+
+taken to reach the end of the curve
+
+where Y of 0 is the initial height here
+
+s is the curve parametrized able solved
+
+this problem using convolutions and
+
+Laplace transforms
+
+but using fractional calculus we can see
+
+a much quicker solution if we divide
+
+both sides by gamma of 1/2 which is
+
+equal to the square of pi and move the
+
+constant to the other side we get this
+
+now if you notice something is that this
+
+is in fact a semi integral so our
+
+equation just ends up being the square
+
+root of 2 G over PI T of 0 is equal to I
+
+did a 1/2 of D s by D Y now to calculate
+
+D s by D Y we simply take the semi
+
+derivative of both sides and we get the
+
+following equation for the s by dy and
+
+in fact this differential equation
+
+describes a curve which is called a
+
+cycloid and the cycloid is a curve you
+
+get when you roll a circle and focus on
+
+a point this curve is also the solution
+
+to the brookie Stallone problem which
+
+tries to solve for a curve that takes
+
+the fastest path from one point to the
+
+other only pulled by gravity this topic
+
+is really interesting and I've left the
+
+few videos in the description if you are
+
+curious the idea of fractional calculus
+
+although it doesn't have that many
+
+application does it demo an extremely
+
+important lesson in math and that's to
+
+try to break the rules and see what
+
+happens
+
+this is what led to the discovery of so
+
+many things in that like complex numbers
+
+when people tried to take the square
+
+root of negative numbers and although
+
+it's hard to see fractional derivatives
+
+geometrically it's quite a fascinating
+
+topic thank you for watching
+
+[Music]
+

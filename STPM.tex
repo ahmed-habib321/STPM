@@ -108,14 +108,18 @@ because $AD^{+}A=0$, then we get
         \\
         D^{+}A &= 0
         \\
-        D^{+} &= 0
+        D^{+}A U^*&= 0
+        \\
+        D^{+}D^{+^{\textstyle *}}&= 0
+        \\
+        \therefore D^{+} &= 0
         \\
         A_2^{+}-A_1^{+} &= 0
         \\
         A_2^{+} &=A_1^{+}
 \end{align*}
 \end{proof}
-\begin{proof}[Proof the existence]
+\begin{proof}[Proof the existence synthetically]
 Let $A$ be a non square matrix we can write $A = BC$ where
         \begin{align*}
                 A &\text{ is of order } (m\times n)
@@ -321,5 +325,48 @@ notice that if you take $B = A$ and $C = I$ will not give an answer because $\de
         It has applications in solving linear systems of equations, 
         least squares problems, and in situations where the original matrix might not have a unique inverse.
 \end{enrichment}
+
+\begin{proof}[Proof the existence analytically]
+        Let $A$ be a non square matrix we can write $A = BC$ where
+        \begin{align*}
+                A &\text{ is of order } (m\times n)
+                \\
+                B &\text{ is of order } (m\times r)
+                \\
+                C &\text{ is of order } (r\times n)
+        \end{align*}
+        let us try to find two matrices such $B^{+} , Q$ that 
+        \[
+        BB^{+} B = B \quad,\quad B^{+} = QB^*
+        \]
+        we notice that 
+        \[
+        BQB^{*}B = B \quad,\quad B^{*}BQB^{*}B = B^{*}B
+        \]
+        since $\det(B^{*}B) \neq 0$ and $B^{*}B$ is square thus $Q$ is the ordinary inverse of $B^{*}B$
+        \[
+        Q = {(B^{*}B)}^{-1}
+        \]
+        thus 
+        \[
+        B^{+} = {(B^{*}B)}^{-1}B^*  
+        \]
+        similarly
+        \[
+        C^{+} = C^*{(C^{*}C)}^{-1}
+        \]
+        which makes that 
+        \[
+        A^{+}  = C^{+}B^{+}= C^*{(C^{*}C)}^{-1}{(B^{*}B)}^{-1}B^*
+        \]
+        the rest of the proof as in the synthetically part 
+\end{proof}
+\begin{enrichment*}{Synthetic Proofs}
+        Synthetic proofs in mathematics refer to a style of proof that relies on creative and constructive methods rather than analytical or deductive reasoning. In a synthetic proof, mathematicians often use geometric or intuitive arguments to establish the truth of a statement. This approach involves constructing figures, diagrams, or models that illustrate the relationships and properties relevant to the mathematical concept being proven.
+\end{enrichment*}
+\begin{enrichment*}{Analytic Proofs}
+        Analytic proofs, in the context of mathematics, refer to a method of proof that relies on logical reasoning and the application of established mathematical principles and definitions. The term "analytic" is derived from "analysis," emphasizing the breakdown of a mathematical statement or proposition into simpler, well-understood components.
+\end{enrichment*}
+
 %\include{BookEnd}          %The pages in the End
 \end{document}

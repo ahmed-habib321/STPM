@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  23 NOV 2023 22:38
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  24 NOV 2023 11:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1396,7 +1396,7 @@ Package mdframed Info: mdframed detected package amsthm
 
 
 ]
-Overfull \hbox (15.4493pt too wide) in paragraph at lines 167--170
+Overfull \hbox (15.4493pt too wide) in paragraph at lines 171--174
 []\TU/lmr/m/n/10 it’s clear that $\OML/lmm/m/it/10 B[]B$\TU/lmr/m/n/10 ,$\OML/l
 mm/m/it/10 CC[]$ \TU/lmr/m/n/10 are square matrices of order $\OML/lmm/m/it/10 
 r$ \TU/lmr/m/n/10 now to proof that $[][][]\OML/lmm/m/it/10 ; [][][] []
@@ -1406,18 +1406,18 @@ r$ \TU/lmr/m/n/10 now to proof that $[][][]\OML/lmm/m/it/10 ; [][][] []
 File: Roger_Penrose.jpg Graphic file (type bmp)
 <Roger_Penrose.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 313--313
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 317--317
 [][] 
  []
 
 File: moore.jpg Graphic file (type bmp)
 <moore.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 323--323
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 327--327
 [][] 
  []
 
-[4] [5] (STPM.aux (SoloLecStarter.aux))
+[4] [5] [6] (STPM.aux (SoloLecStarter.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1431,12 +1431,12 @@ Package rerunfilecheck Info: File `STPM.out' has not changed.
 (rerunfilecheck)             Checksum: 8036681A47A920C3A0910812D1838ACD;141.
  ) 
 Here is how much of TeX's memory you used:
- 34752 strings out of 410633
- 735577 string characters out of 5792050
+ 34760 strings out of 410633
+ 735763 string characters out of 5792050
  1937879 words of memory out of 5000000
- 55291 multiletter control sequences out of 15000+600000
+ 55299 multiletter control sequences out of 15000+600000
  604265 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,16n,92p,1239b,938s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (5 pages).
+Output written on STPM.pdf (6 pages).

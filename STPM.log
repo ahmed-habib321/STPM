@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  24 NOV 2023 11:56
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  6 DEC 2023 19:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1314,7 +1314,7 @@ or `english'. on input line 29.
 \openout2 = `SoloLecStarter.aux'.
 
  (SoloLecStarter.tex
-LaTeX Font Info:    Calculating math sizes for size <50> on input line 8.
+LaTeX Font Info:    Calculating math sizes for size <40> on input line 8.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
 .
 
@@ -1340,11 +1340,11 @@ LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <50> on input line 8.
+(Font)              <40> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <34.99985> on input line 8.
+(Font)              <27.99988> on input line 8.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <25> on input line 8.
+(Font)              <20> on input line 8.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -1362,20 +1362,19 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <50> not available
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <40> not available
 (Font)              size <24.88> substituted on input line 8.
 
 
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <34.99985> not available
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <27.99988> not available
 (Font)              size <24.88> substituted on input line 8.
 
 
-Overfull \hbox (4.4779pt too wide) in paragraph at lines 10--11
- []$[]$ 
- []
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 8.
 
 
-Overfull \hbox (29.92142pt too wide) in paragraph at lines 12--13
+Overfull \hbox (40.65437pt too wide) in paragraph at lines 12--13
  []|  $[]$ 
  []
 
@@ -1383,41 +1382,33 @@ Overfull \hbox (29.92142pt too wide) in paragraph at lines 12--13
 
 
 ])
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 37.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 69.
- [2
-
-
-]
-Overfull \hbox (15.4493pt too wide) in paragraph at lines 171--174
-[]\TU/lmr/m/n/10 it’s clear that $\OML/lmm/m/it/10 B[]B$\TU/lmr/m/n/10 ,$\OML/l
-mm/m/it/10 CC[]$ \TU/lmr/m/n/10 are square matrices of order $\OML/lmm/m/it/10 
-r$ \TU/lmr/m/n/10 now to proof that $[][][]\OML/lmm/m/it/10 ; [][][] []
+Overfull \hbox (0.56967pt too wide) in paragraph at lines 385--388
+\TU/lmr/m/n/10 This definition of a well-posed problem comes from the work of J
+acques Hadamard on mathematical
  []
 
-[3]
-File: Roger_Penrose.jpg Graphic file (type bmp)
-<Roger_Penrose.jpg>
+File: Hadamard.jpg Graphic file (type bmp)
+<Hadamard.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 317--317
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 417--417
 [][] 
  []
 
-File: moore.jpg Graphic file (type bmp)
-<moore.jpg>
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 422.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 422.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 422.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 327--327
-[][] 
+Overfull \hbox (2.22pt too wide) in paragraph at lines 421--443
+[]$[]$ $[]$ 
  []
 
-[4] [5] [6] (STPM.aux (SoloLecStarter.aux))
+[2
+
+
+] [3] [4] (STPM.aux (SoloLecStarter.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1425,18 +1416,18 @@ L3 programming layer <2023-08-11>
 
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 25.12pt have occurred.
+(Font)              up to 15.12pt have occurred.
 
 Package rerunfilecheck Info: File `STPM.out' has not changed.
-(rerunfilecheck)             Checksum: 8036681A47A920C3A0910812D1838ACD;141.
+(rerunfilecheck)             Checksum: ACCEC60FA2D05E9CB3791D51E14646D4;1134.
  ) 
 Here is how much of TeX's memory you used:
- 34760 strings out of 410633
- 735763 string characters out of 5792050
- 1937879 words of memory out of 5000000
- 55299 multiletter control sequences out of 15000+600000
- 604265 words of font info for 101 fonts, out of 8000000 for 9000
+ 34676 strings out of 410633
+ 733739 string characters out of 5792050
+ 1926879 words of memory out of 5000000
+ 55228 multiletter control sequences out of 15000+600000
+ 604382 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,16n,92p,1239b,938s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,12n,92p,1239b,792s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (6 pages).
+Output written on STPM.pdf (4 pages).

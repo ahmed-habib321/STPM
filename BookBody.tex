@@ -1,4 +1,10 @@
 \section{Fractional Calculus}
+Fractional calculus is a branch of mathematical analysis that extends the concepts of 
+differentiation and integration to non-integer orders. 
+\\
+Unlike classical calculus, 
+which deals with integer-order derivatives and integrals, fractional calculus considers 
+derivatives and integrals of arbitrary order, including non-integer or fractional orders.
 \subsection{Fractional Integral}
 Let $f$ be a continuous function on $[a,b]$ and let $I$ donate the integral operator
 \[
@@ -7,11 +13,11 @@ Let $f$ be a continuous function on $[a,b]$ and let $I$ donate the integral oper
 And if we apply it again
 \begin{align*}
     I^{2}f(t) & = \int_{0}^{t}g(s)ds                                  \\
-              & = \int_{0}^{t}\int_{0}^{s}f(\theta)d\theta            \\
+              & = \int_{0}^{t}\int_{0}^{s}f(\theta)d\theta ds          \\
               & = \int_{0}^{t} \left(\int_{s}^{t}d\theta\right)f(s)ds \\
               & = \int_{0}^{t} (t-s) f(s) ds
 \end{align*}
-We can get the general formula for integrating n time by
+We can get the general formula for integrating $n$ time by
 \begin{align*}
     I^{n}f(t) & = \frac{1}{(n-1)!}\int_{0}^{t}(t-s)^{n-1}f(s)ds   \\
               & =\frac{1}{\Gamma(n)}\int_{0}^{t}(t-s)^{n-1}f(s)ds
@@ -57,9 +63,11 @@ and formula (3) the derivative of the constant not equal zero
 \begin{align*}
     D_*^{\alpha} 1 & = \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt}\int_{0}^{t}(t-s)^{-\alpha}ds
     \\
-                   & = \frac{-1}{\Gamma(1-\alpha)}\frac{d}{dt} \left[\frac{(t-s)^{-\alpha+1}}{-\alpha+1}\right]_{0}^{t}
+                    & = \frac{1}{\Gamma(1-\alpha)}\frac{d}{dt} \left[\frac{(t-s)^{-\alpha+1}}{-\alpha+1}\right]_{0}^{t}
     \\
-                   & = \frac{-1}{\Gamma(1-\alpha)} \frac{t^{1-\alpha}}{1-\alpha} \neq 0
+                    & = \frac{-1}{\Gamma(1-\alpha)} \frac{d}{dt} \frac{t^{1-\alpha}}{1-\alpha} \neq 0
+    \\
+                    & = \frac{-1}{\Gamma(1-\alpha)} t^{-\alpha} \neq 0
 \end{align*}
 
 \begin{example}
@@ -205,7 +213,7 @@ If $f(x)$ is differentiable and $f'(x)$ is bounded i.e. $|f'(x)| \leq M$
     \\
     if $\left\lvert \beta_1 - \beta_2 \right\rvert \leq \delta $ then $\left\lvert s_1(t) - s_2(t) \right\rvert \leq \delta e^{Nt} $
 \end{theorem}
-\begin{proof}[proof]
+\begin{proof}[\textcolor{theme}{Proof}]
     \begin{align}
         s_1(t) = \beta_1 + \int_{0}^{t}f(s_1(\theta),\theta)d\theta
         \\
@@ -289,7 +297,7 @@ If $f(x)$ is differentiable and $f'(x)$ is bounded i.e. $|f'(x)| \leq M$
     If $\gamma >N$ and $\left\lvert \beta_1 - \beta_2 \right\rvert \leq \delta $ then $\displaystyle \lim_{t \to \infty}|s_1(t) - s_2(t)| = 0 $
     and $|s_1(t) - s_2(t)| \leq \delta e^{-(\gamma-N)t}$
 \end{theorem}
-\begin{proof}[proof]
+\begin{proof}[\textcolor{theme}{Proof}]
     Let $ y(t) = e^{\gamma t} x(t) $
     \[
         \frac{dy(t)}{dt}  = e^{\gamma t}\frac{dx(t)}{dt} + \gamma e^{\gamma t}x(t)
@@ -446,7 +454,7 @@ If $f(x)$ is differentiable and $f'(x)$ is bounded i.e. $|f'(x)| \leq M$
         \lim_{t \to \infty} ||x(t)|| = 0
     \]
 \end{theorem}
-\begin{proof}[proof]
+\begin{proof}[\textcolor{theme}{Proof}]
     We have
     \begin{equation}
         \frac{dx(t)}{dt} = Ax(t) + f(t,x(t))
@@ -1309,7 +1317,7 @@ of system (1)
     If $\mathbf{S}(t)$ is a fundamental solution of system (1) and if $\mathbf{C}$ is constant matrix such that $\det(\mathbf{C})\neq 0$ then $\mathbf{S}(t)\mathbf{C}$ is a fundamental
     solution of system (1)
 \end{theorem}
-\begin{proof}[Proof]
+\begin{proof}[\textcolor{theme}{Proof}]
     Set
     \[
         f(t) = \mathbf{S}(t)\mathbf{C}
@@ -1333,7 +1341,7 @@ of system (1)
     If $\mathbf{S}_1(t)$ and $\mathbf{S}_2(t)$ are fundamental solution of system (1) then $\mathbf{S}_2(t) = \mathbf{S}_1(t)\mathbf{C}$ where $\mathbf{C}$ is constant matrix such that $\det(\mathbf{C})\neq 0$
 \end{theorem}
 
-\begin{proof}[Proof]
+\begin{proof}[\textcolor{theme}{Proof}]
     Let $\mathbf{S}_1(t)$ and $\mathbf{S}_2(t)$ be fundamental solutions
     \\
     Set
@@ -1433,7 +1441,7 @@ On the other hand if it's applied on Determinant
     \par
     Where $\trace[\mathbf{A}(t)] = a_{11}(t) + a_{22}(t) + \dots + a_{nn}(t)$
 \end{theorem}
-\begin{proof}[Proof]
+\begin{proof}[\textcolor{theme}{Proof}]
     Because
     \[
         \frac{d\mathbf{S}(t)}{dt} = \mathbf{A}(t)\mathbf{S}(t)
@@ -1764,3 +1772,508 @@ At t=1
         \displaystyle \frac{1}{4}e^{7} - \frac{1}{4}e^{-5} & \frac{1}{2}e^{7} +\frac{1}{2} e^{-5}
     \end{bmatrix}    
 \]
+
+\newpage
+
+\section{Generalized Inverse}
+
+In the classical sense of linear algebra, an $n \times n$ square matrix $A$ is 
+called invertible also non-singular 
+if there exists an $n \times n$ square matrix $B$ such that
+\[
+AB = BA = I_n        
+\]
+If this is the case, then the matrix $B$ is 
+uniquely determined by $A$, and is called the 
+inverse of $A$, denoted by $A^{-1}$
+\\
+In linear algebra for matrix $A$ to own an inverse 
+it had to be square matrix and non-singular \\ (i.e $\det(A)\neq0$)
+\subsection{Moore–Penrose generalized inverse}
+Let us now study the concept of the generalized inverse that allow us to get inverse for any matrix of order $(m\times n)$ 
+\\
+We define the generalized inverse $A^{+}$
+\begin{align*}
+        \circled{I}& \dquad AA^{+}A = A
+        \\
+        \circled{II}& \dquad \exists  U,V \quad \text{s.t} \quad A^{+} = UA^{*} \quad,\quad A^{+} = A^{*}V
+\end{align*}
+Where $A^{*}$ is the conjugate transpose if all elements of $A$ are real then $A^{*} = A^{\operatorname{T}}$
+\[
+A = \begin{pmatrix}
+        1+2i & 3-i\\
+        5 & 6i \\
+    \end{pmatrix}
+\quad\Longrightarrow \quad
+A^{*} = \begin{pmatrix}
+        1-2i & 5\\
+        3+i & -6i \\
+    \end{pmatrix}
+\]
+\begin{theorem}[The existence and uniqueness of GI]
+        For matrix $A$ of order $(m\times n)$ the generalized inverse $A^{+}$ exists ,and it's unique
+\end{theorem}
+\begin{figure*}[b]
+        \begin{enrichment}{E.H. Moore}{moore.jpg}{2.4}{.8}{.17}
+        Eliakim Hastings Moore (1862–1932) was an American mathematician known for his contributions to algebra and mathematical logic. 
+        One of his significant contributions was in the field of linear algebra, 
+        particularly his work on the generalized inverse of a non-square matrix.
+        The Moore–Penrose inverse is a concept that extends the idea of the matrix inverse to non-square matrices.
+        it's perhaps the most well-known and widely used among various generalizations of the matrix inverse. 
+        It has applications in solving linear systems of equations, least squares problems.
+\end{enrichment}
+\end{figure*}
+\begin{proof}[\textcolor{theme}{Proof the uniqueness}]
+        Suppose that there is two generalized inverse $A_1^{+}$ , $A_2^{+}$ thus
+        \begin{align*}
+                \circled{I}& \dquad AA_i^{+}A = A
+                \\
+                \circled{II}& \dquad \exists  U_i,V_i \quad \text{s.t} \quad A_i^{+} = U_i A_i^{*} \quad,\quad A_i^{+} = A_i^{*}V_i \dquad \text{for }i=1,2
+        \end{align*}
+From \circled{I} 
+\begin{align*}
+        A[A_2^{+}-A_1^{+}]A =& 0
+        \\
+        ADA=&0
+\end{align*}
+Where $D = A_2^{+}-A_1^{+}$ and we can say that 
+\begin{equation*}
+        \begin{aligned}[c]
+            &D = A^{*}V
+            \\
+            &V = V_2-V_1
+        \end{aligned}
+        \qquad\qquad
+        \begin{aligned}[c]
+        &D = UA^{*}
+        \\
+        &U = U_2-U_1
+        \end{aligned}
+    \end{equation*}
+Now
+\begin{align*}
+        (DA)^{*}DA &= A^* D^{*} D A
+        \\
+        &= A^* V^{*}A D A = 0
+\end{align*}
+Because $ADA=0$, then we get 
+\begin{align*}
+        (DA)^{*}DA &= 0
+        \\
+        DA &= 0 \tag{multiply $U^*$ from the right}
+        \\
+        DA U^*&= 0
+        \\
+        DD^{*}&= 0
+        \\
+        \therefore D &= 0
+        \\
+        A_2^{+}-A_1^{+} &= 0
+        \\
+        A_2^{+} &=A_1^{+}
+\end{align*}
+\end{proof}
+\begin{figure*}[b]
+        \begin{enrichment}{Roger Penrose}{Roger_Penrose.jpg}{2.4}{.8}{.17}
+        Sir Roger Penrose is a British mathematical physicist, mathematician, and philosopher 
+        who has made significant contributions to various fields, including general relativity, 
+        cosmology, and the foundations of quantum mechanics. \\
+        Penrose has made significant contributions to the fields of mathematics
+        One of Penrose's notable contributions is his work on the generalized inverse of a matrix, 
+        Penrose introduced the concept of the Moore-Penrose pseudo-inverse, 
+        which is a widely used method for finding a generalized inverse of a matrix. 
+        This pseudo-inverse has applications in various areas, including linear algebra, 
+        statistics, signal processing, and machine learning.
+\end{enrichment}
+\end{figure*}
+\begin{proof}[\textcolor{theme}{Proof the existence synthetically}]
+Let $A$ be a non square matrix we can write $A = BC$ where
+        \begin{align*}
+                A &\text{ is of order } (m\times n)
+                \\
+                B &\text{ is of order } (m\times r)
+                \\
+                C &\text{ is of order } (r\times n)
+        \end{align*}
+Set
+        \begin{equation*}
+                \begin{cases}
+                        \displaystyle \Lambda = C^{*}(CC^{*})^{-1}(B^{*}B)^{-1}B^{*}
+                        \\
+                        \displaystyle U = C^{*}(CC^{*})^{-1}(B^{*}B)^{-1}(CC^{*})^{-1}C
+                        \\
+                        \displaystyle V = B(B^{*}B)^{-1}(CC^{*})^{-1}(B^{*}B)^{-1}B^{*}
+                    \end{cases}
+        \end{equation*}
+We can see that 
+        \begin{align*}
+                A\Lambda A &= BCC^{*}(CC^{*})^{-1}(B^{*}B)^{-1}B^{*}BC
+                \\
+                &= B\underbrace{\left[CC^{*}(CC^{*})^{-1}\right]}_{I}\underbrace{\left[(B^{*}B)^{-1}B^{*}B\right]}_{I}C
+                \\
+                &= BC = A
+        \end{align*}
+Now to proof the property \circled{II}
+\begin{align*}
+        UA^* &=  C^{*}(CC^{*})^{-1}(B^{*}B)^{-1}(CC^{*})^{-1}C C^* B^*
+        \\
+        &=  C^{*}(CC^{*})^{-1}(B^{*}B)^{-1}\underbrace{\left[(CC^{*})^{-1}C C^*\right]}_{I} B^*
+        \\
+        &= C^{*}(CC^{*})^{-1}(B^{*}B)^{-1}B^* = \Lambda
+        \\
+        \\
+        A^*V &=  C^* B^*B(B^{*}B)^{-1}(CC^{*})^{-1}(B^{*}B)^{-1}B^{*}
+        \\
+        &=  C^{*}\underbrace{\left[B^*B(B^{*}B)^{-1}\right]}_{I}(CC^{*})^{-1}(B^{*}B)^{-1}B^{*}
+        \\
+        &= C^{*}(CC^{*})^{-1}(B^{*}B)^{-1}B^* = \Lambda
+\end{align*}
+Thus $\Lambda = A^{+} $ is the generalized inverse
+\end{proof}
+\begin{enrichment*}{Synthetic Proofs}
+        Synthetic proofs refer to a style of proof that relies on creative and constructive methods rather 
+        than analytical or deductive reasoning. In a synthetic proof, mathematicians often use geometric or intuitive 
+        arguments to establish the truth of a statement. This approach involves constructing figures, diagrams, or models that illustrate the relationships and properties relevant to the mathematical concept being proven.
+\end{enrichment*}
+\begin{proof}[\textcolor{theme}{Proof the existence analytically}]
+        Let $A$ be a non square matrix we can write $A = BC$ where
+        \begin{align*}
+                A &\text{ is of order } (m\times n)
+                \\
+                B &\text{ is of order } (m\times r)
+                \\
+                C &\text{ is of order } (r\times n)
+        \end{align*}
+        Let us try to find two matrices such $B^{+} , Q$ that 
+        \[
+        BB^{+} B = B \quad,\quad B^{+} = QB^*
+        \]
+        We notice that 
+        \begin{align*}
+                BQB^{*}B =& B 
+                \\
+                B^{*}BQB^{*}B =& B^{*}B
+        \end{align*}
+        Since $\det(B^{*}B) \neq 0$ (will be proofed in next lemma) and $B^{*}B$ is square thus $Q$ is the ordinary inverse of $B^{*}B$
+        \[
+        Q = {(B^{*}B)}^{-1}
+        \]
+        Thus 
+        \[
+        B^{+} = {(B^{*}B)}^{-1}B^*  
+        \]
+        Similarly
+        \[
+        C^{+} = C^*{(C^{*}C)}^{-1}
+        \]
+        Which makes that 
+        \[
+        A^{+}  = C^{+}B^{+}= C^*{(C^{*}C)}^{-1}{(B^{*}B)}^{-1}B^*
+        \]
+        The rest of the proof as in the synthetically part 
+\end{proof}
+\begin{enrichment*}{Analytic Proofs}
+        Analytic proofs refer to a method of proof that relies on logical reasoning and the application of established mathematical principles and definitions. The term "analytic" is derived from "analysis," emphasizing the breakdown of a mathematical statement or proposition into simpler, well-understood components.
+\end{enrichment*}
+\newpage
+\begin{lemma}
+        $B^{*}B$,$CC^{*}$ are square matrices and $\det(B^{*}B) ,\det(CC^{*}) \neq 0 $
+\end{lemma}
+\begin{proof}[\textcolor{theme}{Proof}]
+        It's clear that $B^{*}B$,$CC^{*}$ are square matrices of order $r$ because $B_{r \times m}^{*}B_{m \times r} = D_{r \times r}$ 
+        \\
+        Now to proof that $\det(B^{*}B) ,\det(CC^{*}) \neq 0 $
+        \\
+        Consider the homogeneous system
+
+        \[
+        B^{*}B X = 0  \dquad,\dquad X = \begin{pmatrix}
+        x_1\\
+        x_2\\
+        \vdots\\
+        x_r\\
+        \end{pmatrix}        
+        \]
+We have that 
+        \begin{align*}
+                B^{*}B X &= 0 \tag{multiply $X^*$ from the left}
+                \\
+                X^{*}B^{*}B X &= 0 
+                \\
+                (BX)^{*}BX &= 0
+        \end{align*}
+Set $BX = Y$
+        \begin{align*}
+                Y^{*}Y &= 0
+                \\
+                y_1^{2} + y_2^{2} + \dots + y_r^{2} &= 0
+                \\
+                y_1^{2} = y_2^{2} = \dots = y_r^{2} &= 0
+                \\
+                \Longrightarrow BX &= 0 
+        \end{align*}
+This means that only the trivial solution solves this equation
+\\
+But $\rank(B)=r=$ number of unknowns therefore $x_1 = x_2 = \dots = x_r = 0$
+also $\rank(B^{*}B)=r$ then $\det(B^{*}B) \neq 0$
+\\
+\end{proof}
+
+\begin{example}
+        Find $A^{+}$ if 
+        \[
+        A = \begin{pmatrix}
+                1 & 1 & 4\\
+                2 & 1 & 2\\
+            \end{pmatrix} 
+            = 
+            \underbrace{
+                \begin{pmatrix}
+                        1 & 0\\
+                        0 & 1\\
+                    \end{pmatrix}
+            }_B
+            \underbrace{
+                \begin{pmatrix}
+                        1 & 1 & 4\\
+                        2 & 1 & 2\\
+                    \end{pmatrix} 
+            }_C
+        \]
+We have taken $B = I$ to make the calculation easier but most of the time it doesn't work 
+\\
+Only works if $\det(AA^{*}) \neq 0$ in case of $\det(AA^{*}) = 0$ you need to find two matrices $B,C$ such that
+$BC = A$ and $\det(CC^{*}) , \det(B^{*}B) \neq 0$
+        \begin{align*}
+                A^{+} &=  C^{*}(CC^{*})^{-1} (B^{*}B)^{-1}B^{*} =  A^{*}(AA^{*})^{-1}
+                \\
+                &=
+                \begin{pmatrix}
+                        1 & 2\\
+                        1 & 1\\
+                        4 & 2
+                    \end{pmatrix} 
+                \left[
+                        \begin{pmatrix}
+                                1 & 1 & 4\\
+                                2 & 1 & 2\\
+                        \end{pmatrix} 
+                        \begin{pmatrix}
+                                1 & 2\\
+                                1 & 1\\
+                                4 & 2
+                        \end{pmatrix}   
+                \right]^{-1}
+                \\
+                &=
+                \begin{pmatrix}
+                        1 & 2\\
+                        1 & 1\\
+                        4 & 2
+                    \end{pmatrix} 
+                        \begin{pmatrix}
+                                18 & 11\\
+                                11 & 9\\
+                        \end{pmatrix}^{-1}
+                \\
+                &=
+                \begin{pmatrix}
+                        1 & 2\\
+                        1 & 1\\
+                        4 & 2
+                \end{pmatrix} 
+                \begin{pmatrix}
+                        \displaystyle \frac{9}{41} & \displaystyle  \frac{-11}{41}\\\\
+                        \displaystyle \frac{-11}{41} & \displaystyle   \frac{18}{41}\\
+                \end{pmatrix}   
+                \\
+                &=
+                \begin{pmatrix}
+                        \displaystyle \frac{-13}{41} & \displaystyle \frac{25}{41}\\\\
+                        \displaystyle \frac{-2}{41} & \displaystyle \frac{7}{41}\\\\
+                        \displaystyle \frac{14}{41} & \displaystyle \frac{-8}{41}
+                \end{pmatrix}
+                \\
+                AA^{+} &= \begin{pmatrix}
+                        1 & 1 & 4\\
+                        2 & 1 & 2\\
+                    \end{pmatrix} \begin{pmatrix}
+                        \displaystyle \frac{-13}{41} & \displaystyle \frac{25}{41}\\\\
+                        \displaystyle \frac{-2}{41} & \displaystyle \frac{7}{41}\\\\
+                        \displaystyle \frac{14}{41} & \displaystyle \frac{-8}{41}
+                \end{pmatrix} = \begin{pmatrix}
+                        1 & 0 \\
+                        0 & 1 \\
+                    \end{pmatrix}
+        \end{align*}
+$
+\begin{pmatrix}
+        \displaystyle \frac{-13}{41} & \displaystyle \frac{25}{41}\\\\
+        \displaystyle \frac{-2}{41} & \displaystyle \frac{7}{41}\\\\
+        \displaystyle \frac{14}{41} & \displaystyle \frac{-8}{41}
+\end{pmatrix}
+$ is the right inverse of $A$
+
+
+Notice that if you take $B = A$ and $C = I$ will not give an answer because $\det(A^{*}A) = 0$
+that says that it's hard to find suitable $B,C$ to get the inverse of $A$.
+\end{example}
+
+
+\newpage
+
+\section{Well-Posed Problems}
+In mathematics a well-posed problem is one for 
+which the following properties hold:
+
+\begin{enumerate}
+        \item The problem has a solution
+        \item The solution is unique
+        \item The solution's behavior changes continuously with the initial conditions (stable)
+\end{enumerate}
+Examples of well-posed problems the Dirichlet problem for Laplace's equation
+\\
+This definition of a well-posed problem comes from the work of Jacques Hadamard on mathematical modeling of physical phenomena.
+
+Problems that are not well-posed in the sense of Hadamard are termed ill-posed
+
+For example, the inverse heat equation, deducing a previous distribution of temperature from final data, is not well-posed in that the solution is highly sensitive to changes in the final data.
+
+\subsection{Hadamard Laplace Example}
+In the theory of partial differential equations, an example 
+constructed by J. Hadamard, which shows the instability of 
+the solution of the Cauchy problem for the Laplace equation 
+with respect to small changes in the initial data, is of great importance. 
+
+Hadamard’s example served as the beginning of a 
+systematic study of ill-posed problems in mathematical physics. 
+On the other hand, the study of the Cauchy problem for 
+the Laplace equation arises from problems of geophysics. 
+At the same time, the question arises whether the Cauchy problem 
+is correct for other elliptic equations. 
+
+We will see how Hadamard’s example showed the the instability of 
+the solution of the Cauchy problem for the Laplace equation. 
+
+\begin{figure*}[b]
+        \begin{enrichment}{Jacques Hadamard}{Hadamard.jpg}{2.4}{.8}{.17}
+        Jacques Hadamard (1865–1963) was French mathematician who made significant contributions 
+        to various branches of mathematics. One of his notable contributions lies in the field of 
+        partial differential equations and the study of well-posed and ill-posed problems.
+
+        Hadamard's work helped establish fundamental principles in the study of mathematical problems. 
+        Well-posed problems are essential for ensuring the stability and reliability of mathematical models
+         used in various scientific disciplines.
+\end{enrichment}
+\end{figure*}
+Consider the following Cauchy problems for the Laplace equation.
+
+\begin{minipage}{.5\textwidth}
+        \begin{equation}
+                \begin{cases}
+                        \displaystyle \pdv[2]{u(x,t)}{t} + \pdv[2]{u(x,t)}{x} = 0
+                        \\
+                        u(x,0) = 0
+                        \\
+                        \displaystyle \pdv{u(x,0)}{t} = \phi(x)
+                \end{cases}        
+        \end{equation}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+        \begin{equation}
+                \begin{cases}
+                        \displaystyle \pdv[2]{u^{*}(x,t)}{t} + \pdv[2]{u^{*}(x,t)}{x} = 0
+                        \\
+                        u^{*}(x,0) = 0
+                        \\
+                        \displaystyle \pdv{u^{*}(x,0)}{t} = \phi(x) + \frac{\sin(nx)}{n^{k}}
+                \end{cases}               
+        \end{equation}
+\end{minipage}
+
+
+As we can see the two problems are nearly identical except for the second initial condition in (2) but if we take the 
+limit for $n \to \infty$ in (2) it suppose to reduce to problem (1) which means that $u(x,t) = u^{*}(x,t)$ as $n \to \infty$
+
+BUT
+
+Let's construct new problem using (1),(2)
+
+Let $V(x,t) = u^{*}(x,t) - u(x,t)$ we get that 
+\begin{equation}
+        \begin{cases}
+                \displaystyle \pdv[2]{V(x,t)}{t} + \pdv[2]{V(x,t)}{x} = 0
+                \\
+                V(x,0) = 0
+                \\
+                \displaystyle \pdv{V(x,0)}{t} =\frac{\sin(nx)}{n^{k}}
+        \end{cases}               
+\end{equation}
+The solution of this problem is given by 
+\[
+V(x,t) = \frac{\sinh(nt)\sin(nx)}{n^{k+1}}
+\]
+Now as we Assumed $V(x,t)$ should vanish as $n \to \infty$ but we find that 
+\[
+\lim_{n \to \infty} V(x,t) = \infty
+\]
+That's because $\mathbf{O}(\sinh(n)) > \mathbf{O}(n^{k+1})$ which causes the numerator to diverges faster than the denominator
+\setcounter{equation}{0}
+\section{Some Basic Differential Models in Mathematical Biology}
+\subsection{Population dynamic models (Malthus model)}
+
+\begin{minipage}{0.75\textwidth}
+Any specie in the natural world does not exist solely, 
+but is closely related to other species in biological 
+communities and then constitute a population ecosystem. 
+However,        a single population is the basic unit which 
+composed of the entire ecosystem. In order to predict 
+the change law of the population, the famous demographer 
+Malthus proposed the following basic model for single 
+specie
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+        \hspace*{1cm}\includegraphics[scale=.08]{Biomath_link.png}
+    \end{minipage}
+\begin{equation}
+        \dv{N(t)}{t} =rN(t)
+\end{equation}
+Where $N(t)$ denotes the population density at the time $t$, $r$ denotes the intrinsic growth rate, which is the difference between the birth rate and the death rate.
+
+Based on model (1), the famous ecologist Logistic proposed the famous insect population model when studying the growth rate of the insect in the laboratory as follows,
+\[
+        \dv{N(t)}{t} =rN(t)[1-\frac{N(t)}{K}]
+\]
+Where $r$ denotes the intrinsic growth rate, $K$ is the carrying capacity of the environment
+
+
+\subsection{Epidemic models(SIR model)}
+As the epidemic models are concerned, it should date back to the famous SIR model, 
+which was proposed by Kermack and Mckendrick in 1927 when studying the propagation 
+law of the Black Death in London from 1655-1666 and the plague in Mumbai in 1906. 
+And the famous SIR model is as follow,
+\begin{equation}
+        \begin{cases}
+                \displaystyle \dv{S(t)}{t} = -\beta S(t)I(t)
+                \\\\
+                \displaystyle \dv{I(t)}{t} = \beta S(t)I(t)-\gamma I(t)
+                \\\\
+                \displaystyle \dv{R(t)}{t} = \gamma I(t)
+        \end{cases}               
+\end{equation}
+Where $S(t)$ denotes the number of the susceptible individuals which has not yet infected 
+but may be infected by the bacteria at time $t$, $I(t)$ denotes the number of the infected 
+individuals at time $t$, and $R(t)$ denotes the number of the removed individuals at time $t$, $\beta$, 
+denotes the infected rate, $\gamma$ denotes the cure rate and $\gamma^{-1}$ denotes the average cure rate.
+
+notice that if we add equations (2) we get 
+\begin{align*}
+        \dv{S(t)}{t} + \dv{I(t)}{t} + \dv{R(t)}{t} &= \beta S(t)I(t)-\gamma I(t) -\beta S(t)I(t) + \gamma I(t) 
+        \\
+        \dv{}{t} \left(S(t) + I(t) + R(t)\right) &= 0
+        \\
+        S(t) + I(t) + R(t) &= constant
+\end{align*}
+that says that the total number of the individuals keeps constant. 
+\\
+and it's Assumed that the infected individuals have permanent immune capacity after the cure.

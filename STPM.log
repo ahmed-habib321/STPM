@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  6 DEC 2023 19:36
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  7 DEC 2023 13:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1381,34 +1381,7 @@ Overfull \hbox (40.65437pt too wide) in paragraph at lines 12--13
 [1
 
 
-])
-Overfull \hbox (0.56967pt too wide) in paragraph at lines 385--388
-\TU/lmr/m/n/10 This definition of a well-posed problem comes from the work of J
-acques Hadamard on mathematical
- []
-
-File: Hadamard.jpg Graphic file (type bmp)
-<Hadamard.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 417--417
-[][] 
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 422.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 422.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 422.
-
-Overfull \hbox (2.22pt too wide) in paragraph at lines 421--443
-[]$[]$ $[]$ 
- []
-
-[2
-
-
-] [3] [4] (STPM.aux (SoloLecStarter.aux))
+]) (STPM.aux (SoloLecStarter.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1419,15 +1392,15 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 15.12pt have occurred.
 
 Package rerunfilecheck Info: File `STPM.out' has not changed.
-(rerunfilecheck)             Checksum: ACCEC60FA2D05E9CB3791D51E14646D4;1134.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34676 strings out of 410633
- 733739 string characters out of 5792050
- 1926879 words of memory out of 5000000
- 55228 multiletter control sequences out of 15000+600000
- 604382 words of font info for 96 fonts, out of 8000000 for 9000
+ 34560 strings out of 410633
+ 731506 string characters out of 5792050
+ 1911879 words of memory out of 5000000
+ 55135 multiletter control sequences out of 15000+600000
+ 583019 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,12n,92p,1239b,792s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,5n,92p,1239b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (4 pages).
+Output written on STPM.pdf (1 page).

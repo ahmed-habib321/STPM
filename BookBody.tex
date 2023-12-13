@@ -2283,29 +2283,7 @@ and it's Assumed that the infected individuals have permanent immune capacity af
 
 %================================================================
 
-\section{Integro-Partial Differential Equations}
-Consider the equation
-\begin{equation*}
-    \pdv{u(x,t)}{t} = \sum_{|q|\leq m} a_q(x,y,t) D_{x}^{q} u(x,t) + \int_G \sum_{|q|\leq m} b_q(x,y,t) D_{y}^{q} u(x,t) \, dy
-\end{equation*}
-Where $G \subset \mathbb{R}^n$ is bounded region with smooth surface\\
-$D_{x}^{q} = \frac{\partial^{|q|}}{\partial x_{1}^{q_1}\partial x_{2}^{q_2}\partial x_{3}^{q_3}\dots \partial x_{n}^{q_n}} $\\
-$|q|=q_1 + q_2 + \dots + q_n$\\
-$x=(x_1,x_2,\dots, x_n)$\\
-$y=(y_1,y_2,\dots ,y_n)$\\
-$dy = dy_1 dy_2 \dots dy_n$\\
-$\int_G = \underbrace{\int\int \dots \int}_{\textit{n}}$\\
-\begin{example}
-    Consider Integro-Partial differential equation
-    \begin{equation*}
-        \begin{cases}
-            \pdv{u(x,t)}{t}=\pdv[2]{u(x,t)}{x} + \int_{a_1}^{b_1} k_1(x,y,t) \pdv{u(y,t)}{y} dy + \int_{a_2}^{b_2}k_2(x,y,t)u(y,t) \, dy
-            \\
-            u(x,0)=\phi(x)
-        \end{cases}
-    \end{equation*}
-    Where $\phi(x)$ is bounded continuous on $(-\infty,\infty)$ and
-\end{example}
+
 
 
 

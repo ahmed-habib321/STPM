@@ -28,11 +28,181 @@
 
 \begin{document}
 
-%\include{SoloLecStarter}   %When making solo lecture remove the comment
-\include{BookStarter}      %The pages it the start
-\include{BookBody}         %The content of the book
+\include{SoloLecStarter}   %When making solo lecture remove the comment
+%\include{BookStarter}      %The pages it the start
+%\include{BookBody}         %The content of the book
+
+\section{Integro-Partial Differential Equations}
+Consider the equation
+\begin{equation*}
+    \pdv{u(x,t)}{t} = \sum_{|q|\leq m} a_q(x,y,t) D_{x}^{q} u(x,t) + \int_G \sum_{|q|\leq m} b_q(x,y,t) D_{y}^{q} u(x,t) \, dy
+\end{equation*}
+Where
+\begin{itemize}
+        \item $G \subset \mathbb{R}^n$ is bounded region with smooth surface
+        \item $D_{x}^{q} = \displaystyle \frac{\partial^{|q|}}{\partial x_{1}^{q_1}\partial x_{2}^{q_2}\partial x_{3}^{q_3}\dots \partial x_{n}^{q_n}} $
+        \item $|q|=q_1 + q_2 + \dots + q_n$
+        \item $x=(x_1,x_2,\dots, x_n)$
+        \item $y=(y_1,y_2,\dots ,y_n)$
+        \item $dy = dy_1 dy_2 \dots dy_n$
+        \item $\int_G = \underbrace{\int\int \dots \int}_{\textit{n}}$
+\end{itemize}
 
 
 
+
+
+
+\begin{example}
+    Consider Integro-Partial differential equation
+    \begin{equation}
+        \begin{cases}
+                \displaystyle \pdv{u(x,t)}{t}=\pdv[2]{u(x,t)}{x} + \int_{a_1}^{b_1} K_1(x,y,t) \pdv{u(y,t)}{y} dy + \int_{a_2}^{b_2}K_2(x,y,t)u(y,t) \, dy
+                \\
+                u(x,0)=\phi(x)
+        \end{cases}
+    \end{equation}
+    and $\phi(x)$ , $K_1$ , $K_2$ are bounded and continuous known functions on $(-\infty,\infty)$
+    \\
+    Consider the Cauchy problem 
+    \begin{equation}
+        \begin{cases}
+                \displaystyle \pdv{u(x,t)}{t}=\pdv[2]{u(x,t)}{x} + V(x,t)
+                \\
+                u(x,0)=\phi(x)
+        \end{cases}
+    \end{equation}
+    the solution of this problem is given by 
+    \begin{equation}
+        u(x,t) = \underbrace{\frac{1}{2\sqrt{\pi t}}\int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-\xi)}^2}{4t}} \phi(\xi)d\xi}_{= \psi(x,t)} 
+    + \int_{0}^{t} \int_{-\infty}^{\infty}\frac{1}{2\sqrt{\pi (t-\theta)}} e^{\textstyle -\frac{{(x-\xi)}^2}{4(t-\theta)}} V(\xi,\theta)d\xi d\theta
+    \end{equation}
+    (more information about this problem in the end of the lecture)
+    \\
+    comparing problem (1) with (2) we get that  
+    \[
+        V(x,t) = \int_{a_1}^{b_1} K_1(x,y,t) \pdv{u(y,t)}{y} dy + \int_{a_2}^{b_2}K_2(x,y,t)u(y,t) \, dy
+    \]
+    now substitute for $u$ from (3)
+    \begin{align*}
+        V(x,t) =& \int_{a_1}^{b_1} K_1(x,y,t) \pdv{\psi(y,t)}{y} dy 
+                \\
+                &+ \int_{a_1}^{b_1} K_1(x,y,t) \pdv{}{y} \int_{0}^{t} \int_{-\infty}^{\infty}\frac{1}{2\sqrt{\pi (t-\theta)}} e^{\textstyle -\frac{{(y-\xi)}^2}{4(t-\theta)}} V(\xi,\theta)d\xi d\theta dy 
+                \\
+                &+ \int_{a_2}^{b_2}K_2(x,y,t) \psi(y,t) \, dy
+                \\
+                &+ \int_{a_2}^{b_2}K_2(x,y,t) \int_{0}^{t} \int_{-\infty}^{\infty}\frac{1}{2\sqrt{\pi (t-\theta)}} e^{\textstyle -\frac{{(y-\xi)}^2}{4(t-\theta)}} V(\xi,\theta)d\xi d\theta \, dy
+    \end{align*}
+    Put $K_1 = 0 $ to make it a little simpler
+    \[
+        V(x,t) = \psi^*(y,t) + \int_{a_2}^{b_2}K_2(x,y,t) \int_{0}^{t} \int_{-\infty}^{\infty}\frac{1}{2\sqrt{\pi (t-\theta)}} e^{\textstyle -\frac{{(y-\xi)}^2}{4(t-\theta)}} V(\xi,\theta)d\xi d\theta \, dy    
+    \]
+    now we have a volttera integral equation that can be solved by the integral equation methods like successive approximation
+\end{example}
+
+
+\setcounter{equation}{0}
+\begin{enrichment*}{}
+        \begin{center}
+                \textbf{Remember From PDE Course(Extra information)}
+        \end{center}
+    \end{enrichment*}
+
+
+\subsection{Cauchy In-Homogeneous Problem}
+Also known as Heat with a source Cauchy problem
+\\
+Consider the in-homogeneous heat equation on the whole line
+\begin{equation}
+    \begin{cases}
+        \displaystyle \frac{\partial u\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t),\quad c\neq 0,\quad-\infty<x<\infty,\quad t>0
+        \\
+        u\left(x,0 \right) = \phi\left(x\right)
+    \end{cases}
+\end{equation}
+Where $f(x, t)$ and $\phi(x)$ are arbitrary given functions. 
+\\$f(x, t)$ is called the source term, and it measures the physical effect of an external heat source.
+\par
+From the superposition principle, we know that the solution of the in-homogeneous equation can
+be written as the sum of the solution of the homogeneous equation, and a particular solution of the
+in-homogeneous equation. 
+\\
+Thus we can break problem (1) into the following two problems
+\begin{equation}
+    \begin{cases}
+        \displaystyle \frac{\partial u_h\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u_h(x,t)}{\partial x^2}
+        \\
+        u_h\left(x,0 \right) = \phi\left(x\right)
+    \end{cases}
+\end{equation}
+\begin{equation}
+    \begin{cases}
+        \displaystyle \frac{\partial u_p\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u_p(x,t)}{\partial x^2}+ f(x,t)
+        \\
+        u_p\left(x,0 \right) = 0
+    \end{cases}
+\end{equation}
+Obviously, $u = u_h + u_p$ will solve the original problem (1).
+\\
+We have solved problem (2) before, and arrived to the solution
+\begin{equation}
+    u_h(x,t) = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy        
+\end{equation}
+Where $S(x,t)$ is the heat kernel and it's equal to $\displaystyle \frac{\textstyle e^{-\frac{x^2}{4tc^2}}}{2\sqrt{\pi tc^2}}$.
+\\
+Notice that the physical meaning of expression (4) is that the heat
+kernel averages out the initial temperature distribution along the entire rod.
+\par
+Since $f(x, t)$ plays the role of an external heat source, it is clear that this heat contribution must be averaged out too. 
+But in this case one needs to average not only over the entire rod, but over time as well, 
+since the heat contribution at an earlier time will effect the temperatures at all later times. 
+We claim that the solution to (3) is given by
+\begin{equation}
+    u_p(x,t) = \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+\end{equation}
+Combining (4) and (5) we obtain the solution to the IVP (1)
+\begin{equation}
+    u(x,t)  = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy + \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+\end{equation}
+Now substitute the heat kernel
+\[
+    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{0}^{t} \int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4(t-s)c^2}} f(y)dyds            
+\]
+We now need to show that (6) indeed solves problem (1) by direct substitution. 
+\\
+Since we have solved the homogeneous equation before, it suffices to show that $u_p$ solves problem (3). 
+\par
+By differentiating (5) with respect to t gives
+\[
+    \frac{\partial u_p}{\partial t} = \int_{-\infty}^{\infty}S(x-y,0) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}\frac{\partial}{\partial t}S(x-y,t-s) f(y,s)dyds    
+\]
+\begin{enrichment*}{}
+    note that The heat kernel solves the heat equation and has the Dirac delta function as its initial
+    means that $S_t =c^2 S_{xx}$ and $S(x-y,0) = \delta(x-y)$
+    \\
+    When integrating the Dirac Delta function we would get
+    \[
+        \int_{-\infty}^{\infty}\delta(x-y) dy = 1
+    \]
+    If we have another function $f(y,t)$ multiplied to the Dirac Delta function and integrating them we would get
+    \[
+        \int_{-\infty}^{\infty}\delta(x-y) f(y,t) dy = f(x,t)\int_{-\infty}^{\infty}\delta(x-y) dy = f(x,t) 
+    \]
+\end{enrichment*}
+\begin{align*}
+    \frac{\partial u_p}{\partial t} &= \int_{-\infty}^{\infty}\delta(x-y) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}c^2 \frac{\partial^2}{\partial x^2}S(x-y,t-s) f(y,s)dyds
+    \\
+    &= f(x,t) + c^2 \frac{\partial^2}{\partial x^2} \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+    \\
+    &= f(x,t) + c^2 \frac{\partial^2 u_p}{\partial x^2}
+\end{align*}
+Which shows that $u_p(x,t)$ solves the in-homogeneous heat equation. It is also clear that
+\[
+\lim_{t \to 0} u_p(x,t)  = \lim_{t \to 0}\int_{0}^{t} \int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds = 0
+\]
+Therefore $u_p(x,t)$ indeed solves problem (3) which finishes the proof that (6) solves the original IVP (1).
+\begin{enrichment*}{Duhamel's principle}
+    If one can solve an initial value problem for a homogeneous linear differential equation then an in-homogeneous linear differential equation can be solved as well.
+\end{enrichment*}
 %\include{BookEnd}          %The pages in the End
 \end{document}

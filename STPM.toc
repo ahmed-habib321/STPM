@@ -18,4 +18,5 @@
 \contentsline {section}{\numberline {7}Some Basic Differential Models in Mathematical Biology}{36}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Population dynamic models (Malthus model)}{36}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Epidemic models(SIR model)}{36}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Integro-Partial Differential Equations}{37}{section.8}%
 \contentsfinish 

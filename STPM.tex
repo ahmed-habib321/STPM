@@ -24,7 +24,7 @@
 \newfontfamily\Garamondfont{EBGaramond-Medium}[
         Path = fonts/Garamond/,
         Extension =.ttf
-]
+] 
 
 \begin{document}
 
@@ -47,12 +47,6 @@ Where
         \item $dy = dy_1 dy_2 \dots dy_n$
         \item $\int_G = \underbrace{\int\int \dots \int}_{\textit{n}}$
 \end{itemize}
-
-
-
-
-
-
 \begin{example}
     Consider Integro-Partial differential equation
     \begin{equation}
@@ -62,7 +56,7 @@ Where
                 u(x,0)=\phi(x)
         \end{cases}
     \end{equation}
-    and $\phi(x)$ , $K_1$ , $K_2$ are bounded and continuous known functions on $(-\infty,\infty)$
+    And $\phi(x)$ , $K_1$ , $K_2$ are bounded and continuous known functions on $(-\infty,\infty)$
     \\
     Consider the Cauchy problem 
     \begin{equation}
@@ -72,18 +66,18 @@ Where
                 u(x,0)=\phi(x)
         \end{cases}
     \end{equation}
-    the solution of this problem is given by 
+    The solution of this problem is given by 
     \begin{equation}
         u(x,t) = \underbrace{\frac{1}{2\sqrt{\pi t}}\int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-\xi)}^2}{4t}} \phi(\xi)d\xi}_{= \psi(x,t)} 
     + \int_{0}^{t} \int_{-\infty}^{\infty}\frac{1}{2\sqrt{\pi (t-\theta)}} e^{\textstyle -\frac{{(x-\xi)}^2}{4(t-\theta)}} V(\xi,\theta)d\xi d\theta
     \end{equation}
-    (more information about this problem in the end of the lecture)
+    (More information about this problem in the end of the lecture)
     \\
-    comparing problem (1) with (2) we get that  
+    Comparing problem (1) with (2) we get that  
     \[
         V(x,t) = \int_{a_1}^{b_1} K_1(x,y,t) \pdv{u(y,t)}{y} dy + \int_{a_2}^{b_2}K_2(x,y,t)u(y,t) \, dy
     \]
-    now substitute for $u$ from (3)
+    Now substitute for $u$ from (3)
     \begin{align*}
         V(x,t) =& \int_{a_1}^{b_1} K_1(x,y,t) \pdv{\psi(y,t)}{y} dy 
                 \\
@@ -97,14 +91,14 @@ Where
     \[
         V(x,t) = \psi^*(y,t) + \int_{a_2}^{b_2}K_2(x,y,t) \int_{0}^{t} \int_{-\infty}^{\infty}\frac{1}{2\sqrt{\pi (t-\theta)}} e^{\textstyle -\frac{{(y-\xi)}^2}{4(t-\theta)}} V(\xi,\theta)d\xi d\theta \, dy    
     \]
-    now we have a volttera integral equation that can be solved by the integral equation methods like successive approximation
+    Now we have a volttera integral equation that can be solved by the integral equation methods like successive approximation
 \end{example}
 
 
 \setcounter{equation}{0}
 \begin{enrichment*}{}
         \begin{center}
-                \textbf{Remember From PDE Course(Extra information)}
+                \textbf{Remember From PDE Course(Extra Information)}
         \end{center}
     \end{enrichment*}
 
@@ -144,7 +138,7 @@ Thus we can break problem (1) into the following two problems
 \end{equation}
 Obviously, $u = u_h + u_p$ will solve the original problem (1).
 \\
-We have solved problem (2) before, and arrived to the solution
+We have solved problem (2) using Poisson formula which is
 \begin{equation}
     u_h(x,t) = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy        
 \end{equation}
@@ -177,7 +171,7 @@ By differentiating (5) with respect to t gives
     \frac{\partial u_p}{\partial t} = \int_{-\infty}^{\infty}S(x-y,0) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}\frac{\partial}{\partial t}S(x-y,t-s) f(y,s)dyds    
 \]
 \begin{enrichment*}{}
-    note that The heat kernel solves the heat equation and has the Dirac delta function as its initial
+    Note that the heat kernel solves the heat equation and has the Dirac delta function as its initial
     means that $S_t =c^2 S_{xx}$ and $S(x-y,0) = \delta(x-y)$
     \\
     When integrating the Dirac Delta function we would get

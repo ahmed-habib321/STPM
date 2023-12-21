@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  15 DEC 2023 15:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  20 DEC 2023 21:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1220,7 +1220,7 @@ n;language=dflt;+smcp;"
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 29.
 
-(STPM.aux (SoloLecStarter.aux))
+(STPM.aux (BookStarter.aux) (BookBody.aux))
 \openout1 = `STPM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -1311,101 +1311,247 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 29.
-\openout2 = `SoloLecStarter.aux'.
+\openout2 = `BookBody.aux'.
 
- (SoloLecStarter.tex
-LaTeX Font Info:    Calculating math sizes for size <40> on input line 8.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+ (BookBody.tex
+Overfull \hbox (1.94368pt too wide) in paragraph at lines 2--8
+\TU/lmr/m/n/10 Unlike classical calculus, which deals with integer-order deriva
+tives and integrals, fractional calculus
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
 .
-
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
 .
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-8.
+9.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-8.
+9.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <40> on input line 8.
+(Font)              <10> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <27.99988> on input line 8.
+(Font)              <7> on input line 9.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20> on input line 8.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+(Font)              <5> on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 9.
 
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <40> not available
-(Font)              size <24.88> substituted on input line 8.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <27.99988> not available
-(Font)              size <24.88> substituted on input line 8.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 8.
+ []
 
 [1
 
 
-])
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 37.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 37.
- [2
+] [2] [3] [4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 198.
+ [5] [6]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 277.
+Package mdframed Info: Not enough space on this page on input line 299.
+ [7]
+File: Rudolf Lipschitz.jpg Graphic file (type bmp)
+<Rudolf Lipschitz.jpg>
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 399--399
+[][] 
+ []
+
+[8]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 403.
+Package mdframed Info: Not enough space on this page on input line 456.
+ [9] [10]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 565.
+ [11]
+Underfull \hbox (badness 2426) in paragraph at lines 664--673
+[]\TU/lmr/m/n/10 Aleksandr Mikhailovich Lyapunov was a Russian mathematician,
+ []
+
+File: Aleksandr_Lyapunov.jpg Graphic file (type bmp)
+<Aleksandr_Lyapunov.jpg>
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 673--673
+[][] 
+ []
+
+[12] [13] [14]
+Overfull \hbox (10.05858pt too wide) in paragraph at lines 792--802
+[]\TU/lmr/m/n/10 Note that The Adomian Decomposition Method (ADM) is a numerica
+l technique used to approximate
+ []
 
 
-] [3] [4] (STPM.aux (SoloLecStarter.aux))
+Underfull \hbox (badness 3557) in paragraph at lines 822--834
+[]\TU/lmr/m/n/10 George Adomian (March 21, 1922 – June 17, 1996) was an
+ []
+
+
+Underfull \hbox (badness 1117) in paragraph at lines 822--834
+\TU/lmr/m/n/10 American mathematician of Armenian descent who developed the
+ []
+
+File: adom.jpg Graphic file (type bmp)
+<adom.jpg>
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 834--834
+[][] 
+ []
+
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 977--978
+
+ []
+
+[17] [18] [19]
+File: archana_link.png Graphic file (type bmp)
+<archana_link.png>
+
+Overfull \hbox (4.34534pt too wide) in paragraph at lines 1131--1132
+[]| [] 
+ []
+
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 1130--1145
+[]$[]$ $[]$ 
+ []
+
+
+Overfull \hbox (1.39783pt too wide) detected at line 1164
+\OML/lmm/m/it/10 m[] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 A[]\OT1/lmr/m/n/10 (
+\OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 ) \OML/lmm/m/it/10 ;  m[] \OT1/lmr/m/n/10 
+= [] \OML/lmm/m/it/10 B[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 
+) \OML/lmm/m/it/10 ;  m[] \OT1/lmr/m/n/10 + \OML/lmm/m/it/10 ^^Q[] \OT1/lmr/m/n
+/10 = [] \OML/lmm/m/it/10 C[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x; t\OT1/lmr/m/n
+/10 )
+ []
+
+
+Overfull \hbox (2.31496pt too wide) detected at line 1172
+[]
+ []
+
+[20] [21]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1310.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1316.
+ [22]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1340.
+Package mdframed Info: Not enough space on this page on input line 1342.
+
+Overfull \hbox (19.96689pt too wide) detected at line 1423
+[]
+ []
+
+[23]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1433.
+Package mdframed Info: Not enough space on this page on input line 1443.
+ [24] [25] [26] [27]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1813.
+File: moore.jpg Graphic file (type bmp)
+<moore.jpg>
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1824--1824
+[][] 
+ []
+
+[28]
+File: Roger_Penrose.jpg Graphic file (type bmp)
+<Roger_Penrose.jpg>
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1887--1887
+[][] 
+ []
+
+[29] [30] [31] [32]
+Overfull \hbox (0.56967pt too wide) in paragraph at lines 2134--2137
+\TU/lmr/m/n/10 This definition of a well-posed problem comes from the work of J
+acques Hadamard on mathematical
+ []
+
+File: Hadamard.jpg Graphic file (type bmp)
+<Hadamard.jpg>
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 2167--2167
+[][] 
+ []
+
+
+Overfull \hbox (2.22pt too wide) in paragraph at lines 2171--2193
+[]$[]$ $[]$ 
+ []
+
+[33]
+File: Biomath_link.png Graphic file (type bmp)
+<Biomath_link.png>
+
+Overfull \hbox (5.30896pt too wide) in paragraph at lines 2236--2237
+[]| [] 
+ []
+
+
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 2225--2238
+$[]$ $[]$ 
+ []
+
+[34] [35] [36]) [37] (STPM.aux (BookBody.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 15.12pt have occurred.
-
 Package rerunfilecheck Info: File `STPM.out' has not changed.
-(rerunfilecheck)             Checksum: BF7F054DC18EA670350C8E55A90CEEB6;447.
+(rerunfilecheck)             Checksum: 74DB2395FA91A6B4F3E06D588B7413E2;4406.
  ) 
 Here is how much of TeX's memory you used:
- 34688 strings out of 410633
- 734156 string characters out of 5792050
- 1926879 words of memory out of 5000000
- 55230 multiletter control sequences out of 15000+600000
- 604430 words of font info for 102 fonts, out of 8000000 for 9000
+ 34841 strings out of 410633
+ 737510 string characters out of 5792050
+ 1937879 words of memory out of 5000000
+ 55368 multiletter control sequences out of 15000+600000
+ 583190 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,11n,92p,1239b,930s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,16n,92p,1239b,933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (4 pages).
+Output written on STPM.pdf (37 pages).

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  20 DEC 2023 21:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  22 DEC 2023 13:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1220,7 +1220,7 @@ n;language=dflt;+smcp;"
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 29.
 
-(STPM.aux (BookStarter.aux) (BookBody.aux))
+(STPM.aux (BookStarter.aux) (BookBody.aux) (BookEnd.aux))
 \openout1 = `STPM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -1311,6 +1311,59 @@ nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
 or `english'. on input line 29.
+\openout2 = `BookStarter.aux'.
+
+ (BookStarter.tex
+File: front.jpg Graphic file (type bmp)
+<front.jpg>
+ [1
+
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(57.81621pt, 467.42168pt, 72.26999pt)
+* v-part:(T,H,B)=(57.81621pt, 685.82399pt, 101.40665pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=467.42168pt
+* \textheight=685.82399pt
+* \oddsidemargin=-14.45378pt
+* \evensidemargin=-14.45378pt
+* \topmargin=-51.45378pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+File: collage logo.png Graphic file (type bmp)
+<collage logo.png>
+ [2
+
+] (STPM.toc)
+\tf@toc=\write6
+\openout6 = `STPM.toc'.
+
+
+[3
+
+])
 \openout2 = `BookBody.aux'.
 
  (BookBody.tex
@@ -1371,6 +1424,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 [1
 
 
+
 ] [2] [3] [4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1398,42 +1452,42 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 565.
  [11]
-Underfull \hbox (badness 2426) in paragraph at lines 664--673
+Underfull \hbox (badness 2426) in paragraph at lines 669--678
 []\TU/lmr/m/n/10 Aleksandr Mikhailovich Lyapunov was a Russian mathematician,
  []
 
 File: Aleksandr_Lyapunov.jpg Graphic file (type bmp)
 <Aleksandr_Lyapunov.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 673--673
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 678--678
 [][] 
  []
 
 [12] [13] [14]
-Overfull \hbox (10.05858pt too wide) in paragraph at lines 792--802
+Overfull \hbox (10.05858pt too wide) in paragraph at lines 797--807
 []\TU/lmr/m/n/10 Note that The Adomian Decomposition Method (ADM) is a numerica
 l technique used to approximate
  []
 
 
-Underfull \hbox (badness 3557) in paragraph at lines 822--834
+Underfull \hbox (badness 3557) in paragraph at lines 827--839
 []\TU/lmr/m/n/10 George Adomian (March 21, 1922 – June 17, 1996) was an
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 822--834
+Underfull \hbox (badness 1117) in paragraph at lines 827--839
 \TU/lmr/m/n/10 American mathematician of Armenian descent who developed the
  []
 
 File: adom.jpg Graphic file (type bmp)
 <adom.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 834--834
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 839--839
 [][] 
  []
 
 [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 977--978
+Underfull \hbox (badness 10000) in paragraph at lines 982--983
 
  []
 
@@ -1441,17 +1495,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 977--978
 File: archana_link.png Graphic file (type bmp)
 <archana_link.png>
 
-Overfull \hbox (4.34534pt too wide) in paragraph at lines 1131--1132
+Overfull \hbox (4.34534pt too wide) in paragraph at lines 1136--1137
 []| [] 
  []
 
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 1130--1145
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 1135--1150
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (1.39783pt too wide) detected at line 1164
+Overfull \hbox (1.39783pt too wide) detected at line 1169
 \OML/lmm/m/it/10 m[] \OT1/lmr/m/n/10 = [] \OML/lmm/m/it/10 A[]\OT1/lmr/m/n/10 (
 \OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 ) \OML/lmm/m/it/10 ;  m[] \OT1/lmr/m/n/10 
 = [] \OML/lmm/m/it/10 B[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x; t\OT1/lmr/m/n/10 
@@ -1461,40 +1515,40 @@ Overfull \hbox (1.39783pt too wide) detected at line 1164
  []
 
 
-Overfull \hbox (2.31496pt too wide) detected at line 1172
+Overfull \hbox (2.31496pt too wide) detected at line 1177
 []
  []
 
 [20] [21]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1310.
+(mdframed)              on input line 1315.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1316.
+(mdframed)              on input line 1321.
  [22]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1340.
-Package mdframed Info: Not enough space on this page on input line 1342.
+(mdframed)              on input line 1345.
+Package mdframed Info: Not enough space on this page on input line 1347.
 
-Overfull \hbox (19.96689pt too wide) detected at line 1423
+Overfull \hbox (19.96689pt too wide) detected at line 1428
 []
  []
 
 [23]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1433.
-Package mdframed Info: Not enough space on this page on input line 1443.
+(mdframed)              on input line 1438.
+Package mdframed Info: Not enough space on this page on input line 1448.
  [24] [25] [26] [27]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1813.
+(mdframed)              on input line 1818.
 File: moore.jpg Graphic file (type bmp)
 <moore.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1824--1824
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1829--1829
 [][] 
  []
 
@@ -1502,12 +1556,12 @@ Overfull \hbox (1.51756pt too wide) in paragraph at lines 1824--1824
 File: Roger_Penrose.jpg Graphic file (type bmp)
 <Roger_Penrose.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1887--1887
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1892--1892
 [][] 
  []
 
 [29] [30] [31] [32]
-Overfull \hbox (0.56967pt too wide) in paragraph at lines 2134--2137
+Overfull \hbox (0.56967pt too wide) in paragraph at lines 2139--2142
 \TU/lmr/m/n/10 This definition of a well-posed problem comes from the work of J
 acques Hadamard on mathematical
  []
@@ -1515,12 +1569,12 @@ acques Hadamard on mathematical
 File: Hadamard.jpg Graphic file (type bmp)
 <Hadamard.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 2167--2167
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 2172--2172
 [][] 
  []
 
 
-Overfull \hbox (2.22pt too wide) in paragraph at lines 2171--2193
+Overfull \hbox (2.22pt too wide) in paragraph at lines 2176--2198
 []$[]$ $[]$ 
  []
 
@@ -1528,16 +1582,27 @@ Overfull \hbox (2.22pt too wide) in paragraph at lines 2171--2193
 File: Biomath_link.png Graphic file (type bmp)
 <Biomath_link.png>
 
-Overfull \hbox (5.30896pt too wide) in paragraph at lines 2236--2237
+Overfull \hbox (5.30896pt too wide) in paragraph at lines 2241--2242
 []| [] 
  []
 
 
-Overfull \hbox (2.21999pt too wide) in paragraph at lines 2225--2238
+Overfull \hbox (2.21999pt too wide) in paragraph at lines 2230--2243
 $[]$ $[]$ 
  []
 
-[34] [35] [36]) [37] (STPM.aux (BookBody.aux))
+[34] [35] [36]) [37]
+\openout2 = `BookEnd.aux'.
+
+ (BookEnd.tex)
+File: back.jpg Graphic file (type bmp)
+<back.jpg>
+ [38
+
+
+
+] (STPM.aux (BookStarter.aux)
+(BookBody.aux) (BookEnd.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1546,12 +1611,12 @@ Package rerunfilecheck Info: File `STPM.out' has not changed.
 (rerunfilecheck)             Checksum: 74DB2395FA91A6B4F3E06D588B7413E2;4406.
  ) 
 Here is how much of TeX's memory you used:
- 34841 strings out of 410633
- 737510 string characters out of 5792050
+ 34930 strings out of 410633
+ 739405 string characters out of 5792050
  1937879 words of memory out of 5000000
- 55368 multiletter control sequences out of 15000+600000
- 583190 words of font info for 85 fonts, out of 8000000 for 9000
+ 55434 multiletter control sequences out of 15000+600000
+ 583230 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,16n,92p,1239b,933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on STPM.pdf (37 pages).
+Output written on STPM.pdf (41 pages).

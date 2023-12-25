@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  22 DEC 2023 13:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  25 DEC 2023 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1218,38 +1218,38 @@ n;language=dflt;"
 n;language=dflt;+smcp;"
 
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 29.
+h' as default language. on input line 39.
 
-(STPM.aux (BookStarter.aux) (BookBody.aux) (BookEnd.aux))
+(STPM.aux (BookStarter.aux) (BookEnd.aux))
 \openout1 = `STPM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
 9.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-Package hyperref Info: Link coloring OFF on input line 29.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+Package hyperref Info: Link coloring OFF on input line 39.
 
 (STPM.out) (STPM.out)
 \@outlinefile=\write5
@@ -1310,7 +1310,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 29.
+or `english'. on input line 39.
 \openout2 = `BookStarter.aux'.
 
  (BookStarter.tex
@@ -1607,15 +1607,22 @@ File: back.jpg Graphic file (type bmp)
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
-Package rerunfilecheck Info: File `STPM.out' has not changed.
-(rerunfilecheck)             Checksum: 74DB2395FA91A6B4F3E06D588B7413E2;4406.
+
+
+Package rerunfilecheck Warning: File `STPM.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `STPM.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  74DB2395FA91A6B4F3E06D588B7413E2;4406.
  ) 
 Here is how much of TeX's memory you used:
- 34930 strings out of 410633
- 739405 string characters out of 5792050
+ 34915 strings out of 410633
+ 739215 string characters out of 5792050
  1937879 words of memory out of 5000000
- 55434 multiletter control sequences out of 15000+600000
- 583230 words of font info for 90 fonts, out of 8000000 for 9000
+ 55422 multiletter control sequences out of 15000+600000
+ 583222 words of font info for 89 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,16n,92p,1239b,933s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
